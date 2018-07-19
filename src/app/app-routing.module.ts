@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
 import { AppsComponent } from './components/apps/apps.component';
+import { WritingsComponent } from './components/writings/writings.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,11 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'travel',
+    path: 'writings',
+    component: WritingsComponent
+  },
+  {
+    path: 'travel-gallery',
     component: TravelComponent
   },
   {
