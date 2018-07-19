@@ -6,17 +6,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { PostsComponent } from './components/posts/posts.component';
-import { UsersComponent } from './components/users/users.component';
-import { DetailsComponent } from './components/details/details.component';
+import { AboutComponent } from './components/about/about.component';
+import { TravelComponent } from './components/travel/travel.component';
+import { HomeComponent } from './components/home/home.component';
+import { AppsComponent } from './components/apps/apps.component';
+import { ReadingListComponent } from './components/reading-list/reading-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    PostsComponent,
-    UsersComponent,
-    DetailsComponent
+    AboutComponent,
+    TravelComponent,
+    HomeComponent,
+    AppsComponent,
+    ReadingListComponent
   ],
   imports: [
     BrowserModule,

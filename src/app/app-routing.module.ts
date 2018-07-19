@@ -1,22 +1,32 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { UsersComponent } from './components/users/users.component';
-import { DetailsComponent } from './components/details/details.component';
-import { PostsComponent } from './components/posts/posts.component';
+import { TravelComponent } from './components/travel/travel.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ReadingListComponent } from './components/reading-list/reading-list.component';
+import { AppsComponent } from './components/apps/apps.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: UsersComponent
+    component: HomeComponent
   },
   {
-    path: 'details/:id',
-    component: DetailsComponent
+    path: 'about',
+    component: AboutComponent
   },
   {
-    path: 'posts',
-    component: PostsComponent
+    path: 'travel',
+    component: TravelComponent
+  },
+  {
+    path: 'apps',
+    component: AppsComponent
+  },
+  {
+    path: 'reading-list',
+    component: ReadingListComponent
   }
 ];
 

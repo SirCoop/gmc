@@ -1,13 +1,13 @@
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 
 @Component({
   selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class PostsComponent implements OnInit {
+export class AboutComponent implements OnInit {
 
   posts$: Object;
 

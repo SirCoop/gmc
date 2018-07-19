@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './../../services/data.service';
+import { DataService } from '../../services/data.service';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 
 @Component({
@@ -30,7 +30,7 @@ import { trigger,style,transition,animate,keyframes,query,stagger } from '@angul
     ])
   ]
 })
-export class UsersComponent implements OnInit {
+export class TravelComponent implements OnInit {
 
   users$: Object;
 

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
-import { Observable } from '../../../../node_modules/rxjs';
-import { DataService } from './../../services/data.service';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class DetailsComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   user$: Object;
 

@@ -1,6 +1,31 @@
 <nav>
   <ul>
     <li>
+      <a routerLink="" [class.activated]="currentUrl == '/about'">
+        <i class="material-icons">fingerprint</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">folder</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">collections</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">view_module</i>
+      </a>
+    </li>
+    <li>
+        <a routerLink="" [class.activated]="currentUrl == '/'">
+          <i class="material-icons">list</i>
+        </a>
+      </li>
+    <li>
       <a routerLink="" [class.activated]="currentUrl == '/'">
         <i class="material-icons">supervised_user_circle</i>
       </a>
