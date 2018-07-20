@@ -14,6 +14,7 @@ import { ReadingListComponent } from './components/reading-list/reading-list.com
 import { WritingsComponent } from './components/writings/writings.component';
 import { SuccessesComponent } from './components/successes/successes.component';
 import { FailuresComponent } from './components/failures/failures.component';
+import { WorldmapComponent } from './components/worldmap/worldmap.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FailuresComponent } from './components/failures/failures.component';
     ReadingListComponent,
     WritingsComponent,
     SuccessesComponent,
-    FailuresComponent
+    FailuresComponent,
+    WorldmapComponent
   ],
   imports: [
     BrowserModule,
