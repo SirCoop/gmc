@@ -30,5 +30,15 @@
         <i class="material-icons">list</i>
       </a>
     </li>
+    <li>
+      <a routerLink="successes" [class.activated]="currentUrl == '/successes'">
+        <i class="material-icons">done</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="failures" [class.activated]="currentUrl == '/failures'">
+        <i class="material-icons">highlight_off</i>
+      </a>
+    </li>
   </ul>
 </nav>

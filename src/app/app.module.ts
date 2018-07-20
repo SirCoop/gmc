@@ -12,6 +12,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AppsComponent } from './components/apps/apps.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
 import { WritingsComponent } from './components/writings/writings.component';
+import { SuccessesComponent } from './components/successes/successes.component';
+import { FailuresComponent } from './components/failures/failures.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { WritingsComponent } from './components/writings/writings.component';
     HomeComponent,
     AppsComponent,
     ReadingListComponent,
-    WritingsComponent
+    WritingsComponent,
+    SuccessesComponent,
+    FailuresComponent
   ],
   imports: [
     BrowserModule,
