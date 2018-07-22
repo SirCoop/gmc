@@ -1,6 +1,6 @@
 import { Component,  Renderer2, OnInit } from '@angular/core';
 import * as d3 from 'd3';
-import * as tooltip from 'd3-tip';
+import * as d3Tip from 'd3-tip';
 import * as topojson from 'topojson';
 import worldData from './world-data.js';
 import visitedLocationCoordinates from './visited-locations';
@@ -13,7 +13,7 @@ import visitedLocationCoordinates from './visited-locations';
 export class WorldmapComponent implements OnInit {
 
   getFeatures(topology, key) {
-    return topology.objects[key].geometries.map(function(geom) {
+    return topology.objects[key].geometries.map(geom => {
       return {
         type: 'Feature',
         id: geom.id,
@@ -28,9 +28,9 @@ export class WorldmapComponent implements OnInit {
   
   appendData() {
     const format = d3.format(',');
-
+  
     // Set tooltips
-    // const tip = tooltip.tip()
+    // const tip = d3.tip().attr('class', 'd3-tip').html(function(d) { return d; });
     // .attr('class', 'd3-tip')
     // .offset([-10, 0])
     // .html(function(d) {

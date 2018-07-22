@@ -27,6 +27,8 @@ const visitedLocationCoordinates: any = [
     [-74.072092, 4.710989],
     // Rio de Janeiro
     [-43.172896, -22.906847],
+    // Buzios, Brazil
+    [-41.889042, -22.756391],
 
     /* Caribbean */
     // Havana, Cuba
