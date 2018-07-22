@@ -2,6 +2,7 @@ import { Component,  Renderer2, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import * as topojson from 'topojson';
 import worldData from './world-data.js';
+import visitedLocationCoordinates from './visited-locations';
 
 @Component({
   selector: 'app-worldmap',
@@ -54,9 +55,7 @@ export class WorldmapComponent implements OnInit {
     const countries: any = topojson.feature(worldData, worldData.objects.countries);
     // get features
     const countryFeatures: any = countries.features;
-    // add states from topojson
-    console.log('countries: ', countries);
-
+    // add countries from topojson
     svg.selectAll('path')
       .data(countryFeatures).enter()
       .append('path')
@@ -64,18 +63,23 @@ export class WorldmapComponent implements OnInit {
       .style('fill', 'steelblue')
       .attr('d', geoPath);
     
-    // put boarder around states 
+    // put boarder around countries 
     svg.append('path')
-      .datum(topojson.mesh(worldData, worldData.objects.countries, function(a, b) { return a !== b; }))
+      .datum(topojson.mesh(worldData, worldData.objects.countries, function(a, b) {
+        /* 
+         * a,b are FeaturePoint Objects with shape:
+         * {
+         *  arcs: Array,
+         *  id: Number,
+         *  type: String
+         * }        
+        */
+        return a !== b; 
+      }))
       .attr('class', 'mesh')
       .attr('d', geoPath);
-    
-    // add circles to svg
-    const visitedLocationCoordinates: any = [
-      [-122.490402, 37.786453],
-      [-122.389809, 37.72728]
-    ];
 
+    // add circles to svg
     svg.selectAll('circle')
       .data(visitedLocationCoordinates).enter()
       .append('circle')
