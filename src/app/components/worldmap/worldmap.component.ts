@@ -29,8 +29,8 @@ export class WorldmapComponent implements OnInit {
   appendData() {
 
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
-    const width = 1080 - margin.left - margin.right;
-    const height = 720 - margin.top - margin.bottom;
+    const width = 900 - margin.left - margin.right;
+    const height = 700 - margin.top - margin.bottom;
    
     const color = d3.scaleThreshold()
       .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000]);
@@ -85,7 +85,7 @@ export class WorldmapComponent implements OnInit {
       .append('circle')
       .attr('cx', (d: any) => projection(d)[0])
       .attr('cy', (d: any) => projection(d)[1])
-      .attr('r', '8px')
+      .attr('r', '3px')
       .attr('fill', 'red');
   }
 
