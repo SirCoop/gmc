@@ -1,13 +1,13 @@
 const worldData: any = {
-  "type": "Topology",
-  "transform": {
-    "scale": [0.03600360036003601, 0.017366249624962495],
-    "translate": [-180, -90]
+  'type': 'Topology',
+  'transform': {
+    'scale': [0.03600360036003601, 0.017366249624962495],
+    'translate': [-180, -90]
   },
-  "objects": {
-    "land": {
-      "type": "MultiPolygon",
-      "arcs": [
+  'objects': {
+    'land': {
+      'type': 'MultiPolygon',
+      'arcs': [
         [
           [0]
         ],
@@ -392,18 +392,18 @@ const worldData: any = {
         ]
       ]
     },
-    "countries": {
-      "type": "GeometryCollection",
-      "geometries": [{
-        "type": "Polygon",
-        "id": 4,
-        "arcs": [
+    'countries': {
+      'type': 'GeometryCollection',
+      'geometries': [{
+        'type': 'Polygon',
+        'id': 4,
+        'arcs': [
           [297, 298, 299, 300, 301, 302]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 24,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 24,
+        'arcs': [
           [
             [303, 304, 211, 305]
           ],
@@ -412,21 +412,21 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 8,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 8,
+        'arcs': [
           [308, 248, 309, 310, 311]
         ]
       }, {
-        "type": "Polygon",
-        "id": 784,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 784,
+        'arcs': [
           [312, 195, 313, 314, 193]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 32,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 32,
+        'arcs': [
           [
             [315, 10]
           ],
@@ -435,15 +435,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 51,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 51,
+        'arcs': [
           [321, 322, 323, 324, 325]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 10,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 10,
+        'arcs': [
           [
             [0]
           ],
@@ -470,15 +470,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 260,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 260,
+        'arcs': [
           [327]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 36,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 36,
+        'arcs': [
           [
             [13]
           ],
@@ -487,15 +487,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 40,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 40,
+        'arcs': [
           [328, 329, 330, 331, 332, 333, 334]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 31,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 31,
+        'arcs': [
           [
             [335, -323]
           ],
@@ -504,45 +504,45 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 108,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 108,
+        'arcs': [
           [339, 340, 341]
         ]
       }, {
-        "type": "Polygon",
-        "id": 56,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 56,
+        'arcs': [
           [342, 343, 344, 258, 345]
         ]
       }, {
-        "type": "Polygon",
-        "id": 204,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 204,
+        'arcs': [
           [346, 347, 348, 219, 349]
         ]
       }, {
-        "type": "Polygon",
-        "id": 854,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 854,
+        'arcs': [
           [350, 351, -347, 352, 353, 354]
         ]
       }, {
-        "type": "Polygon",
-        "id": 50,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 50,
+        'arcs': [
           [184, 355, 356]
         ]
       }, {
-        "type": "Polygon",
-        "id": 100,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 100,
+        'arcs': [
           [245, 357, 358, 359, 360, 361]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 44,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 44,
+        'arcs': [
           [
             [70]
           ],
@@ -554,63 +554,63 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 70,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 70,
+        'arcs': [
           [362, 363, 364]
         ]
       }, {
-        "type": "Polygon",
-        "id": 112,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 112,
+        'arcs': [
           [365, 366, 367, 368, 369]
         ]
       }, {
-        "type": "Polygon",
-        "id": 84,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 84,
+        'arcs': [
           [118, 370, 371]
         ]
       }, {
-        "type": "Polygon",
-        "id": 68,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 68,
+        'arcs': [
           [372, 373, 374, 375, -321]
         ]
       }, {
-        "type": "Polygon",
-        "id": 76,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 76,
+        'arcs': [
           [376, -375, 377, 378, 379, 380, 381, 382, 129, 383, -318]
         ]
       }, {
-        "type": "Polygon",
-        "id": 96,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 96,
+        'arcs': [
           [384, 47]
         ]
       }, {
-        "type": "Polygon",
-        "id": 64,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 64,
+        'arcs': [
           [385, 386]
         ]
       }, {
-        "type": "Polygon",
-        "id": 72,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 72,
+        'arcs': [
           [387, 388, 389, 390]
         ]
       }, {
-        "type": "Polygon",
-        "id": 140,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 140,
+        'arcs': [
           [391, 392, 393, 394, 395, 396, 397]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 124,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 124,
+        'arcs': [
           [
             [83]
           ],
@@ -703,15 +703,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 756,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 756,
+        'arcs': [
           [406, 407, 408, -331]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 152,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 152,
+        'arcs': [
           [
             [409, 410, 411, -316]
           ],
@@ -720,9 +720,9 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 156,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 156,
+        'arcs': [
           [
             [63]
           ],
@@ -731,81 +731,81 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 384,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 384,
+        'arcs': [
           [428, 429, 430, -355, 431, 222]
         ]
       }, {
-        "type": "Polygon",
-        "id": 120,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 120,
+        'arcs': [
           [432, 217, 433, 434, 435, -397, 436, 437]
         ]
       }, {
-        "type": "Polygon",
-        "id": 180,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 180,
+        'arcs': [
           [438, -342, 439, 440, -306, 212, -308, 441, -395, 442, 443]
         ]
       }, {
-        "type": "Polygon",
-        "id": 178,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 178,
+        'arcs': [
           [214, 444, -437, -396, -442, -307]
         ]
       }, {
-        "type": "Polygon",
-        "id": 170,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 170,
+        'arcs': [
           [135, 445, 124, 446, -379, 447, 448]
         ]
       }, {
-        "type": "Polygon",
-        "id": 188,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 188,
+        'arcs': [
           [449, 122, 450, 137]
         ]
       }, {
-        "type": "Polygon",
-        "id": 192,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 192,
+        'arcs': [
           [451]
         ]
       }, {
-        "type": "Polygon",
-        "id": -1,
-        "arcs": [
+        'type': 'Polygon',
+        'id': -1,
+        'arcs': [
           [452, 76]
         ]
       }, {
-        "type": "Polygon",
-        "id": 196,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 196,
+        'arcs': [
           [-453, 75]
         ]
       }, {
-        "type": "Polygon",
-        "id": 203,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 203,
+        'arcs': [
           [453, 454, 455, -333]
         ]
       }, {
-        "type": "Polygon",
-        "id": 276,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 276,
+        'arcs': [
           [456, -454, -332, -409, 457, 458, -343, 459, 260, 460, 262]
         ]
       }, {
-        "type": "Polygon",
-        "id": 262,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 262,
+        'arcs': [
           [461, 462, 463, 203]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 208,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 208,
+        'arcs': [
           [
             [91]
           ],
@@ -814,63 +814,63 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 214,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 214,
+        'arcs': [
           [464, 61]
         ]
       }, {
-        "type": "Polygon",
-        "id": 12,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 12,
+        'arcs': [
           [465, 466, 467, 468, 233, 469, 470, 471]
         ]
       }, {
-        "type": "Polygon",
-        "id": 218,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 218,
+        'arcs': [
           [-449, 472, 134]
         ]
       }, {
-        "type": "Polygon",
-        "id": 818,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 818,
+        'arcs': [
           [473, 474, 236, 475, 200]
         ]
       }, {
-        "type": "Polygon",
-        "id": 232,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 232,
+        'arcs': [
           [476, 202, -464, 477]
         ]
       }, {
-        "type": "Polygon",
-        "id": 724,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 724,
+        'arcs': [
           [478, 254, 479, 256]
         ]
       }, {
-        "type": "Polygon",
-        "id": 233,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 233,
+        'arcs': [
           [480, 481, 267]
         ]
       }, {
-        "type": "Polygon",
-        "id": 231,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 231,
+        'arcs': [
           [-463, 482, 483, 484, 485, 486, 487, -478]
         ]
       }, {
-        "type": "Polygon",
-        "id": 246,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 246,
+        'arcs': [
           [269, 488, 489, 490]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 242,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 242,
+        'arcs': [
           [
             [17]
           ],
@@ -882,15 +882,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 238,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 238,
+        'arcs': [
           [491]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 250,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 250,
+        'arcs': [
           [
             [492, 493, 494, 128, -383]
           ],
@@ -902,15 +902,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 266,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 266,
+        'arcs': [
           [497, -438, -445, 215]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 826,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 826,
+        'arcs': [
           [
             [498, 89]
           ],
@@ -919,45 +919,45 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 268,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 268,
+        'arcs': [
           [503, -338, -325, 504, 241]
         ]
       }, {
-        "type": "Polygon",
-        "id": 288,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 288,
+        'arcs': [
           [-432, -354, 505, 221]
         ]
       }, {
-        "type": "Polygon",
-        "id": 324,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 324,
+        'arcs': [
           [506, 225, 507, 508, 509, -430, 510]
         ]
       }, {
-        "type": "Polygon",
-        "id": 270,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 270,
+        'arcs': [
           [228, 511]
         ]
       }, {
-        "type": "Polygon",
-        "id": 624,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 624,
+        'arcs': [
           [512, -508, 226]
         ]
       }, {
-        "type": "Polygon",
-        "id": 226,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 226,
+        'arcs': [
           [-433, -498, 216]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 300,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 300,
+        'arcs': [
           [
             [77]
           ],
@@ -966,51 +966,51 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 304,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 304,
+        'arcs': [
           [515]
         ]
       }, {
-        "type": "Polygon",
-        "id": 320,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 320,
+        'arcs': [
           [516, -371, 119, 517, 518, 143]
         ]
       }, {
-        "type": "Polygon",
-        "id": 328,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 328,
+        'arcs': [
           [519, -381, 520, 126]
         ]
       }, {
-        "type": "Polygon",
-        "id": 340,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 340,
+        'arcs': [
           [521, -518, 120, 522, 139]
         ]
       }, {
-        "type": "Polygon",
-        "id": 191,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 191,
+        'arcs': [
           [-364, 523, 250, 524, 525, 526]
         ]
       }, {
-        "type": "Polygon",
-        "id": 332,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 332,
+        'arcs': [
           [-465, 62]
         ]
       }, {
-        "type": "Polygon",
-        "id": 348,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 348,
+        'arcs': [
           [527, 528, 529, 530, -526, 531, -335]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 360,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 360,
+        'arcs': [
           [
             [25]
           ],
@@ -1052,45 +1052,45 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 356,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 356,
+        'arcs': [
           [535, -419, -387, -418, 536, -356, 185, 537, -421]
         ]
       }, {
-        "type": "Polygon",
-        "id": 372,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 372,
+        'arcs': [
           [-499, 90]
         ]
       }, {
-        "type": "Polygon",
-        "id": 364,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 364,
+        'arcs': [
           [-302, 538, 187, 539, 540, -336, -322, -337, 278, 541]
         ]
       }, {
-        "type": "Polygon",
-        "id": 368,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 368,
+        'arcs': [
           [188, 542, 543, 544, 545, 546, -540]
         ]
       }, {
-        "type": "Polygon",
-        "id": 352,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 352,
+        'arcs': [
           [99]
         ]
       }, {
-        "type": "Polygon",
-        "id": 376,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 376,
+        'arcs': [
           [547, -476, 237, 548, 549, 550, 551]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 380,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 380,
+        'arcs': [
           [
             [78]
           ],
@@ -1102,21 +1102,21 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 388,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 388,
+        'arcs': [
           [553]
         ]
       }, {
-        "type": "Polygon",
-        "id": 400,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 400,
+        'arcs': [
           [-545, 554, 199, -548, 555, -551, 556]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 392,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 392,
+        'arcs': [
           [
             [74]
           ],
@@ -1128,177 +1128,177 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 398,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 398,
+        'arcs': [
           [557, 280, 558, -425, 559, 560]
         ]
       }, {
-        "type": "Polygon",
-        "id": 404,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 404,
+        'arcs': [
           [206, 561, 562, 563, -485, 564]
         ]
       }, {
-        "type": "Polygon",
-        "id": 417,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 417,
+        'arcs': [
           [-424, 565, 566, -560]
         ]
       }, {
-        "type": "Polygon",
-        "id": 116,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 116,
+        'arcs': [
           [567, 568, 569, 179]
         ]
       }, {
-        "type": "Polygon",
-        "id": 410,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 410,
+        'arcs': [
           [570, 175]
         ]
       }, {
-        "type": "Polygon",
-        "id": -2,
-        "arcs": [
+        'type': 'Polygon',
+        'id': -2,
+        'arcs': [
           [-311, 571, 572, 573]
         ]
       }, {
-        "type": "Polygon",
-        "id": 414,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 414,
+        'arcs': [
           [574, -543, 189]
         ]
       }, {
-        "type": "Polygon",
-        "id": 418,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 418,
+        'arcs': [
           [575, -416, 576, -569, 577]
         ]
       }, {
-        "type": "Polygon",
-        "id": 422,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 422,
+        'arcs': [
           [238, 578, -549]
         ]
       }, {
-        "type": "Polygon",
-        "id": 430,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 430,
+        'arcs': [
           [579, -511, -429, 223]
         ]
       }, {
-        "type": "Polygon",
-        "id": 434,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 434,
+        'arcs': [
           [-471, 580, 235, -475, 581, 582, 583]
         ]
       }, {
-        "type": "Polygon",
-        "id": 144,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 144,
+        'arcs': [
           [584]
         ]
       }, {
-        "type": "Polygon",
-        "id": 426,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 426,
+        'arcs': [
           [585]
         ]
       }, {
-        "type": "Polygon",
-        "id": 440,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 440,
+        'arcs': [
           [265, 586, -370, 587, 588]
         ]
       }, {
-        "type": "Polygon",
-        "id": 442,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 442,
+        'arcs': [
           [-496, -344, -459]
         ]
       }, {
-        "type": "Polygon",
-        "id": 428,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 428,
+        'arcs': [
           [-482, 589, -366, -587, 266]
         ]
       }, {
-        "type": "Polygon",
-        "id": 504,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 504,
+        'arcs': [
           [-469, 590, 591, 592, 593]
         ]
       }, {
-        "type": "Polygon",
-        "id": 498,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 498,
+        'arcs': [
           [594, 595]
         ]
       }, {
-        "type": "Polygon",
-        "id": 450,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 450,
+        'arcs': [
           [596]
         ]
       }, {
-        "type": "Polygon",
-        "id": 484,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 484,
+        'arcs': [
           [-372, -517, 144, 597, 598]
         ]
       }, {
-        "type": "Polygon",
-        "id": 807,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 807,
+        'arcs': [
           [599, -360, -514, -312, -574]
         ]
       }, {
-        "type": "Polygon",
-        "id": 466,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 466,
+        'arcs': [
           [-466, 600, -351, -431, -510, 601, 602]
         ]
       }, {
-        "type": "Polygon",
-        "id": 104,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 104,
+        'arcs': [
           [183, -357, -537, -417, -576, 603]
         ]
       }, {
-        "type": "Polygon",
-        "id": 499,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 499,
+        'arcs': [
           [249, -524, -363, 604, -572, -310]
         ]
       }, {
-        "type": "Polygon",
-        "id": 496,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 496,
+        'arcs': [
           [-427, 605]
         ]
       }, {
-        "type": "Polygon",
-        "id": 508,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 508,
+        'arcs': [
           [208, 606, 607, 608, 609, 610, 611, 612]
         ]
       }, {
-        "type": "Polygon",
-        "id": 478,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 478,
+        'arcs': [
           [230, 613, -467, -603, 614]
         ]
       }, {
-        "type": "Polygon",
-        "id": 454,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 454,
+        'arcs': [
           [615, 616, -612]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 458,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 458,
+        'arcs': [
           [
             [181, 617]
           ],
@@ -1307,45 +1307,45 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 516,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 516,
+        'arcs': [
           [-305, 618, -389, 619, 210]
         ]
       }, {
-        "type": "Polygon",
-        "id": 540,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 540,
+        'arcs': [
           [620]
         ]
       }, {
-        "type": "Polygon",
-        "id": 562,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 562,
+        'arcs': [
           [-601, -472, -584, 621, -435, 622, -348, -352]
         ]
       }, {
-        "type": "Polygon",
-        "id": 566,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 566,
+        'arcs': [
           [-349, -623, -434, 218]
         ]
       }, {
-        "type": "Polygon",
-        "id": 558,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 558,
+        'arcs': [
           [-523, 121, -450, 138]
         ]
       }, {
-        "type": "Polygon",
-        "id": 528,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 528,
+        'arcs': [
           [-460, -346, 259]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 578,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 578,
+        'arcs': [
           [
             [623, -490, 624, 271]
           ],
@@ -1360,15 +1360,15 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 524,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 524,
+        'arcs': [
           [-420, -536]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 554,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 554,
+        'arcs': [
           [
             [14]
           ],
@@ -1377,9 +1377,9 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 512,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 512,
+        'arcs': [
           [
             [625, 626, -314, 196]
           ],
@@ -1388,27 +1388,27 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 586,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 586,
+        'arcs': [
           [-538, 186, -539, -301, -422]
         ]
       }, {
-        "type": "Polygon",
-        "id": 591,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 591,
+        'arcs': [
           [-451, 123, -446, 136]
         ]
       }, {
-        "type": "Polygon",
-        "id": 604,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 604,
+        'arcs': [
           [133, -473, -448, -378, -374, -413]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 608,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 608,
+        'arcs': [
           [
             [50]
           ],
@@ -1432,9 +1432,9 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 598,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 598,
+        'arcs': [
           [
             [36]
           ],
@@ -1449,57 +1449,57 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 616,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 616,
+        'arcs': [
           [263, 627, -588, -369, 628, 629, -455, -457]
         ]
       }, {
-        "type": "Polygon",
-        "id": 630,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 630,
+        'arcs': [
           [630]
         ]
       }, {
-        "type": "Polygon",
-        "id": 408,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 408,
+        'arcs': [
           [-571, 176, -414, 631, 174]
         ]
       }, {
-        "type": "Polygon",
-        "id": 620,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 620,
+        'arcs': [
           [255, -480]
         ]
       }, {
-        "type": "Polygon",
-        "id": 600,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 600,
+        'arcs': [
           [-377, -317, -376]
         ]
       }, {
-        "type": "Polygon",
-        "id": 275,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 275,
+        'arcs': [
           [-552, -556]
         ]
       }, {
-        "type": "Polygon",
-        "id": 634,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 634,
+        'arcs': [
           [632, 191]
         ]
       }, {
-        "type": "Polygon",
-        "id": 642,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 642,
+        'arcs': [
           [-595, 633, 244, -362, 634, -530, 635]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 643,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 643,
+        'arcs': [
           [
             [88]
           ],
@@ -1541,45 +1541,45 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 646,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 646,
+        'arcs': [
           [-340, -439, 643, 644]
         ]
       }, {
-        "type": "Polygon",
-        "id": 732,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 732,
+        'arcs': [
           [-468, -614, 231, -591]
         ]
       }, {
-        "type": "Polygon",
-        "id": 682,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 682,
+        'arcs': [
           [-555, -544, -575, 190, -633, 192, -315, -627, 645, 198]
         ]
       }, {
-        "type": "Polygon",
-        "id": 729,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 729,
+        'arcs': [
           [646, -582, -474, 201, -477, -488, 647, 648, 649, -392]
         ]
       }, {
-        "type": "Polygon",
-        "id": 728,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 728,
+        'arcs': [
           [-564, 650, -443, -394, 651, -649, 652, -486]
         ]
       }, {
-        "type": "Polygon",
-        "id": 686,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 686,
+        'arcs': [
           [-615, -602, -509, -513, 227, -512, 229]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 90,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 90,
+        'arcs': [
           [
             [24]
           ],
@@ -1597,123 +1597,123 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 694,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 694,
+        'arcs': [
           [-507, -580, 224]
         ]
       }, {
-        "type": "Polygon",
-        "id": 222,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 222,
+        'arcs': [
           [142, -519, -522, 140, 653]
         ]
       }, {
-        "type": "Polygon",
-        "id": -3,
-        "arcs": [
+        'type': 'Polygon',
+        'id': -3,
+        'arcs': [
           [-483, -462, 204, 654]
         ]
       }, {
-        "type": "Polygon",
-        "id": 706,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 706,
+        'arcs': [
           [-565, -484, -655, 205]
         ]
       }, {
-        "type": "Polygon",
-        "id": 688,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 688,
+        'arcs': [
           [-361, -600, -573, -605, -365, -527, -531, -635]
         ]
       }, {
-        "type": "Polygon",
-        "id": 740,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 740,
+        'arcs': [
           [-495, 655, 656, -382, -520, 127]
         ]
       }, {
-        "type": "Polygon",
-        "id": 703,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 703,
+        'arcs': [
           [657, -528, -334, -456, -630]
         ]
       }, {
-        "type": "Polygon",
-        "id": 705,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 705,
+        'arcs': [
           [-532, -525, 251, -553, -329]
         ]
       }, {
-        "type": "Polygon",
-        "id": 752,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 752,
+        'arcs': [
           [-625, -489, 270]
         ]
       }, {
-        "type": "Polygon",
-        "id": 748,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 748,
+        'arcs': [
           [-608, 658]
         ]
       }, {
-        "type": "Polygon",
-        "id": 760,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 760,
+        'arcs': [
           [-550, -579, 239, 659, -546, -557]
         ]
       }, {
-        "type": "Polygon",
-        "id": 148,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 148,
+        'arcs': [
           [-583, -647, -398, -436, -622]
         ]
       }, {
-        "type": "Polygon",
-        "id": 768,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 768,
+        'arcs': [
           [-353, -350, 220, -506]
         ]
       }, {
-        "type": "Polygon",
-        "id": 764,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 764,
+        'arcs': [
           [-618, 182, -604, -578, -568, 180]
         ]
       }, {
-        "type": "Polygon",
-        "id": 762,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 762,
+        'arcs': [
           [-423, -299, 660, -566]
         ]
       }, {
-        "type": "Polygon",
-        "id": 795,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 795,
+        'arcs': [
           [279, -558, 661, -303, -542]
         ]
       }, {
-        "type": "Polygon",
-        "id": 626,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 626,
+        'arcs': [
           [-533, 28]
         ]
       }, {
-        "type": "Polygon",
-        "id": 780,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 780,
+        'arcs': [
           [662]
         ]
       }, {
-        "type": "Polygon",
-        "id": 788,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 788,
+        'arcs': [
           [234, -581, -470]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 792,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 792,
+        'arcs': [
           [
             [-505, -324, -541, -547, -660, 240]
           ],
@@ -1722,39 +1722,39 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 158,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 158,
+        'arcs': [
           [663]
         ]
       }, {
-        "type": "Polygon",
-        "id": 834,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 834,
+        'arcs': [
           [207, -613, -617, 664, -440, -341, -645, 665, -562]
         ]
       }, {
-        "type": "Polygon",
-        "id": 800,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 800,
+        'arcs': [
           [-644, -444, -651, -563, -666]
         ]
       }, {
-        "type": "Polygon",
-        "id": 804,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 804,
+        'arcs': [
           [243, -634, -596, -636, -529, -658, -629, -368, -637]
         ]
       }, {
-        "type": "Polygon",
-        "id": 858,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 858,
+        'arcs': [
           [130, -319, -384]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 840,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 840,
+        'arcs': [
           [
             [64]
           ],
@@ -1787,27 +1787,27 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 860,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 860,
+        'arcs': [
           [-561, -567, -661, -298, -662]
         ]
       }, {
-        "type": "Polygon",
-        "id": 862,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 862,
+        'arcs': [
           [-521, -380, -447, 125]
         ]
       }, {
-        "type": "Polygon",
-        "id": 704,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 704,
+        'arcs': [
           [-570, -577, -415, 178]
         ]
       }, {
-        "type": "MultiPolygon",
-        "id": 548,
-        "arcs": [
+        'type': 'MultiPolygon',
+        'id': 548,
+        'arcs': [
           [
             [20]
           ],
@@ -1816,34 +1816,34 @@ const worldData: any = {
           ]
         ]
       }, {
-        "type": "Polygon",
-        "id": 887,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 887,
+        'arcs': [
           [-646, -626, 197]
         ]
       }, {
-        "type": "Polygon",
-        "id": 710,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 710,
+        'arcs': [
           [-620, -388, 674, -609, -659, -607, 209],
           [-586]
         ]
       }, {
-        "type": "Polygon",
-        "id": 894,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 894,
+        'arcs': [
           [-611, 675, -390, -619, -304, -441, -665, -616]
         ]
       }, {
-        "type": "Polygon",
-        "id": 716,
-        "arcs": [
+        'type': 'Polygon',
+        'id': 716,
+        'arcs': [
           [-391, -676, -610, -675]
         ]
       }]
     }
   },
-  "arcs": [
+  'arcs': [
     [
       [3344, 573],
       [-8, -29],

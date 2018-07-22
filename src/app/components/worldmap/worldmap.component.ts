@@ -1,4 +1,4 @@
-import { Component,  Renderer2, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 import * as d3Tip from 'd3-tip';
 import * as topojson from 'topojson';
@@ -41,28 +41,41 @@ export class WorldmapComponent implements OnInit {
     //   );
     // });
 
+    /* globals used in graph */
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
     const width = 900 - margin.left - margin.right;
     const height = 700 - margin.top - margin.bottom;
    
     const color = d3.scaleThreshold()
       .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000]);
-  
-    const svg = d3.select( '#mapContainer' )
-      .append( 'svg' )
-      .attr( 'width', width )
-      .attr( 'height', height )
-      .append('g')
-      .attr('class', 'map');
-  
+      // .range([
+      //   'rgb(247,251,255)', 'rgb(222,235,247)', 'rgb(198,219,239)', 'rgb(158,202,225)',
+      // 'rgb(107,174,214)', 'rgb(66,146,198)','rgb(33,113,181)','rgb(8,81,156)',
+      // 'rgb(8,48,107)', 'rgb(3,19,43)'
+      // ]);
+    
+    /* projection definitions */
     const projection = d3.geoMercator()
-      .scale( 130 )
-      .rotate( [71.057, 0] )
-      .center( [0, 42.313] )
-      .translate( [width / 2, height / 1.5] );
+      // .scale( 130 )
+      // .rotate( [71.057, 0] )
+      // .center( [0, 42.313] )
+      .scale((width + 1) / 2 / Math.PI)
+      .translate([width / 2, height / 1.75])
+      // .translate( [width / 2, height / 1.5] )
+      .precision(.8);
   
     const geoPath = d3.geoPath()
       .projection( projection );
+
+    const graticule = d3.geoGraticule();
+
+    /* SVG related definitions */
+    const svg = d3.select( '#mapContainer' )
+    .append( 'svg' )
+    .attr( 'width', width )
+    .attr( 'height', height )
+    .append('g')
+    .attr('class', 'map');
 
     // create FeatureCollection
     const countries: any = topojson.feature(worldData, worldData.objects.countries);
@@ -102,7 +115,7 @@ export class WorldmapComponent implements OnInit {
       .attr('fill', 'red');
   }
 
-  constructor(private renderer: Renderer2) { }
+  constructor() { }
 
   ngOnInit() { 
     this.appendData();
