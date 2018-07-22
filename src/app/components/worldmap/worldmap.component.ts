@@ -60,8 +60,7 @@ export class WorldmapComponent implements OnInit {
       // .rotate( [71.057, 0] )
       // .center( [0, 42.313] )
       .scale((width + 1) / 2 / Math.PI)
-      .translate([width / 2, height / 1.75])
-      // .translate( [width / 2, height / 1.5] )
+      .translate([width / 2, height / 1.59])
       .precision(.8);
   
     const geoPath = d3.geoPath()
