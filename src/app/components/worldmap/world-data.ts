@@ -1,4 +1,4 @@
-const worldData = {
+const worldData: any = {
   "type": "Topology",
   "transform": {
     "scale": [0.03600360036003601, 0.017366249624962495],

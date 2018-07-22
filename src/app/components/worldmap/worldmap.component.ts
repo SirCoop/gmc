@@ -1,5 +1,6 @@
 import { Component,  Renderer2, OnInit } from '@angular/core';
 import * as d3 from 'd3';
+import * as tooltip from 'd3-tip';
 import * as topojson from 'topojson';
 import worldData from './world-data.js';
 import visitedLocationCoordinates from './visited-locations';
@@ -25,8 +26,20 @@ export class WorldmapComponent implements OnInit {
     });
   }
   
-
   appendData() {
+    const format = d3.format(',');
+
+    // Set tooltips
+    // const tip = tooltip.tip()
+    // .attr('class', 'd3-tip')
+    // .offset([-10, 0])
+    // .html(function(d) {
+    //   return (
+    //     '<strong>Country: </strong><span class="details">' + 
+    //     d.properties.name + '<br></span>' + '<strong>Population: </strong><span class="details">' + 
+    //     format(d.population) + '</span>'
+    //   );
+    // });
 
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
     const width = 900 - margin.left - margin.right;
