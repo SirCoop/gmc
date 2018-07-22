@@ -28,6 +28,12 @@ const visitedLocationCoordinates: any = [
     // Rio de Janeiro
     [-43.172896, -22.906847],
 
+    /* Caribbean */
+    // Havana, Cuba
+    [-82.366596, 23.113592],
+    // San Juan, Puerto Rico, USA
+    [-66.105735, 18.465539],
+
     /* Europe */
     // Nitra, Slovakia
     [18.076376, 48.306141],
@@ -54,7 +60,9 @@ const visitedLocationCoordinates: any = [
     // Osan, Korea
     [127.077221, 37.149810],
 
-    /* SouthEast Asia */  
+    /* SouthEast Asia */
+    // Bangkok, Thailand
+    [100.501765, 13.756331],
     // Chalong, Phuket, Thailand
     [98.348390, 7.836717],
     // Nusa Dua, Bali, Indonesia
