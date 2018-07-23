@@ -5,7 +5,7 @@ module.exports = {
         port: 1213
     },
     webapp: {
-        dist: path.join(__dirname, 'webapp/dist/GMC'),
+        dist: path.join(__dirname, 'webapp/dist'),
         dev: path.join(__dirname, 'webapp/src/app')
     }
 };
