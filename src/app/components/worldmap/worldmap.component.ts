@@ -88,7 +88,7 @@ export class WorldmapComponent implements OnInit {
           .style('stroke', 'white')
           .style('stroke-width', 0.3)
           .on('mouseover', function(d) {
-            tip.show(d);
+            tip.show(d, this);
   
             d3.select(this)
               .style('opacity', 1)
@@ -96,7 +96,7 @@ export class WorldmapComponent implements OnInit {
               .style('stroke-width', 3);
           })
           .on('mouseout', function(d) {
-            tip.hide(d);
+            tip.hide(d, this);
   
             d3.select(this)
               .style('opacity', 0.8)
