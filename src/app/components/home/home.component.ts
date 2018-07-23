@@ -12,19 +12,21 @@ export class HomeComponent implements OnInit {
 
   user$: Object;
 
-  constructor(private route: ActivatedRoute, private data: DataService) {
-    this.route.params.subscribe( params => {
-      console.log('details route params: ', params);
-      this.user$ = params.id ;
-    });
-   }
+  // constructor(private route: ActivatedRoute, private data: DataService) {
+  //   this.route.params.subscribe( params => {
+  //     this.user$ = params.id ;
+  //   });
+  // }
+
+  constructor() {}
 
   ngOnInit() {
-    this.data.getUser(this.user$).subscribe(
-      data => {
-        console.log('data: ', data);
-        this.user$ = data;
-      });
+    // this.data.getUser(this.user$).subscribe(
+    //   data => {
+    //     console.log('data: ', data);
+    //     this.user$ = data;
+    //   }
+    // );
   }
 
 }
