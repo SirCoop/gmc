@@ -53,7 +53,7 @@ export class WorldmapComponent implements OnInit {
 
     let path = d3.geoPath();
     
-    const svg = d3.select('body')
+    const svg = d3.select( '#mapContainer' )
                 .append('svg')
                 .attr('width', width)
                 .attr('height', height)
@@ -73,8 +73,6 @@ export class WorldmapComponent implements OnInit {
     population.forEach(function(d) { populationById[d.id] = + d.population; });
     data.features.forEach(function(d) { d.population = populationById[d.id]; });
 
-    console.log('svg: ', svg);
-  
     svg.append('g')
         .attr('class', 'data')
       .selectAll('path')
