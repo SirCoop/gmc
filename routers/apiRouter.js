@@ -7,7 +7,7 @@ router.get('', (req, res) => {
 });
 
 router.get('/coop', (req, res) => {
-    res.send('coop works');
-  });
+  res.send('coop works');
+});
 
 module.exports = router;

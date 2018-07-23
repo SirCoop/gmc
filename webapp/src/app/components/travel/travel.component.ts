@@ -12,7 +12,6 @@ export class TravelComponent implements OnInit {
 
   private testUrl = '/api';
 
-  /* returns type: <any> for testing api connection */
   fetchData() {
     return this.http.get(this.testUrl)
       .subscribe(data => {

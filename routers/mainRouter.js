@@ -5,7 +5,7 @@ const CONSTANTS = require('../constants.js');
 /* GET api listing */
 router.get('', (req, res) => {
 //   res.send('main works');
-    res.sendFile(`${CONSTANTS.webapp.dev}/index.html`)
+    // res.sendFile(`${CONSTANTS.webapp.dev}/index.html`)
 });
 
 
