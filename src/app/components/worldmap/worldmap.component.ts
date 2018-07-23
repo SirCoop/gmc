@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import worldCountries from './world_countries';
 import worldPopulation from './world_population';
@@ -25,10 +26,8 @@ export class WorldmapComponent implements OnInit {
                 .offset([-10, 0])
                 .html(function(d) {
                   return (
-                    '<strong>Country: </strong><span class="details">' +
-                    d.properties.name + '<br></span>' +
-                    '<strong>Population: </strong><span class="details">'
-                    + format(d.population) + '</span>');
+                    `<strong>Country: </strong><span class="details">${d.properties.name}<br>
+                    </span><strong>Population: </strong><span class="details">format(${d.population})</span>`);
                 });
     
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
@@ -104,6 +103,9 @@ export class WorldmapComponent implements OnInit {
               .style('opacity', 0.8)
               .style('stroke', 'white')
               .style('stroke-width',  0.3);
+          })
+          .on('click', (country) => {
+            this.redirect(country.properties.name);
           });
   
     svg.append('path')
@@ -121,8 +123,11 @@ export class WorldmapComponent implements OnInit {
       .attr('fill', 'red');
   }
 
+  redirect(country: string) {
+    this.router.navigate([country]);
+  }
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.ready();
