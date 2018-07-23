@@ -106,7 +106,9 @@ export class WorldmapComponent implements OnInit {
           })
           .on('click', (country) => {
             tip.hide();
-            this.redirect(country.properties.name);
+            /* remove whitespace in country name to prettify url */
+            const countryName = country.properties.name.replace(/\s/g, '');
+            this.redirect(countryName);
           });
   
     svg.append('path')
