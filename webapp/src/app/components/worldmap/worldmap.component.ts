@@ -88,13 +88,14 @@ export class WorldmapComponent implements OnInit {
         /* change country styling on focus */
           .style('stroke', 'white')
           .style('stroke-width', 0.3)
-          .on('mouseover', function(d) {
+          .on('mouseover', function(d) {            
             tip.show(d, this);
   
             d3.select(this)
               .style('opacity', 1)
               .style('stroke', 'white')
-              .style('stroke-width', 3);
+              .style('stroke-width', 3)
+              .style('cursor', 'pointer');
           })
           .on('mouseout', function(d) {
             tip.hide(d, this);
