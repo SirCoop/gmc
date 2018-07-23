@@ -6,6 +6,6 @@ module.exports = {
     },
     webapp: {
         dist: path.join(__dirname, 'webapp/dist/GMC'),
-        dev: path.join(__dirname, 'webapp/src')
+        dev: path.join(__dirname, 'webapp/src/app')
     }
 };
