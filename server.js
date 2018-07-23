@@ -6,6 +6,7 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
 
 /* Get API routes */
 const api = require('./routers/apiRouter');
