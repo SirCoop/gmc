@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     express: {
-        port: 3000
+        port: 1213
     },
     webapp: {
         dist: path.join(__dirname, 'webapp/dist'),
