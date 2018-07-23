@@ -10,10 +10,18 @@ export class TravelComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  private testUrl = '/api';
+
+  /* returns type: <any> for testing api connection */
+  fetchData() {
+    return this.http.get(this.testUrl)
+      .subscribe(data => {
+        console.log('data: ', data);
+      });
+  }
+
   ngOnInit() {
-    this.http.get('/api').subscribe(data => {
-      console.log('data: ', data);
-    });
+    this.fetchData();
 
   }
 
