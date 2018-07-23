@@ -71,6 +71,8 @@ const visitedLocationCoordinates: any = [
     [115.230162, -8.794096],
     // Kuala Lumpur, Malaysia
     [101.686855, 3.139003],
+    // Singapore, Singapore
+    [103.819836, 1.352083],
 
     /* South Pacific */
      // Waikiki, Hawaii

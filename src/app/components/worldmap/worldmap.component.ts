@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import worldCountries from './world_countries';
 import worldPopulation from './world_population';
+import visitedLocationCoordinates from './visited-locations';
 
 // script tag imports due to typing and compatibility issues
 declare let d3: any;
@@ -87,7 +88,7 @@ export class WorldmapComponent implements OnInit {
           .style('stroke', 'white')
           .style('stroke-width', 0.3)
           .on('mouseover', function(d) {
-            this.tip.show(d);
+            tip.show(d);
   
             d3.select(this)
               .style('opacity', 1)
@@ -95,7 +96,7 @@ export class WorldmapComponent implements OnInit {
               .style('stroke-width', 3);
           })
           .on('mouseout', function(d) {
-            this.tip.hide(d);
+            tip.hide(d);
   
             d3.select(this)
               .style('opacity', 0.8)
@@ -107,6 +108,15 @@ export class WorldmapComponent implements OnInit {
         .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
         .attr('class', 'names')
         .attr('d', path);
+
+    // add circles to svg
+    svg.selectAll('circle')
+      .data(visitedLocationCoordinates).enter()
+      .append('circle')
+      .attr('cx', (d: any) => projection(d)[0])
+      .attr('cy', (d: any) => projection(d)[1])
+      .attr('r', '3px')
+      .attr('fill', 'red');
   }
 
   
