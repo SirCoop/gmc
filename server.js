@@ -17,14 +17,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 /* Point static path to dist */
-app.use(express.static(CONSTANTS.webapp_dir));
+app.use(express.static(CONSTANTS.webapp.dist));
 
 /* Set api routes */
 app.use('/api', api);
 
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
-    res.sendFile(`${CONSTANTS.webapp_dir}/index.html`);
+    res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);
   });
 
 app.set('port', CONSTANTS.express.port);
