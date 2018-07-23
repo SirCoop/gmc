@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import worldCountries from './world_countries';
 import worldPopulation from './world_population';
 import visitedLocationCoordinates from './visited-locations';
-import { removeDebugNodeFromIndex } from '../../../../node_modules/@angular/core/src/debug/debug_node';
 
-// script tag imports due to typing and compatibility issues
+/* imported via script tags due to typing and compatibility issues */
 declare let d3: any;
 declare let topojson: any;
 
@@ -20,7 +19,7 @@ export class WorldmapComponent implements OnInit {
     const population: any = worldPopulation;
     const format = d3.format(',');
 
-    // Set tooltips
+    /* Set tooltips */
     const tip = d3.tip()
                 .attr('class', 'd3-tip')
                 .offset([-10, 0])
@@ -68,6 +67,7 @@ export class WorldmapComponent implements OnInit {
     
     path = d3.geoPath().projection(projection);
 
+    /* Invoke the tip in the context of this visualization */
     svg.call(tip);
 
     const populationById = {};
@@ -81,12 +81,12 @@ export class WorldmapComponent implements OnInit {
         .data(data.features)
       .enter().append('path')
         .attr('d', path)
-        // fills country with color based on population
+        /* fills country with color based on population */
         .style('fill', function(d) { return color(populationById[d.id]); })
         .style('stroke', 'white')
         .style('stroke-width', 1.5)
         .style('opacity', 0.8)
-        // change country styling on focus
+        /* change country styling on focus */
           .style('stroke', 'white')
           .style('stroke-width', 0.3)
           .on('mouseover', function(d) {
@@ -111,7 +111,7 @@ export class WorldmapComponent implements OnInit {
         .attr('class', 'names')
         .attr('d', path);
 
-    // add circles to svg
+    /* add circles to svg */
     svg.selectAll('circle')
       .data(visitedLocationCoordinates).enter()
       .append('circle')
