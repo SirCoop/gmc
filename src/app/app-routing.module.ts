@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { TravelComponent } from './components/travel/travel.component';
+import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'travel-gallery',
     component: TravelComponent
+  },
+  {
+    path: 'travel-gallery/:country',
+    component: TravelImagesComponent
   },
   {
     path: 'apps',

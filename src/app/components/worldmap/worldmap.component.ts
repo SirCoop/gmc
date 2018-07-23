@@ -124,7 +124,7 @@ export class WorldmapComponent implements OnInit {
   }
 
   redirect(country: string) {
-    this.router.navigate([country]);
+    this.router.navigate(['/travel-gallery', country]);
   }
   
   constructor(private router: Router) { }
