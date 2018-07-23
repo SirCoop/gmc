@@ -105,6 +105,7 @@ export class WorldmapComponent implements OnInit {
               .style('stroke-width',  0.3);
           })
           .on('click', (country) => {
+            tip.hide();
             this.redirect(country.properties.name);
           });
   
