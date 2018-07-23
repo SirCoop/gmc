@@ -7,18 +7,22 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
-
-/* Get API routes */
-const api = require('./routers/apiRouter');
+const morgan = require('morgan');
 
 const app = express();
 
-/* Parsers for POST data */
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+/* log all requests to console */
+app.use(morgan('dev'));
 
 /* Point static path to dist */
 app.use(express.static(CONSTANTS.webapp.dist));
+
+/* Parsers for POST data */
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+/* Get API routes */
+const api = require('./routers/apiRouter');
 
 /* Set api routes */
 app.use('/api', api);
