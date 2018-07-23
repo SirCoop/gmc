@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import worldCountries from './world_countries';
 import worldPopulation from './world_population';
 import visitedLocationCoordinates from './visited-locations';
+import { removeDebugNodeFromIndex } from '../../../../node_modules/@angular/core/src/debug/debug_node';
 
 // script tag imports due to typing and compatibility issues
 declare let d3: any;
@@ -80,11 +81,12 @@ export class WorldmapComponent implements OnInit {
         .data(data.features)
       .enter().append('path')
         .attr('d', path)
+        // fills country with color based on population
         .style('fill', function(d) { return color(populationById[d.id]); })
         .style('stroke', 'white')
         .style('stroke-width', 1.5)
         .style('opacity', 0.8)
-        // tooltips
+        // change country styling on focus
           .style('stroke', 'white')
           .style('stroke-width', 0.3)
           .on('mouseover', function(d) {
