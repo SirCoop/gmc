@@ -27,7 +27,7 @@ export class WorldmapComponent implements OnInit {
                 .html(function(d) {
                   return (
                     `<strong>Country: </strong><span class="details">${d.properties.name}<br>
-                    </span><strong>Population: </strong><span class="details">format(${d.population})</span>`);
+                    </span><strong>Population: </strong><span class="details">${format(d.population)}</span>`);
                 });
     
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
