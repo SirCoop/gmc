@@ -6,7 +6,7 @@ router.get('', (req, res) => {
   res.send('api works');
 });
 
-router.get('/coop', (req, res) => {
+router.get('/country/:name/images', (req, res) => {
   res.send('coop works');
 });
 
