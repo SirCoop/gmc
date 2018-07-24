@@ -1,5 +1,7 @@
-/* remember: var exports = module.exports = {}; */
+const path = require('path');
+
 const world = require('../assets/countryList');
+const countryImagesService = require('../services/country-images.service');
 
 const visitedCountries = world.visitedCountries.map(country => world.titleCase(country));
 const countries = world.countries.map(country => world.titleCase(country));
@@ -9,15 +11,19 @@ module.exports = {
     getCountryImages: function(req, res) {
         const country = req.params.name;
 
-        console.log('country: ', country);
-
         const responseData = {
             data: []
         };
 
-        if (hasBeenVisited(country)) {            
-            responseData.data = [{message: 'success'}];
-            res.send(JSON.stringify(responseData));
+        if (hasBeenVisited(country)) {
+            console.log('__dirname: ', __dirname);
+
+            const directory = path.join(__dirname, `../assets/images/countries/${country}`);
+            console.log('directory: ', directory);
+            // fetch images
+            responseData.data = countryImagesService.getImages(directory);
+            
+            res.send(responseData);
         }
 
         if (!hasBeenVisited(country)) {
@@ -25,11 +31,7 @@ module.exports = {
             res.send(JSON.stringify(responseData));
         }
 
-        // front end should handle case of invalid url params
-        
-        // if (!isValidCountry(country)) {
-        //     res.status(400).send('Bad Request');
-        // }
+        /* front end should handle cases of invalid url params */      
     
     }
 

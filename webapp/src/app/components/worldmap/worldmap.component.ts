@@ -120,7 +120,6 @@ export class WorldmapComponent implements OnInit {
             if (this.isCountry(name)) {
               tip.hide();
               /* TitleCase country name to prettify url */
-              console.log('title: ', this.titleCase(name));
               this.redirect(this.titleCase(name));
             } else {
               // handle this issue
