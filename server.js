@@ -21,11 +21,13 @@ app.use(express.static(CONSTANTS.webapp.dist));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-/* Get API routes */
-const api = require('./routes/api-routes');
+/* Set API routes */
+const base_api_url = '/api';
 
-/* Set api routes */
-app.use('/api', api);
+/* Country */
+/* import controllers */
+const countryController = require('./controllers/country.controller');
+app.use(`${base_api_url}/country/:name/images`, countryController.getCountryImages);
 
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
