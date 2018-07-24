@@ -1,19 +1,25 @@
 /* remember: var exports = module.exports = {}; */
-const countryList = require('../assets/countryList');
+const world = require('../assets/countryList');
+
+const visitedCountries = world.visitedCountries.map(country => world.titleCase(country));
 
 module.exports = {
 
     getCountryImages: function(req, res) {
-        console.log('req: ', req.params.name);
-        console.log('countryList: ', countryList.titleCase(req.params.name));
+        const country = req.params.name;
 
-        res.send('country works');
+        if (hasBeenVisited(country)) {
+            res.send('Photos Available!');      
+        }
+        else {
+            res.send('This country is still on my bucket list.');      
+        }
     
     }
 
 }
 
-// hasBeenVisited(country) {
-//     if countryList
-// }
+function hasBeenVisited(country) {
+    return visitedCountries.indexOf(country) > -1;    
+}
 

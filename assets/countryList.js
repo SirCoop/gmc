@@ -1,5 +1,5 @@
 module.exports = {
-  countryList: [
+  countries: [
     'Afghanistan',
     'Angola',
     'Albania',
@@ -178,12 +178,12 @@ module.exports = {
     'Zambia',
     'Zimbabwe'
   ],
-  visitedLocationCoordinates: [
+  visitedCountries: [
     /* North America */
     'Canada',
     'USA',
     /* Central America */
-    'Cost Rica',
+    'Costa Rica',
     'Mexico',
     /* South America */
     'Colombia',
@@ -201,7 +201,7 @@ module.exports = {
     'Croatia',
     /* East Asia */
     'Japan',
-    'SouthKorea',
+    'South Korea',
     /* SouthEast Asia */
     'Thailand',
     'Indonesia',
@@ -209,10 +209,5 @@ module.exports = {
     'Singapore',
     /* South Pacific */
   ],
-  titleCase: (name) => {
-    name.replace(/\w\S*/g, (txt) => {
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-      }
-    );
-  }
+  titleCase: (name) => name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')
 }

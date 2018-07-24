@@ -15,7 +15,7 @@ const visitedLocationCoordinates: any = [
     [-122.332071, 47.606209],
 
     /* Central America */
-    // Dominical, Cost Rica
+    // Dominical, Costa Rica
     [-83.859231, 9.252431],
     // Tijuana, Mexico
     [-117.038247, 32.514947],
@@ -59,7 +59,7 @@ const visitedLocationCoordinates: any = [
     [139.691706, 35.689487],
     // Okinawa, Japan
     [127.945404, 26.501301],
-    // Osan, Korea
+    // Osan, South Korea
     [127.077221, 37.149810],
 
     /* SouthEast Asia */
