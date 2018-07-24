@@ -24,10 +24,12 @@ module.exports = {
             responseData.data = [];
             res.send(JSON.stringify(responseData));
         }
+
+        // front end should handle case of invalid url params
         
-        if (!isValidCountry(country)) {
-            res.status(400).send('Bad Request');
-        }
+        // if (!isValidCountry(country)) {
+        //     res.status(400).send('Bad Request');
+        // }
     
     }
 
@@ -38,7 +40,6 @@ function hasBeenVisited(country) {
 }
 
 function isValidCountry(country) {
-
     return countries.indexOf(country) > -1;
 }
 
