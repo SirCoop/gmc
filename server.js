@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 /* Get API routes */
-const api = require('./routers/apiRouter');
+const api = require('./routes/apiRouter');
 
 /* Set api routes */
 app.use('/api', api);
