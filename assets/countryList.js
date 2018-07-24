@@ -177,5 +177,42 @@ module.exports = {
     'South Africa',
     'Zambia',
     'Zimbabwe'
-  ]
+  ],
+  visitedLocationCoordinates: [
+    /* North America */
+    'Canada',
+    'USA',
+    /* Central America */
+    'Cost Rica',
+    'Mexico',
+    /* South America */
+    'Colombia',
+    'Brazil',
+    /* Caribbean */
+    'Cuba',
+    /* Europe */
+    'Slovakia',
+    'Hungary',
+    'France',
+    'Netherlands',
+    'Austria',
+    'Germany',
+    'Italy',
+    'Croatia',
+    /* East Asia */
+    'Japan',
+    'SouthKorea',
+    /* SouthEast Asia */
+    'Thailand',
+    'Indonesia',
+    'Malaysia',
+    'Singapore',
+    /* South Pacific */
+  ],
+  titleCase: (name) => {
+    name.replace(/\w\S*/g, (txt) => {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    );
+  }
 }

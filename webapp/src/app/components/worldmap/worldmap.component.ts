@@ -15,6 +15,10 @@ declare let topojson: any;
 })
 export class WorldmapComponent implements OnInit {
 
+  titleCase(name: string): string {
+    return name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+  }
+
   ready() {
     const data: any = worldCountries;
     const population: any = worldPopulation;
@@ -108,8 +112,9 @@ export class WorldmapComponent implements OnInit {
           .on('click', (country) => {
             tip.hide();
             /* remove whitespace in country name to prettify url */
-            const countryName = country.properties.name.replace(/\s/g, '');
-            this.redirect(countryName);
+            // const countryName = country.properties.name.replace(/\s/g, '');
+            console.log('title: ', this.titleCase(country.properties.name));
+            this.redirect(this.titleCase(country.properties.name));
           });
   
     svg.append('path')
