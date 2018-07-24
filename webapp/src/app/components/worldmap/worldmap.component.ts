@@ -1,8 +1,9 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import worldCountries from './world_countries';
-import worldPopulation from './world_population';
+import worldCountries from './world-countries-geoJSON';
+import worldPopulation from './world-population';
 import visitedLocationCoordinates from './visited-locations';
+import countryList from './country-list';
 
 /* imported via script tags due to typing and compatibility issues */
 declare let d3: any;
@@ -17,6 +18,10 @@ export class WorldmapComponent implements OnInit {
 
   titleCase(name: string): string {
     return name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+  }
+
+  isCountry(country) {
+    return countryList.indexOf(country) > -1;
   }
 
   ready() {
@@ -109,12 +114,18 @@ export class WorldmapComponent implements OnInit {
               .style('stroke', 'white')
               .style('stroke-width',  0.3);
           })
-          .on('click', (country) => {
-            tip.hide();
-            /* remove whitespace in country name to prettify url */
-            // const countryName = country.properties.name.replace(/\s/g, '');
-            console.log('title: ', this.titleCase(country.properties.name));
-            this.redirect(this.titleCase(country.properties.name));
+          .on('click', (countryFeature) => {
+            const { name } = countryFeature.properties;
+            /* Ensure only valid country names from map data */
+            if (this.isCountry(name)) {
+              tip.hide();
+              /* TitleCase country name to prettify url */
+              console.log('title: ', this.titleCase(name));
+              this.redirect(this.titleCase(name));
+            } else {
+              // handle this issue
+            }
+            
           });
   
     svg.append('path')

@@ -2,17 +2,31 @@
 const world = require('../assets/countryList');
 
 const visitedCountries = world.visitedCountries.map(country => world.titleCase(country));
+const countries = world.countries.map(country => world.titleCase(country));
 
 module.exports = {
 
     getCountryImages: function(req, res) {
         const country = req.params.name;
 
-        if (hasBeenVisited(country)) {
-            res.send('Photos Available!');      
+        console.log('country: ', country);
+
+        const responseData = {
+            data: []
+        };
+
+        if (hasBeenVisited(country)) {            
+            responseData.data = [{message: 'success'}];
+            res.send(JSON.stringify(responseData));
         }
-        else {
-            res.send('This country is still on my bucket list.');      
+
+        if (!hasBeenVisited(country)) {
+            responseData.data = [];
+            res.send(JSON.stringify(responseData));
+        }
+        
+        if (!isValidCountry(country)) {
+            res.status(400).send('Bad Request');
         }
     
     }
@@ -21,5 +35,10 @@ module.exports = {
 
 function hasBeenVisited(country) {
     return visitedCountries.indexOf(country) > -1;    
+}
+
+function isValidCountry(country) {
+
+    return countries.indexOf(country) > -1;
 }
 

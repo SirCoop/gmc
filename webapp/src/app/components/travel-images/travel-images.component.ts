@@ -13,6 +13,7 @@ export class TravelImagesComponent implements OnInit {
 
   ngOnInit() {
     this.images$ = this.route.snapshot.data['images'];
+    console.log('images: ', this.images$);
   }
 
 }
