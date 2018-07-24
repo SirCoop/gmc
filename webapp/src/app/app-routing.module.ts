@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { CountryImagesResolver } from './resolvers/country-images.resolver';
+
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { HomeComponent } from './components/home/home.component';
@@ -30,7 +32,10 @@ const routes: Routes = [
   },
   {
     path: 'travel-gallery/:country',
-    component: TravelImagesComponent
+    component: TravelImagesComponent,
+    resolve: {
+      images: CountryImagesResolver
+    }
   },
   {
     path: 'apps',

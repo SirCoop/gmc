@@ -1,24 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule  } from '@angular/common/http';
 
-/* Mock Data Service for reference */
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
+  private testUrl = '/api';
+
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+  getCountryImages(country) {
+    return this.http.get(`${this.testUrl}/${country}/images`);
   }
 
-  getUser(userId: Object) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
-  }
-
-  getPosts() {
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
-  }
 }

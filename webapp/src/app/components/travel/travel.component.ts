@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,20 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  private testUrl = '/api';
 
-  fetchData() {
-    return this.http.get(this.testUrl)
-      .subscribe(data => {
-        console.log('data: ', data);
-      });
-  }
+  
 
   ngOnInit() {
-    this.fetchData();
-
   }
 
 }

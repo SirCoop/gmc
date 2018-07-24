@@ -9,14 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  posts$: Object;
-
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getPosts().subscribe(
-      data => this.posts$ = data
-    );
   }
 
 }
