@@ -1,5 +1,6 @@
 const path = require('path');
 
+
 const world = require('../assets/countryList');
 const countryImagesService = require('../services/country-images.service');
 
@@ -7,28 +8,28 @@ const visitedCountries = world.visitedCountries.map(country => world.titleCase(c
 const countries = world.countries.map(country => world.titleCase(country));
 
 module.exports = {
-
-    getCountryImages: function(req, res) {
+    /* node's util.promisfy makes this async/await possible */
+    getCountryImages: async function(req, res) {
         const country = req.params.name;
 
-        const responseData = {
+        const response = {
             data: []
         };
 
         if (hasBeenVisited(country)) {
-            console.log('__dirname: ', __dirname);
-
             const directory = path.join(__dirname, `../assets/images/countries/${country}`);
-            console.log('directory: ', directory);
-            // fetch images
-            responseData.data = countryImagesService.getImages(directory);
-            
-            res.send(responseData);
+            try {
+                const files = await countryImagesService.getImages(directory);
+                response.data = files;
+                res.send(JSON.stringify(response));
+            } catch (error) {
+                res.send(JSON.stringify(error));                
+            }
         }
 
         if (!hasBeenVisited(country)) {
-            responseData.data = [];
-            res.send(JSON.stringify(responseData));
+            response.data = [];
+            res.send(JSON.stringify(response));
         }
 
         /* front end should handle cases of invalid url params */      

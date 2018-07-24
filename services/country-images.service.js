@@ -1,22 +1,12 @@
 const fs = require('fs');
+const util = require('util');
+
+/* beautiful async/await */
+const readdir = util.promisify(fs.readdir);
 
 module.exports = {
 
-  getImages: function (path) {
-    fs.readdir(path, cb);
-
-    function cb(err, files) {
-      if (err) {
-        console.log(err);
-        res.writeHead(400, {
-          'Content-type': 'text/html'
-        })
-        res.end("No such image");
-      } else {
-        console.log('files: ', files);
-        return files;
-      }
-    }
-  }
+  getImages: (path) => readdir(path)
 
 }
+
