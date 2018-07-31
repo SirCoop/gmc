@@ -31,16 +31,13 @@ const base_api_url = '/api';
 
 /* Country */
 const countryController = require('./controllers/country.controller');
-/*
-  Notes:
-    This middleware does return proper image filepaths. 
-    However, once paths are returned to UI, UI then makes a call for each image separately.
-    Either make a new middleware to handle each http request for a single image, or 
-      manually move all images to front-end assets folder and serve from there.
-*/
 
 app.use(`${base_api_url}/country/:name/images`, countryController.getImageUrls);
 
+/* 
+  res headers can only be set here, not in delegated function. 
+  use app.get vs app.use so that we can change res header and open file stream
+*/
 app.get('/api/country/:name/:image', (req, res) => {
   const country = req.params.name;
   const image = req.params.image;
@@ -69,7 +66,7 @@ app.get('/api/country/:name/:image', (req, res) => {
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
     res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);
-  });
+});
 
 
 app.set('port', CONSTANTS.express.port);

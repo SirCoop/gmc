@@ -7,8 +7,7 @@ const readdir = util.promisify(fs.readdir);
 
 module.exports = {
 
-  getImageUrls: (folder) => readdir(folder),
-  getImage: (file) => fs.readFile(file)
+  getImageUrls: (folder) => readdir(folder)
 
 }
 
