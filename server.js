@@ -6,14 +6,11 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
-const favicon = require('serve-favicon');
 const morgan = require('morgan');
 
 const countryImagesService = require('./services/country-images.service');
 
 const fs = require('fs');
-
-
 const app = express();
 
 /* log all requests to console */
