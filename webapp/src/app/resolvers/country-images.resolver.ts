@@ -15,7 +15,7 @@ export class CountryImagesResolver implements Resolve<any> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> {
         const country = route.paramMap.get('country');
         try {
-            return this.dataService.getCountryImages(country);
+            return this.dataService.getCountryImageUrls(country);
         } catch (error) {
             console.error(error); // deal with API error (eg not found)
             this.router.navigate(['/']); // could redirect to error page

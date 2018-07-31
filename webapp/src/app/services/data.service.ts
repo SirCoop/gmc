@@ -12,7 +12,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getCountryImages(country) {
+  getCountryImageUrls(country) {
     return this.http.get(`${this.testUrl}/${country}/images`);
   }
 

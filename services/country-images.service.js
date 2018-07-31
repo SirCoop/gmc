@@ -3,10 +3,12 @@ const util = require('util');
 
 /* beautiful async/await */
 const readdir = util.promisify(fs.readdir);
+// const readfile = util.promisify(fs.readFile);
 
 module.exports = {
 
-  getImages: (path) => readdir(path)
+  getImageUrls: (folder) => readdir(folder),
+  getImage: (file) => fs.readFile(file)
 
 }
 

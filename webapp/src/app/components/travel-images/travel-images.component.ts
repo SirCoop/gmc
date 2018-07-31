@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-travel-images',
@@ -7,13 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./travel-images.component.scss']
 })
 export class TravelImagesComponent implements OnInit {
-  images$: any;
+  imageUrls$: any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.images$ = this.route.snapshot.data['images'];
-    console.log('images: ', this.images$);
+    this.imageUrls$ = this.route.snapshot.data.images.data;
   }
 
 }

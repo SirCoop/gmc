@@ -1,6 +1,5 @@
 const path = require('path');
 
-
 const world = require('../assets/countryList');
 const countryImagesService = require('../services/country-images.service');
 
@@ -9,7 +8,7 @@ const countries = world.countries.map(country => world.titleCase(country));
 
 module.exports = {
     /* node's util.promisfy makes this async/await possible */
-    getCountryImages: async function(req, res) {
+    getImageUrls: async function(req, res) {
         const country = req.params.name;
 
         const response = {
@@ -18,12 +17,14 @@ module.exports = {
 
         if (hasBeenVisited(country)) {
             const directory = path.join(__dirname, `../assets/images/countries/${country}`);
+            const URI = `/api/country/${country}`;
             try {
-                const files = await countryImagesService.getImages(directory);
-                response.data = files;
-                res.send(JSON.stringify(response));
+                const files = await countryImagesService.getImageUrls(directory);
+                /* api file paths */
+                const filePaths = files.map(file => `${URI}/${file}`);
+                res.send({ data: filePaths });
             } catch (error) {
-                res.send(JSON.stringify(error));                
+                res.send(error);
             }
         }
 
@@ -32,17 +33,11 @@ module.exports = {
             res.send(JSON.stringify(response));
         }
 
-        /* front end should handle cases of invalid url params */      
-    
+        /* front end should handle cases of invalid url params */
     }
-
 }
 
 function hasBeenVisited(country) {
     return visitedCountries.indexOf(country) > -1;    
-}
-
-function isValidCountry(country) {
-    return countries.indexOf(country) > -1;
 }
 

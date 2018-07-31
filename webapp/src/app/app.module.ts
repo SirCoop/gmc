@@ -17,6 +17,7 @@ import { SuccessesComponent } from './components/successes/successes.component';
 import { FailuresComponent } from './components/failures/failures.component';
 import { WorldmapComponent } from './components/worldmap/worldmap.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
+import { URLSanitizerPipe } from './pipes/urlsanitizer.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TravelImagesComponent } from './components/travel-images/travel-images.
     SuccessesComponent,
     FailuresComponent,
     WorldmapComponent,
-    TravelImagesComponent
+    TravelImagesComponent,
+    URLSanitizerPipe
   ],
   imports: [
     BrowserModule,
