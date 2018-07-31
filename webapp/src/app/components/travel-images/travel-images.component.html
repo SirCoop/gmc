@@ -1,3 +1,9 @@
-<div *ngFor="let url of imageUrls$">
-  <img [src]="url | urlSanitizer"/>
+<div *ngIf="imageUrls$.length">
+  <div *ngFor="let url of imageUrls$">
+    <img [src]="url | urlSanitizer"/>
+  </div>
+</div>
+
+<div *ngIf="!imageUrls$.length">
+  This one is on the bucket list!
 </div>
