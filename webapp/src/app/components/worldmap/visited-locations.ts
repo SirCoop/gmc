@@ -69,6 +69,8 @@ const visitedLocationCoordinates: any = [
     [14.991688, 44.467219],
     // London, England
     [-0.127758, 51.507351],
+    // Prague, Czech Republic
+    [14.437800, 50.075538],
 
     /* East Asia */
     // Tokyo, Japan

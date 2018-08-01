@@ -4,7 +4,6 @@ const world = require('../assets/countryList');
 const countryImagesService = require('../services/country-images.service');
 
 const visitedCountries = world.visitedCountries.map(country => world.titleCase(country));
-const countries = world.countries.map(country => world.titleCase(country));
 
 module.exports = {
     /* node's util.promisfy makes this async/await possible */
