@@ -192,6 +192,7 @@ module.exports = {
     'Bahamas',
     'Cuba',
     'Dominican Republic',
+    'Puerto Rico',
     /* Europe */
     'Czech Republic',
     'Slovakia',
