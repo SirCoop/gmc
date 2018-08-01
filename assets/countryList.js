@@ -191,9 +191,9 @@ module.exports = {
     /* Caribbean */
     'Bahamas',
     'Cuba',
-    'DominicanRepublic',
+    'Dominican Republic',
     /* Europe */
-    'CzechRepublic',
+    'Czech Republic',
     'Slovakia',
     'Hungary',
     'France',
