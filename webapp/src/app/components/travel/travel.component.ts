@@ -9,9 +9,6 @@ export class TravelComponent implements OnInit {
 
   constructor() { }
 
-
-  
-
   ngOnInit() {
   }
 

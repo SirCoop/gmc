@@ -1,0 +1,12 @@
+.mat-dialog-container {
+    max-width: 1500px;
+    max-height: 1400px;
+    
+    & img {
+        max-width:1366px;
+        max-height:768px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+    } 
+}

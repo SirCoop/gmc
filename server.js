@@ -28,7 +28,6 @@ const base_api_url = '/api';
 
 /* Country */
 const countryController = require('./controllers/country.controller');
-
 app.use(`${base_api_url}/country/:name/images`, countryController.getImageUrls);
 
 /* 

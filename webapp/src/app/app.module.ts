@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { FailuresComponent } from './components/failures/failures.component';
 import { WorldmapComponent } from './components/worldmap/worldmap.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { URLSanitizerPipe } from './pipes/urlsanitizer.pipe';
+import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +35,19 @@ import { URLSanitizerPipe } from './pipes/urlsanitizer.pipe';
     FailuresComponent,
     WorldmapComponent,
     TravelImagesComponent,
-    URLSanitizerPipe
+    URLSanitizerPipe,
+    ImageDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ImageDialogComponent]
 })
 export class AppModule { }

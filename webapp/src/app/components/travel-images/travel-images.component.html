@@ -1,6 +1,6 @@
 <div *ngIf="imageUrls$.length">
-  <div *ngFor="let url of imageUrls$">
-    <img [src]="url | urlSanitizer"/>
+  <div *ngFor="let url of imageUrls$" class="image-container">
+    <img [src]="url | urlSanitizer" (click)="openDialog(url)"/>
   </div>
 </div>
 
