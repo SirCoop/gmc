@@ -40,8 +40,8 @@ export class WorldmapComponent implements OnInit {
                 });
     
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
-    const width = 960 - margin.left - margin.right;
-    const height = 500 - margin.top - margin.bottom;
+    const width = 1500 - margin.left - margin.right;
+    const height = 1300 - margin.top - margin.bottom;
     
     const color = d3.scaleThreshold()
         .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000])
@@ -67,11 +67,11 @@ export class WorldmapComponent implements OnInit {
                 .attr('width', width)
                 .attr('height', height)
                 .append('g')
-                .attr('class', 'map');
+                .attr('class', 'map');               
     
     const projection = d3.geoMercator()
-                        .scale(130)
-                        .translate( [width / 2, height / 1.5]);
+                        .scale(250)
+                        .translate( [width / 2, height / 1.75]);
     
     path = d3.geoPath().projection(projection);
 
@@ -81,7 +81,7 @@ export class WorldmapComponent implements OnInit {
     const populationById = {};
   
     population.forEach(function(d) { populationById[d.id] = + d.population; });
-    data.features.forEach(function(d) { d.population = populationById[d.id]; });
+    data.features.forEach(function(d) { d.population = populationById[d.id]; });    
 
     svg.append('g')
         .attr('class', 'data')
@@ -140,6 +140,7 @@ export class WorldmapComponent implements OnInit {
       .attr('cy', (d: any) => projection(d)[1])
       .attr('r', '3px')
       .attr('fill', 'red');
+
   }
 
   redirect(country: string) {
