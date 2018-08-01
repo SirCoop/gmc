@@ -6,7 +6,7 @@ const readingList: any = {
         { title: 'The New Evolution Diet', author: 'Arthur De Vany' },
         { title: 'The Power of Now', author: 'Eckhart Tolle' },
         { title: 'PsychoCybernetics', author: 'Maxwell Maltz' },
-        { title: 'Mastery', auhtor: 'Robert Greene' },
+        { title: 'Mastery', author: 'Robert Greene' },
         { title: 'Think and Grow Rich', author: 'Napoleon Hill' },
         { title: 'The Art of Love', author: 'Ovid' },
         { title: 'Breaking the Habit of Being Yourself: How to lose your mind and create a new one', author: 'Dr. Joe Dispenza' }
