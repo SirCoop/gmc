@@ -59,7 +59,7 @@ const readingList: any = {
         { title: 'The Black Swan', author: 'Nassim Nicholas Taleb' },
         { title: 'AntiFragile', author: 'Nassim Nicholas Taleb' },
         { title: 'The Prince', author: 'Niccolo Machiavelli' },
-        { title: 'Letters from a Stoic', auhtor: 'Seneca' },
+        { title: 'Letters from a Stoic', author: 'Seneca' },
         { title: 'Meditations', author: 'Marcus Aurelius' },
         { title: 'Rhetoric', author: 'Aristotle' },
         { title: 'The AntiChrist', author: 'Friedrich Nietzsche' },
