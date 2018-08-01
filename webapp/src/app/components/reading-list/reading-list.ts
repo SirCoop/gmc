@@ -1,4 +1,16 @@
 const readingList: any = {
+    selfImprovement: [
+        { title: 'The Autobiography of Malcolm X: As told by Alex Haley', author: 'Malcolm X, Alex Haley' },
+        { title: 'Principles', author: 'Ray Dalio' },
+        { title: '12 Rules for Life', author: 'Dr. Jordan B. Perterson' },
+        { title: 'The New Evolution Diet', author: 'Arthur De Vany' },
+        { title: 'The Power of Now', author: 'Eckhart Tolle' },
+        { title: 'PsychoCybernetics', author: 'Maxwell Maltz' },
+        { title: 'Mastery', auhtor: 'Robert Greene' },
+        { title: 'Think and Grow Rich', author: 'Napoleon Hill' },
+        { title: 'The Art of Love', author: 'Ovid' },
+        { title: 'Breaking the Habit of Being Yourself: How to lose your mind and create a new one', author: 'Dr. Joe Dispenza' }
+    ],
     business: [
         { title: 'Zero to One', author: 'Peter Thiel' },
         { title: 'The Situational Leader', author: 'Dr. Paul Hersey' },
@@ -32,7 +44,7 @@ const readingList: any = {
             { title: 'Spy the Lie', author: 'Philip Houston, Michael Floyd, and Susan Carnicero' },
             { title: 'Body Language and Social Order', author: 'Albert E Scheflen' }
         ],
-        general: [
+        communication: [
             { title: 'Predictably Irrational', author: 'Dan Ariely' },
             { title: 'Crucial Conversations', author: 'Patterson, Grenny, McMillan, Switzler' },
             { title: 'Covert Persuasion', author: 'Hogan Speakman' },
@@ -40,21 +52,10 @@ const readingList: any = {
             { title: 'The Art of Seduction', author: 'Robert Greene' },
             { title: 'The 48 Laws of Power', author: 'Robert Greene' }
         ]
-    },
-    selfImprovement: [
-        { title: 'The Autobiography of Malcolm X: As told by Alex Haley', author: 'Malcolm X, Alex Haley' },
-        { title: 'Principles', author: 'Ray Dalio' },
-        { title: '12 Rules for Life', author: 'Dr. Jordan B. Perterson' },
-        { title: 'The New Evolution Diet', author: 'Arthur De Vany' },
-        { title: 'The Power of Now', author: 'Eckhart Tolle' },
-        { title: 'PsychoCybernetics', author: 'Maxwell Maltz' },
-        { title: 'Mastery', auhtor: 'Robert Greene' },
-        { title: 'Think and Grow Rich', author: 'Napoleon Hill' },
-        { title: 'The Art of Love', author: 'Ovid' },
-        { title: 'Breaking the Habit of Being Yourself: How to lose your mind and create a new one', author: 'Dr. Joe Dispenza' }
-    ],
+    },    
     philosophy: [
         { title: 'The Complete I Ching', author: 'Alfred Huang' },
+        { title: 'The Art of War', author: 'Sun Tzu' },
         { title: 'The Black Swan', author: 'Nassim Nicholas Taleb' },
         { title: 'AntiFragile', author: 'Nassim Nicholas Taleb' },
         { title: 'The Prince', author: 'Niccolo Machiavelli' },
@@ -67,9 +68,11 @@ const readingList: any = {
     ],
     spiritual: [
         { title: 'Strikes: Soul Meets Body', author: 'Vladimir Vasiliev & Scott Meredith' },
+        { title: 'The Four Agreements', author: 'Don Miguel Ruiz' },
         { title: 'Seven Spiritual Laws of Success', author: 'Deepak Chopra' },
         { title: 'Feng Shui', author: 'Lillian Too' },
-        { title: 'The Celesting Prophecy', author: 'James Refield' }
+        { title: 'The Celesting Prophecy', author: 'James Refield' },
+        { title: 'The Art of Dreaming', author: 'Carlos Castaneda' }
     ]
 
 };

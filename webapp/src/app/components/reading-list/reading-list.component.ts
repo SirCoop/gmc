@@ -8,7 +8,7 @@ import readingList from './reading-list';
 })
 export class ReadingListComponent implements OnInit {
 
-  list$: any = readingList;
+  books$: any = readingList;
 
   constructor() { }
 
