@@ -1,12 +1,16 @@
-.mat-dialog-container {
-    max-width: 1500px;
-    max-height: 1400px;
-    
-    & img {
-        max-width:1366px;
-        max-height:768px;
-        width: auto;
-        height: auto;
-        cursor: pointer;
-    } 
+.image-container {
+  max-width: 1400px;
+  max-height: 1400px;
+  &>mat-dialog-content {
+    overflow: hidden;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+  }
+  & img {
+    max-width: inherit;
+    max-height: inherit;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
 }

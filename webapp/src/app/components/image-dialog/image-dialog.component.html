@@ -1,11 +1,14 @@
-<h2 mat-dialog-title></h2>
+<div class="image-container">
+    <h2 mat-dialog-title></h2>
 
-<mat-dialog-content>
-    <img [src]="image | urlSanitizer"/>
- 
-</mat-dialog-content>
+    <mat-dialog-content>
+        <img [src]="image | urlSanitizer"/>
+     
+    </mat-dialog-content>
+    
+    <mat-dialog-actions>
+        <!-- <button class="mat-raised-button"(click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary"(click)="save()">Save</button> -->
+    </mat-dialog-actions>
+</div>
 
-<mat-dialog-actions>
-    <!-- <button class="mat-raised-button"(click)="close()">Close</button>
-    <button class="mat-raised-button mat-primary"(click)="save()">Save</button> -->
-</mat-dialog-actions>
