@@ -1,60 +1,63 @@
-<h1>Reading List</h1>
+<div class="reading-list-container">
+  <h1>Reading List</h1>
 
-<section>
-  <h2>My personal recommendations.</h2>
-  <p>Because I only demand of others what I first demand of myself, all written works listed have been read by me.</p>
-  <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
-</section>
+  <section>
+    <h2>My personal recommendations.</h2>
+    <p>Because I only demand of others what I first demand of myself, all written works listed have been read by me.</p>
+    <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
+  </section>
 
-<section>
-  <h3>Self-Improvement</h3>
-  <p>These books will absolutely change your life!</p>
-  <ul *ngFor="let book of books$.selfImprovement">
-    <li>{{book.title}} - {{book.author}}</li>
-  </ul>
-</section>
-
-<section>
-  <h3>Leadership | Management | Entrepreneurship</h3>
-  <ul *ngFor="let book of books$.business">
-    <li>{{book.title}} - {{book.author}}</li>
-  </ul>
-</section>
-
-<section>
-  <h3>Psychology</h3>
-  <div>
-    <strong>Crowd Psychology</strong>
-    <ul *ngFor="let book of books$.psychology.crowdPsychology">
+  <section>
+    <h3>Self-Improvement</h3>
+    <p>These books will absolutely change your life!</p>
+    <ul *ngFor="let book of books$.selfImprovement">
       <li>{{book.title}} - {{book.author}}</li>
     </ul>
-  </div>
+  </section>
 
-  <div>
-    <strong>Body Language</strong>
-    <ul *ngFor="let book of books$.psychology.bodyLanguage">
+  <section>
+    <h3>Leadership | Management | Entrepreneurship</h3>
+    <ul *ngFor="let book of books$.business">
       <li>{{book.title}} - {{book.author}}</li>
     </ul>
-  </div>
+  </section>
 
-  <div>
-    <strong>Communication</strong>
-    <ul *ngFor="let book of books$.psychology.communication">
+  <section>
+    <h3>Psychology</h3>
+    <div>
+      <strong>Crowd Psychology</strong>
+      <ul *ngFor="let book of books$.psychology.crowdPsychology">
+        <li>{{book.title}} - {{book.author}}</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong>Body Language</strong>
+      <ul *ngFor="let book of books$.psychology.bodyLanguage">
+        <li>{{book.title}} - {{book.author}}</li>
+      </ul>
+    </div>
+
+    <div>
+      <strong>Communication</strong>
+      <ul *ngFor="let book of books$.psychology.communication">
+        <li>{{book.title}} - {{book.author}}</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h3>Philosophy</h3>
+    <ul *ngFor="let book of books$.philosophy">
       <li>{{book.title}} - {{book.author}}</li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h3>Philosophy</h3>
-  <ul *ngFor="let book of books$.philosophy">
-    <li>{{book.title}} - {{book.author}}</li>
-  </ul>
-</section>
+  <section>
+    <h3>Spiritual</h3>
+    <ul *ngFor="let book of books$.spiritual">
+      <li>{{book.title}} - {{book.author}}</li>
+    </ul>
+  </section>
 
-<section>
-  <h3>Spiritual</h3>
-  <ul *ngFor="let book of books$.spiritual">
-    <li>{{book.title}} - {{book.author}}</li>
-  </ul>
-</section>
+</div>

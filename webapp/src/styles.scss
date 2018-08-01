@@ -47,5 +47,17 @@ body {
                }
            }
        }
+
+       .reading-list-container {
+        width: 50%;
+        &>section {
+          & ul {
+            &>li {
+              padding: .5rem;
+            }
+          }
+        }
+      }
    }
+   
 }
