@@ -189,8 +189,11 @@ module.exports = {
     'Colombia',
     'Brazil',
     /* Caribbean */
+    'Bahamas',
     'Cuba',
+    'DominicanRepublic',
     /* Europe */
+    'CzechRepublic',
     'Slovakia',
     'Hungary',
     'France',
@@ -199,6 +202,7 @@ module.exports = {
     'Germany',
     'Italy',
     'Croatia',
+    'England',
     /* East Asia */
     'Japan',
     'South Korea',

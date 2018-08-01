@@ -11,8 +11,18 @@ const visitedLocationCoordinates: any = [
     [-80.843127, 35.227087],
     // San Diego, California
     [-117.161084, 32.715738],
-    // Seattle
+    // Seattle, WA
     [-122.332071, 47.606209],
+    // Las Vegas, NV
+    [-115.139830, 36.169941],
+    // NYC, NY
+    [-73.971249, 40.783060],
+    // New Orleans, LA
+    [-90.071532, 29.951066],
+    // Destin, FL
+    [-86.495783, 30.393534],
+    // ATL
+    [-84.387982, 33.748995],
 
     /* Central America */
     // Dominical, Costa Rica
@@ -35,6 +45,10 @@ const visitedLocationCoordinates: any = [
     [-82.366596, 23.113592],
     // San Juan, Puerto Rico, USA
     [-66.105735, 18.465539],
+    // Overo Alto, Dominican Republic
+    [-68.581354, 18.808499],
+    // Bimini, Bahamas
+    [-79.869953, 24.641533],
 
     /* Europe */
     // Nitra, Slovakia
@@ -53,6 +67,8 @@ const visitedLocationCoordinates: any = [
     [12.315515, 45.440847],
     // Pag, Croatia
     [14.991688, 44.467219],
+    // London, England
+    [-0.127758, 51.507351],
 
     /* East Asia */
     // Tokyo, Japan
