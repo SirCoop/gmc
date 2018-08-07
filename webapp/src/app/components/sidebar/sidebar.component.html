@@ -40,5 +40,15 @@
         <i class="material-icons">highlight_off</i>
       </a>
     </li>
+    <li>
+      <a routerLink="resume" [class.activated]="currentUrl == '/resume'">
+        <i class="material-icons">assignment</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
+        <i class="material-icons">assessment</i>
+      </a>
+    </li>
   </ul>
 </nav>

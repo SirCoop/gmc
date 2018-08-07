@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material';
 
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -20,6 +22,8 @@ import { WorldmapComponent } from './components/worldmap/worldmap.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { URLSanitizerPipe } from './pipes/urlsanitizer.pipe';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import { ImageDialogComponent } from './components/image-dialog/image-dialog.com
     WorldmapComponent,
     TravelImagesComponent,
     URLSanitizerPipe,
-    ImageDialogComponent
+    ImageDialogComponent,
+    ResumeComponent,
+    SelfAssessmentComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,8 @@ import { ImageDialogComponent } from './components/image-dialog/image-dialog.com
     HttpClientModule,
     HttpModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

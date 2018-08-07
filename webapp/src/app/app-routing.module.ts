@@ -12,6 +12,8 @@ import { AppsComponent } from './components/apps/apps.component';
 import { WritingsComponent } from './components/writings/writings.component';
 import { SuccessesComponent } from './components/successes/successes.component';
 import { FailuresComponent } from './components/failures/failures.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 
 const routes: Routes = [
   {
@@ -52,6 +54,14 @@ const routes: Routes = [
   {
     path: 'failures',
     component: FailuresComponent
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent
+  },
+  {
+    path: 'self-assessment',
+    component: SelfAssessmentComponent
   }
 ];
 

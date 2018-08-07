@@ -20,7 +20,7 @@ export class WorldmapComponent implements OnInit {
     return name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
   }
 
-  isCountry(country) {
+  isCountry(country: string): boolean {
     return countryList.indexOf(country) > -1;
   }
 
