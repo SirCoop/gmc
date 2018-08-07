@@ -1,7 +1,28 @@
 nav {
+
+  @media (max-width: 1690px) {
+    background: blue;
+  }
+  @media (max-width: 1280px) {
+    background: red;
+    width: fit-content;
+  }
+  @media (max-width: 980px) {
+    background: green;
+    width: fit-content;
+  }
+  @media (max-width: 736px) {
+    background: yellow;
+    width: fit-content;
+  }
+  @media (max-width: 480px) {
+    background: orange;
+    width: fit-content;
+  }
+
   background: #2D2E2E;
-  height: 100%; // border-top: 1px solid white;
-  // border-bottom: 1px solid white;
+  height: 100%;
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -11,6 +32,19 @@ nav {
         color: #fff;
         padding: 20px;
         display: block;
+
+        @media (max-width: 980px) {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+        @media (max-width: 736px) {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+        @media (max-width: 480px) {
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
       }
       .activated {
         background-color: #00a8ff;

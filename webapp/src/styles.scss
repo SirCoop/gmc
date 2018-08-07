@@ -1,63 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+/*Common Media Queries*/
+// @media (max-width: 1690px) {
+//   background: blue;
+// }
+
+// @media (max-width: 1280px) {
+//   background: red;
+//   width: fit-content;
+// }
+
+// @media (max-width: 980px) {
+//   background: green;
+//   width: fit-content;
+// }
+
+// @media (max-width: 736px) {
+//   background: yellow;
+//   width: fit-content;
+// }
+
+// @media (max-width: 480px) {
+//   background: orange;
+//   width: fit-content;
+// }
+
 body {
-    margin: 0;
-    background: #F2F2F2;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+  margin: 0;
+  background: #F2F2F2;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 }
 
 #container {
-   display: grid;
-   grid-template-columns: 4% auto;
-   height: 100%;
-
-   #content {
-       padding: 30px 50px;
-
-       ul {
-           list-style-type: none;
-           margin:0;padding:0;
-       
-           li {
-               background: #fff;
-               border-radius: 8px;
-               padding: 20px;
-               margin-bottom: 8px;
-       
-               a {
-                   font-size: 1.5em;
-                   text-decoration: none;
-                   font-weight: bold;
-                   color:#00A8FF;
-               }
-       
-               ul {
-                   margin-top: 20px;
-                   
-                   li {
-                       padding:0;
-       
-                       a {
-                           font-size: 1em;
-                           font-weight: 300;
-                       }
-                   }
-               }
-           }
-       }
-
-       .reading-list-container {
-        width: 50%;
-        &>section {
-          & ul {
-            &>li {
-              padding: .65rem;
+  display: grid;
+  grid-template-columns: 4% auto;
+  height: 100%;
+  #content {
+    padding: 30px 50px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 8px;
+        a {
+          font-size: 1.5em;
+          text-decoration: none;
+          font-weight: bold;
+          color: #00A8FF;
+        }
+        ul {
+          margin-top: 20px;
+          li {
+            padding: 0;
+            a {
+              font-size: 1em;
+              font-weight: 300;
             }
           }
         }
       }
-   }
-   
+    }
+    .reading-list-container {
+      width: 50%;
+      &>section {
+        & ul {
+          &>li {
+            padding: .65rem;
+          }
+        }
+      }
+    }
+  }
 }
