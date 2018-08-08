@@ -24,6 +24,7 @@ import { URLSanitizerPipe } from './pipes/urlsanitizer.pipe';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
+import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
     URLSanitizerPipe,
     ImageDialogComponent,
     ResumeComponent,
-    SelfAssessmentComponent
+    SelfAssessmentComponent,
+    BulletChartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+const skills = [
+    {'title': 'Javascript', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [8], 'markers': [8]},
+    {'title': 'Angular2+', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [6], 'markers': [6]},
+    {'title': 'Typescript', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [6], 'markers': [6]},
+    {'title': 'AngularJS', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [8], 'markers': [8]},
+    {'title': 'React', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [5], 'markers': [5]},
+    {'title': 'HTML', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [7], 'markers': [7]},
+    {'title': 'CSS', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [5], 'markers': [5]},
+    {'title': 'C# / .NET', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [4], 'markers': [4]},
+    {'title': 'Ruby on Rails', 'subtitle': 'out of 10', 'ranges': [0, 10, 10], 'measures': [4], 'markers': [4]}
+  ];
+
+  export default skills;

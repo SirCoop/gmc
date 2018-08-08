@@ -50,3 +50,57 @@ body {
     }
   }
 }
+
+#bulletChartContainer {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+  width: 960px;
+
+  > svg.bullet {
+      font: 10px sans-serif;
+
+      > g {
+          > rect.range.s0 {
+                  fill: #eee;
+              }
+          > rect.range.s1 {
+                  fill: #ddd;
+              }
+          > rect.range.s2 {
+                  fill: #ccc;
+              }
+          > rect.measure.s0 {
+                  fill: lightsteelblue;
+              }
+          > rect.measure.s1 {
+                  fill: steelblue;
+              }
+          > line.marker {
+              stroke: #000;
+              stroke-width: 2px;
+          }
+
+          > g {
+              & .tick {
+                > line {
+                    stroke: #666;
+                    stroke-width: .5px;
+                  }
+              }
+              > text.title {
+                  font-size: 14px;
+                  font-weight: bold;                
+              }
+              > text.subtitle {
+                  fill: #999;
+              }
+          }
+      }
+
+
+  }
+}
+
+
