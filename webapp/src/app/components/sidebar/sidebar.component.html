@@ -11,20 +11,15 @@
       </a>
     </li>
     <li>
-      <a routerLink="resume" [class.activated]="currentUrl == '/resume'">
-        <i class="material-icons">assignment</i>
+      <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')">
+        <i class="material-icons">airplanemode_active</i>
       </a>
     </li>
     <li>
       <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
         <i class="material-icons">assessment</i>
       </a>
-    </li>    
-    <li>
-      <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')">
-        <i class="material-icons">airplanemode_active</i>
-      </a>
-    </li>
+    </li>        
     <li>
       <a routerLink="apps" [class.activated]="currentUrl == '/apps'">
         <i class="material-icons">view_module</i>
@@ -48,6 +43,11 @@
     <li>
       <a routerLink="failures" [class.activated]="currentUrl == '/failures'">
         <i class="material-icons">highlight_off</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="resume" [class.activated]="currentUrl == '/resume'">
+        <i class="material-icons">assignment</i>
       </a>
     </li>
   </ul>
