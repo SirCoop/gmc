@@ -11,10 +11,15 @@
       </a>
     </li>
     <li>
-      <a routerLink="writings" [class.activated]="currentUrl == '/writings'">
-        <i class="material-icons">create</i>
+      <a routerLink="resume" [class.activated]="currentUrl == '/resume'">
+        <i class="material-icons">assignment</i>
       </a>
     </li>
+    <li>
+      <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
+        <i class="material-icons">assessment</i>
+      </a>
+    </li>    
     <li>
       <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')">
         <i class="material-icons">airplanemode_active</i>
@@ -31,6 +36,11 @@
       </a>
     </li>
     <li>
+      <a routerLink="writings" [class.activated]="currentUrl == '/writings'">
+        <i class="material-icons">create</i>
+      </a>
+    </li>
+    <li>
       <a routerLink="successes" [class.activated]="currentUrl == '/successes'">
         <i class="material-icons">done</i>
       </a>
@@ -38,16 +48,6 @@
     <li>
       <a routerLink="failures" [class.activated]="currentUrl == '/failures'">
         <i class="material-icons">highlight_off</i>
-      </a>
-    </li>
-    <li>
-      <a routerLink="resume" [class.activated]="currentUrl == '/resume'">
-        <i class="material-icons">assignment</i>
-      </a>
-    </li>
-    <li>
-      <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
-        <i class="material-icons">assessment</i>
       </a>
     </li>
   </ul>
