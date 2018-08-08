@@ -51,56 +51,143 @@ body {
   }
 }
 
-#bulletChartContainer {
+#frontEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   padding-top: 40px;
   position: relative;
   width: 960px;
-
-  > svg.bullet {
-      font: 10px sans-serif;
-
-      > g {
-          > rect.range.s0 {
-                  fill: #eee;
-              }
-          > rect.range.s1 {
-                  fill: #ddd;
-              }
-          > rect.range.s2 {
-                  fill: #ccc;
-              }
-          > rect.measure.s0 {
-                  fill: lightsteelblue;
-              }
-          > rect.measure.s1 {
-                  fill: steelblue;
-              }
-          > line.marker {
-              stroke: #000;
-              stroke-width: 2px;
-          }
-
-          > g {
-              & .tick {
-                > line {
-                    stroke: #666;
-                    stroke-width: .5px;
-                  }
-              }
-              > text.title {
-                  font-size: 14px;
-                  font-weight: bold;                
-              }
-              > text.subtitle {
-                  fill: #999;
-              }
-          }
+  >svg.bullet {
+    font: 10px sans-serif;
+    >g {
+      >rect.range.s0 {
+        fill: #eee;
       }
-
-
+      >rect.range.s1 {
+        fill: #ddd;
+      }
+      >rect.range.s2 {
+        fill: #ccc;
+      }
+      >rect.measure.s0 {
+        fill: rgb(70, 180, 107);
+      }
+      >rect.measure.s1 {
+        fill: rgb(70, 180, 107);
+      }
+      >line.marker {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+      >g {
+        & .tick {
+          >line {
+            stroke: #666;
+            stroke-width: .5px;
+          }
+        }
+        >text.title {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        >text.subtitle {
+          fill: #999;
+        }
+      }
+    }
   }
 }
 
+#backEndSkills {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+  width: 960px;
+  >svg.bullet {
+    font: 10px sans-serif;
+    >g {
+      >rect.range.s0 {
+        fill: #eee;
+      }
+      >rect.range.s1 {
+        fill: #ddd;
+      }
+      >rect.range.s2 {
+        fill: #ccc;
+      }
+      >rect.measure.s0 {
+        fill: rgb(70, 158, 180);
+      }
+      >rect.measure.s1 {
+        fill: rgb(70, 158, 180);
+      }
+      >line.marker {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+      >g {
+        & .tick {
+          >line {
+            stroke: #666;
+            stroke-width: .5px;
+          }
+        }
+        >text.title {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        >text.subtitle {
+          fill: #999;
+        }
+      }
+    }
+  }
+}
 
+#machineLearningSkills {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+  width: 960px;
+  >svg.bullet {
+    font: 10px sans-serif;
+    >g {
+      >rect.range.s0 {
+        fill: #eee;
+      }
+      >rect.range.s1 {
+        fill: #ddd;
+      }
+      >rect.range.s2 {
+        fill: #ccc;
+      }
+      >rect.measure.s0 {
+        fill: rgb(127, 70, 180);
+      }
+      >rect.measure.s1 {
+        fill: rgb(127, 70, 180);
+      }
+      >line.marker {
+        stroke: #000;
+        stroke-width: 2px;
+      }
+      >g {
+        & .tick {
+          >line {
+            stroke: #666;
+            stroke-width: .5px;
+          }
+        }
+        >text.title {
+          font-size: 14px;
+          font-weight: bold;
+        }
+        >text.subtitle {
+          fill: #999;
+        }
+      }
+    }
+  }
+}

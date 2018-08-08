@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import d3Bullet from './bullet.js';
-import skills from './skills';
 
 /* imported via script tags due to typing and compatibility issues */
 declare let d3: any;
@@ -11,6 +10,7 @@ declare let d3: any;
   styleUrls: ['./bullet-chart.component.scss']
 })
 export class BulletChartComponent implements OnInit {
+  @Input() dataSource: any[] = [];
 
   randomize(d) {
     if (!d.randomizer) {
@@ -27,9 +27,9 @@ export class BulletChartComponent implements OnInit {
     return () => Math.max(0, d + k * (Math.random() - .5));
   }
 
-  ready() {
+  ready(data, selector) {
     d3Bullet();
-    const margin = { top: 5, right: 40, bottom: 20, left: 120 },
+    const margin = { top: 5, right: 40, bottom: 20, left: 300 },
       width = 960 - margin.left - margin.right,
       height = 50 - margin.top - margin.bottom;
 
@@ -37,10 +37,7 @@ export class BulletChartComponent implements OnInit {
       .width(width)
       .height(height);
 
-    const data: any = skills;
-
-
-    const svg = d3.select('#bulletChartContainer').selectAll('svg')
+    const svg = d3.select(selector).selectAll('svg')
       .data(data)
       .enter().append('svg')
       .attr('class', 'bullet')
@@ -71,7 +68,9 @@ export class BulletChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.ready();
+    this.dataSource.forEach(src => {
+      this.ready(src.data, src.selector);      
+    });
   }
 
 }
