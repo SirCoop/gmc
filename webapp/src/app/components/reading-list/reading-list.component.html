@@ -7,56 +7,59 @@
     <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
   </section>
 
-  <section>
-    <h3>Self-Improvement</h3>
-    <ul *ngFor="let book of books$.selfImprovement">
-      <li>{{book.title}} - {{book.author}}</li>
-    </ul>
-  </section>
+  <mat-tab-group>
+    <mat-tab label="Self-Improvement">
+      <ng-template matTabContent>
+        <h3>These books will absolutely change your life.</h3>
+        <ul *ngFor="let book of books$.selfImprovement">
+          <li>{{book.title}} - {{book.author}}</li>
+        </ul>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Leadership | Management | Entrepreneurship">
+      <ng-template matTabContent>
+        <ul *ngFor="let book of books$.business">
+          <li>{{book.title}} - {{book.author}}</li>
+        </ul>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Psychology">
+      <ng-template matTabContent>
+        <div class="sub-section">
+          <strong>Crowd Psychology</strong>
+          <ul *ngFor="let book of books$.psychology.crowdPsychology">
+            <li>{{book.title}} - {{book.author}}</li>
+          </ul>
+        </div>
 
-  <section>
-    <h3>Leadership | Management | Entrepreneurship</h3>
-    <ul *ngFor="let book of books$.business">
-      <li>{{book.title}} - {{book.author}}</li>
-    </ul>
-  </section>
+        <div class="sub-section">
+          <strong>Body Language</strong>
+          <ul *ngFor="let book of books$.psychology.bodyLanguage">
+            <li>{{book.title}} - {{book.author}}</li>
+          </ul>
+        </div>
 
-  <section>
-    <h3>Psychology</h3>
-    <div>
-      <strong>Crowd Psychology</strong>
-      <ul *ngFor="let book of books$.psychology.crowdPsychology">
-        <li>{{book.title}} - {{book.author}}</li>
-      </ul>
-    </div>
-
-    <div>
-      <strong>Body Language</strong>
-      <ul *ngFor="let book of books$.psychology.bodyLanguage">
-        <li>{{book.title}} - {{book.author}}</li>
-      </ul>
-    </div>
-
-    <div>
-      <strong>Communication</strong>
-      <ul *ngFor="let book of books$.psychology.communication">
-        <li>{{book.title}} - {{book.author}}</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h3>Philosophy</h3>
-    <ul *ngFor="let book of books$.philosophy">
-      <li>{{book.title}} - {{book.author}}</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Spiritual</h3>
-    <ul *ngFor="let book of books$.spiritual">
-      <li>{{book.title}} - {{book.author}}</li>
-    </ul>
-  </section>
-
+        <div class="sub-section">
+          <strong>Communication</strong>
+          <ul *ngFor="let book of books$.psychology.communication">
+            <li>{{book.title}} - {{book.author}}</li>
+          </ul>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Philosophy">
+      <ng-template matTabContent>
+        <ul *ngFor="let book of books$.philosophy">
+          <li>{{book.title}} - {{book.author}}</li>
+        </ul>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Spiritual">
+      <ng-template matTabContent>
+        <ul *ngFor="let book of books$.spiritual">
+          <li>{{book.title}} - {{book.author}}</li>
+        </ul>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
 </div>
