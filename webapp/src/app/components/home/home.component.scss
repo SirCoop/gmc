@@ -1,3 +1,7 @@
+#headline {
+  text-align: center;
+}
+
 .logo-container {
     display: inline-block;
     vertical-align: middle;
@@ -6,8 +10,9 @@
 
 img {
   display: block;
-  max-width:230px;
-  max-height:95px;
+  // reduce max-* to reduce image size but keep aspect ratio
+  max-width:150px;
+  max-height:60px;
   width: auto;
   height: auto;
 }
