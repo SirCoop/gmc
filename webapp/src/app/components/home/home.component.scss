@@ -6,6 +6,10 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 1.5rem;
+    @media (max-width: 980px) { 
+      display: block;
+      margin-bottom: 1rem;
+    }
 }
 
 img {

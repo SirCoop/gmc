@@ -1,6 +1,7 @@
 node_modules/
 
 assets/images/**/*
+assets/journal/**/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
