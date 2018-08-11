@@ -7,14 +7,13 @@ import { DataService } from '../services/data.service';
 @Injectable({
     providedIn: 'root'
 })
-export class CountryImagesResolver implements Resolve<any> {
+export class WritingsResolver implements Resolve<any> {
 
     constructor(private dataService: DataService, private router: Router) {}
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> | Promise<any> {
-        const country = route.paramMap.get('country');
         try {
-            return this.dataService.getCountryImageUrls(country);
+            return this.dataService.getWritingLists();
         } catch (error) {
             console.error(error); // deal with API error (eg not found)
             this.router.navigate(['/']); // could redirect to error page

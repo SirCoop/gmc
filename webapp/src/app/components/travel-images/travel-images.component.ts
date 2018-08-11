@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
+import {MatDialog } from '@angular/material';
+
+// MatDialogConfig, MatDialogRef 
 
 import { ImageDialogComponent } from './../image-dialog/image-dialog.component';
 

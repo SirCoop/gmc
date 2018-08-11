@@ -59,6 +59,10 @@ app.get('/api/country/:name/:image', (req, res) => {
   });
 });
 
+/* Writings */
+const writingsController = require('./controllers/writings.controller');
+app.use(`${base_api_url}/writings/lists`, writingsController.getWritingLists);
+
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
     res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);

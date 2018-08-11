@@ -8,12 +8,20 @@ import { HttpClient } from '@angular/common/http';
 
 export class DataService {
 
-  private testUrl = '/api/country';
+  private baseUrl = '/api';
 
   constructor(private http: HttpClient) { }
 
   getCountryImageUrls(country) {
-    return this.http.get(`${this.testUrl}/${country}/images`);
+    return this.http.get(`${this.baseUrl}/country/${country}/images`);
+  }
+
+  getWritingLists() {
+    return this.http.get(`${this.baseUrl}/writings/lists`);
+  }
+
+  getWriting(type, id) {
+    return this.http.get(`${this.baseUrl}/writings/${type}/${id}`);
   }
 
 }

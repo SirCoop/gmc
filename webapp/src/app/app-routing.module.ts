@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CountryImagesResolver } from './resolvers/country-images.resolver';
+import { WritingsResolver } from './resolvers/writings.resolver';
 
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
@@ -25,10 +26,6 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'writings',
-    component: WritingsComponent
-  },
-  {
     path: 'travel-gallery',
     component: TravelComponent
   },
@@ -40,12 +37,23 @@ const routes: Routes = [
     }
   },
   {
+    path: 'self-assessment',
+    component: SelfAssessmentComponent
+  },
+  {
     path: 'apps',
     component: AppsComponent
   },
   {
     path: 'reading-list',
     component: ReadingListComponent
+  },
+  {
+    path: 'writings',
+    component: WritingsComponent,
+    resolve: {
+      writings: WritingsResolver
+    }
   },
   {
     path: 'successes',
@@ -58,10 +66,6 @@ const routes: Routes = [
   {
     path: 'resume',
     component: ResumeComponent
-  },
-  {
-    path: 'self-assessment',
-    component: SelfAssessmentComponent
   }
 ];
 

@@ -17,11 +17,17 @@
         <mat-tab label="Journal">
           <ng-template matTabContent>
               <h2>Some Header</h2>
+              <div *ngFor="let item of writings$.journal">
+                <a href="">{{item}}</a>
+              </div>
           </ng-template>
         </mat-tab>
         <mat-tab label="Metaphorical Art">
           <ng-template matTabContent>
               <h2>Some Header</h2>
+              <div *ngFor="let item of writings$.metaphoricalArt">
+                <a href="">{{item}}</a>
+              </div>
               <!-- <p>Made viewable by &nbsp;<a href="https://github.com/VadimDez/ng2-pdf-viewer">ng2-pdf-viewer</a></p> -->
               <!-- <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc" [render-text]="renderText" style="display: block"></pdf-viewer> -->
           </ng-template>
@@ -29,6 +35,9 @@
         <mat-tab label="Blue Ocean">
             <ng-template matTabContent>
                 <h2>Some Header</h2>
+                <div *ngFor="let item of writings$.blueOcean">
+                  <a href="">{{item}}</a>
+                </div>
             </ng-template>
           </mat-tab>
       </mat-tab-group>
