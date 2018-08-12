@@ -15,24 +15,26 @@
 <section>
     <mat-tab-group>
         <mat-tab label="Journal">
-          <ng-template matTabContent>
-              <div *ngFor="let item of writings$.journal">
-                <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
+          <ng-template matTabContent class="tab-content">
+            <div class="list-container">
+              <div *ngFor="let item of writings$.journal" class="writing-item">
+                  <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
               </div>
+            </div>              
           </ng-template>
         </mat-tab>
         <mat-tab label="Metaphorical Art">
-          <ng-template matTabContent>
+          <ng-template matTabContent class="tab-content">
               <h2>Some Header</h2>
-              <div *ngFor="let item of writings$.metaphoricalArt">
+              <div *ngFor="let item of writings$.metaphoricalArt" class="writing-item">
                 <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
               </div>              
           </ng-template>
         </mat-tab>
         <mat-tab label="Blue Ocean">
-            <ng-template matTabContent>
+            <ng-template matTabContent class="tab-content">
                 <h2>Some Header</h2>
-                <div *ngFor="let item of writings$.blueOcean">
+                <div *ngFor="let item of writings$.blueOcean" class="writing-item">
                   <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
                 </div>
             </ng-template>
