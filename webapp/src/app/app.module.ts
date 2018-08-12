@@ -26,6 +26,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
 import { ReaderComponent } from './components/reader/reader.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ReaderComponent } from './components/reader/reader.component';
     ResumeComponent,
     SelfAssessmentComponent,
     BulletChartComponent,
-    ReaderComponent
+    ReaderComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CountryImagesResolver } from './resolvers/country-images.resolver';
 import { WritingsResolver } from './resolvers/writings.resolver';
 
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { HomeComponent } from './components/home/home.component';
@@ -20,6 +21,10 @@ import { ReaderComponent } from './components/reader/reader.component';
 const routes: Routes = [
   {
     path: '',
+    component: LandingPageComponent
+  },
+  {
+    path: 'home',
     component: HomeComponent
   },
   {
