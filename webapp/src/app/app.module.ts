@@ -25,6 +25,7 @@ import { ImageDialogComponent } from './components/image-dialog/image-dialog.com
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
+import { ReaderComponent } from './components/reader/reader.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BulletChartComponent } from './components/bullet-chart/bullet-chart.com
     ImageDialogComponent,
     ResumeComponent,
     SelfAssessmentComponent,
-    BulletChartComponent
+    BulletChartComponent,
+    ReaderComponent
   ],
   imports: [
     BrowserModule,

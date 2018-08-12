@@ -31,7 +31,7 @@
       </a>
     </li>
     <li>
-      <a routerLink="writings" [class.activated]="currentUrl == '/writings'">
+      <a routerLink="writings" [class.activated]="currentUrl.includes('writings')">
         <i class="material-icons">create</i>
       </a>
     </li>

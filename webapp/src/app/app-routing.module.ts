@@ -15,6 +15,7 @@ import { SuccessesComponent } from './components/successes/successes.component';
 import { FailuresComponent } from './components/failures/failures.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
+import { ReaderComponent } from './components/reader/reader.component';
 
 const routes: Routes = [
   {
@@ -54,6 +55,10 @@ const routes: Routes = [
     resolve: {
       writings: WritingsResolver
     }
+  },
+  {
+    path: 'writings/:type/:id',
+    component: ReaderComponent
   },
   {
     path: 'successes',

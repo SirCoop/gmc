@@ -8,8 +8,6 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const countryImagesService = require('./services/country-images.service');
-
 const fs = require('fs');
 const app = express();
 
@@ -62,6 +60,15 @@ app.get('/api/country/:name/:image', (req, res) => {
 /* Writings */
 const writingsController = require('./controllers/writings.controller');
 app.use(`${base_api_url}/writings/lists`, writingsController.getWritingLists);
+
+// this may not work - supposed to auto serve pdf when browser hits url
+app.get('/writings/:type/:id', (req, res) => {
+  const type = req.params.type;
+  const id = req.params.id;
+  const ext = '.pdf';
+  const path = `${CONSTANTS.webapp.writings}/${type}/${id}${ext}`;
+  res.sendfile(path);
+});
 
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
