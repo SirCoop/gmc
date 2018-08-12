@@ -57,7 +57,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'writings/:type/:id',
+    path: 'writings/:type/:fileName',
     component: ReaderComponent
   },
   {

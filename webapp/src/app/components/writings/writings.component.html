@@ -17,7 +17,7 @@
         <mat-tab label="Journal">
           <ng-template matTabContent>
               <div *ngFor="let item of writings$.journal">
-                <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
+                <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
               </div>
           </ng-template>
         </mat-tab>

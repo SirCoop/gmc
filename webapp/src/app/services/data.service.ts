@@ -1,6 +1,6 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,13 @@ export class DataService {
     return this.http.get(`${this.baseUrl}/writings/lists`);
   }
 
-  getWriting(type, id) {
-    return this.http.get(`${this.baseUrl}/writings/${type}/${id}`);
+  getWriting(type, fileName): Observable<any> {
+    /*
+    * HttpClient automatically returns an Observable
+    * Subscribe to Observable in component requesting this data    
+    * e.g. this.dataService.getWriting(type, fileName).subscribe(res => this.pdf$ = res);
+    */
+    return this.http.get(`${this.baseUrl}/writings/${type}/${fileName}.pdf`);
   }
 
 }

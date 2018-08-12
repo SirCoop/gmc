@@ -59,15 +59,20 @@ app.get('/api/country/:name/:image', (req, res) => {
 
 /* Writings */
 const writingsController = require('./controllers/writings.controller');
+// get List - All
 app.use(`${base_api_url}/writings/lists`, writingsController.getWritingLists);
-
-// this may not work - supposed to auto serve pdf when browser hits url
-app.get('/writings/:type/:id', (req, res) => {
+// get One
+app.get(`${base_api_url}/writings/:type/:fileName`, (req, res) => {
   const type = req.params.type;
-  const id = req.params.id;
-  const ext = '.pdf';
-  const path = `${CONSTANTS.webapp.writings}/${type}/${id}${ext}`;
-  res.sendfile(path);
+  const fileName = req.params.fileName;
+  const path = `${CONSTANTS.webapp.writings}/${type}/${fileName}`;
+  console.log('here is the path: ', path);
+  const file = fs.createReadStream(path);
+  const stat = fs.statSync(path);
+  res.setHeader('Content-Length', stat.size);
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'attachment;');
+  file.pipe(res);
 });
 
 /* Catch all other routes and return the index file */

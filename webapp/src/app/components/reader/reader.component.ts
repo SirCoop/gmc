@@ -10,9 +10,9 @@ import { DataService } from './../../services/data.service';
 })
 export class ReaderComponent implements OnInit {
 
-  pdf$: any;
-  pdfSrc = '../../../assets/gmc_resume.pdf';
-  zoom = 1.45;
+  pdfTitle: string;
+  pdfSrc = '';
+  zoom = 1.35;
   originalSize = true;
   showAll = true;
   renderText = false;
@@ -24,9 +24,9 @@ export class ReaderComponent implements OnInit {
   }
 
   fetchPdf() {
-    // get route params for type and id.
-    // call getWriting(type, id) {
-    // this.dataService.getWriting(type, id);
+    const { type, fileName } = this.route.snapshot.params;
+    this.pdfTitle = fileName.split('_')[1].split('.')[0];
+    this.pdfSrc = `/api/writings/${type}/${fileName}.pdf`;
   }
 
 }

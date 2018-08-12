@@ -30,8 +30,9 @@ function getDirectoryList(directories, dirObject) {
         dirObject[dir] = dirObject[dir].map(item => { 
             const index = item.split('_');
             const id = index[0];
-            const value = index[1] .split('.')[0];
-            return { id, value, type: dir };
+            const value = index[1].split('.')[0];
+            const fileName = item.split('.')[0]
+            return { id, value, type: dir, fileName };
         });
     });
     return dirObject;
