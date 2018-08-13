@@ -12,7 +12,7 @@ export class ReaderComponent implements OnInit {
 
   pdfTitle: string;
   pdfSrc = '';
-  zoom = 1.35;
+  zoom = 1.05;
   originalSize = true;
   showAll = true;
   renderText = false;
