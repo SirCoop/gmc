@@ -1,0 +1,31 @@
+nav {
+  @media (min-width: 981px) {
+    background: orange;
+    height: 100%;
+    a {
+      color: #fff;
+      padding: 20px;
+      display: block;
+      @media (max-width: 980px) {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+      @media (max-width: 736px) {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+      @media (max-width: 480px) {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+    }
+
+    a:last-child {
+        display: none;
+    }
+
+    .activated {
+      background-color: #00a8ff;
+    }
+  }
+}
