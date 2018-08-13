@@ -229,4 +229,9 @@
     &:hover {
         color: black;
     }
+
+    @media (max-width: 980px) {
+        font-family: serif;
+        color: black;
+     }
 }
