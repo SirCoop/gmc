@@ -1,12 +1,18 @@
+#landing-page {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 /*dna*/
 .dna-wrapper {
     font-size: 26px;
     // min-height: 800px;
-    // width: inherit;
+    width: inherit;
 }
 
 #A,#T,#C,#G,#A2,#T2,#C2,#G2,#A3,#T3,#C3,#G3,#A4,#T4,#C4,#G4,
-#A9,#T9,#C9,#G9,#A10,#T10,#C10,#G10,#A11,#T11,#C11,#G11,#A12,#T12,#C12,#G12 {
+#A9,#T9,#C9,#G9,#A10,#T10,#C10,#G10,#A11,#T11,#C11,#G11,#A12,#T12,#C12,#G12, #enterButton {
     position: absolute;
 }
 
@@ -16,51 +22,71 @@
 
 #A,#T {
     top: 10%;
+    left: 40%;
 }
 #C,#G {
     top: 15%;
+    left: 40%;
 }
 #A2,#T2 {
     top: 20%;
+    left: 40%;
 }
 #C2,#G2 {
     top: 25%;
+    left: 40%;
 }
 #A3,#T3 {
     top: 30%;
+    left: 40%;
 }
 #C3,#G3 {
     top: 35%;
+    left: 40%;
 }
 #A4,#T4 {
     top: 40%;
+    left: 40%;
 }
 #C4,#G4 {
     top: 45%;
+    left: 40%;
 }
 #A9,#T9 {
     top: 50%;
+    left: 40%;
 }
 #C9,#G9 {
     top: 55%;
+    left: 40%;
 }
 #A10,#T10 {
     top: 60%;
+    left: 40%;
 }
 #C10,#G10 {
     top: 65%;
+    left: 40%;
 }
 #A11,#T11 {
     top: 70%;
+    left: 40%;
 }
 #C11,#G11 {
     top: 75%;
+    left: 40%;
 }
 #A12,#T12 {
     top: 80%;
+    left: 40%;
 }
 #C12,#G12 {
     top: 85%;
+    left: 40%;
+}
+#enterButton {
+    top: 85%;
+    left: 43%;
 }
 
 @-webkit-keyframes one {
@@ -189,5 +215,18 @@
 /*end dna*/
 
 #enterButton {
-    cursor: pointer;    
+    font-family: serif;
+    color: gainsboro;
+    cursor: pointer;
+
+    -o-transition:.75s;
+    -ms-transition:.75s;
+    -moz-transition:.75s;
+    -webkit-transition:.75s;
+    /* for the proper property */
+    transition:.75s;
+    
+    &:hover {
+        color: black;
+    }
 }
