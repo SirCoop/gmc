@@ -27,6 +27,7 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
 import { BulletChartComponent } from './components/bullet-chart/bullet-chart.component';
 import { ReaderComponent } from './components/reader/reader.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     SelfAssessmentComponent,
     BulletChartComponent,
     ReaderComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    ToggleSidebarDirective
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 /*dna*/
 .dna-wrapper {
     font-size: 26px;
-    min-height: 800px;
-    width: inherit;
+    // min-height: 800px;
+    // width: inherit;
 }
 
 #A,#T,#C,#G,#A2,#T2,#C2,#G2,#A3,#T3,#C3,#G3,#A4,#T4,#C4,#G4,
@@ -187,3 +187,7 @@
 /*end 4th pair*/
 
 /*end dna*/
+
+#enterButton {
+    cursor: pointer;    
+}
