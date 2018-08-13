@@ -4,6 +4,34 @@
     }
 }
 
+/* toggle css/gif for mobile */
+// @media (max-width: 1690px) and (max-width: 1280px) { 
+//     .dna-wrapper {
+//         display: block;
+//     }
+//     .dna-mobile {
+//         display: none;
+//     }
+//  }
+@media (min-width: 981px) { 
+    .dna-wrapper {
+        display: block;
+    }
+    .dna-mobile {
+        display: none;
+    }
+ }
+
+@media (max-width: 980px) and (max-width: 736px) and (max-width: 480px) { 
+    .dna-wrapper {
+        display: none;
+    }
+    .dna-mobile {
+        display: block;
+    }
+ }
+
+
 /*dna*/
 .dna-wrapper {
     font-size: 26px;
@@ -86,7 +114,7 @@
 }
 #enterButton {
     top: 85%;
-    left: 43%;
+    left: 41%;
 }
 
 @-webkit-keyframes one {
@@ -232,6 +260,6 @@
 
     @media (max-width: 980px) {
         font-family: serif;
-        color: black;
+        color: black;        
      }
 }
