@@ -13,7 +13,6 @@ import { map } from 'rxjs/operators';
 export class SidenavResponsiveComponent {
   currentUrl = '';
 
-
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches)
