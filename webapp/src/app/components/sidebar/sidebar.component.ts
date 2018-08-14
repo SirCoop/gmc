@@ -17,7 +17,7 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  ngOnInit() {   
+  ngOnInit() {
   }
 
   @HostListener('window:resize', ['$event']) onResize(event) {
@@ -29,10 +29,10 @@ export class SidebarComponent implements OnInit {
   toggleMenu() {
     const el = document.getElementById('navContainer');
     if (el.className === 'topnav') {
-        el.className += ' responsive';
+      el.className += ' responsive';
     } else {
-        el.className = 'topnav';
+      el.className = 'topnav';
     }
-}
+  }
 
 }

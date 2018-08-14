@@ -1,0 +1,57 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="home" [class.activated]="currentUrl == '/home'">
+        <i class="material-icons">location_city</i>
+      </a>
+      <a mat-list-item routerLink="about" [class.activated]="currentUrl == '/about'">
+        <i class="material-icons">fingerprint</i>
+      </a>
+      <a mat-list-item routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')">
+        <i class="material-icons">airplanemode_active</i>
+      </a>
+      <a mat-list-item routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
+        <i class="material-icons">assessment</i>
+      </a>
+      <a mat-list-item routerLink="apps" [class.activated]="currentUrl == '/apps'">
+        <i class="material-icons">view_module</i>
+      </a>
+      <a mat-list-item routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'">
+        <i class="material-icons">list</i>
+      </a>
+      <a mat-list-item routerLink="writings" [class.activated]="currentUrl.includes('writings')">
+        <i class="material-icons">create</i>
+      </a>
+      <a mat-list-item routerLink="successes" [class.activated]="currentUrl == '/successes'">
+        <i class="material-icons">done</i>
+      </a>
+      <a mat-list-item routerLink="failures" [class.activated]="currentUrl == '/failures'">
+        <i class="material-icons">highlight_off</i>
+      </a>
+      <a mat-list-item routerLink="resume" [class.activated]="currentUrl == '/resume'">
+        <i class="material-icons">assignment</i>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>GMC</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

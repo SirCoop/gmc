@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule, MatTabsModule  } from '@angular/material';
+import { MatDialogModule, MatTabsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule  } from '@angular/material';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
@@ -28,6 +28,8 @@ import { BulletChartComponent } from './components/bullet-chart/bullet-chart.com
 import { ReaderComponent } from './components/reader/reader.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
+import { LayoutModule } from '@angular/cdk/layout';
+import { SidenavResponsiveComponent } from './components/sidenav-responsive/sidenav-responsive.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
     BulletChartComponent,
     ReaderComponent,
     LandingPageComponent,
-    ToggleSidebarDirective
+    ToggleSidebarDirective,
+    SidenavResponsiveComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,13 @@ import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
     BrowserAnimationsModule,
     MatDialogModule,
     MatTabsModule,
-    PdfViewerModule
+    PdfViewerModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule    
   ],
   providers: [],
   bootstrap: [AppComponent],
