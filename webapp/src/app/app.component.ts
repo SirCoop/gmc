@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'app';
   currentUrl = '';
   hideSideNav = true;
@@ -19,22 +19,9 @@ export class AppComponent implements OnInit {
       map(result => result.matches)
     );
 
-  constructor(private el: ElementRef, private renderer: Renderer2, private router: Router, private breakpointObserver: BreakpointObserver) {
+  constructor(private router: Router, private breakpointObserver: BreakpointObserver) {
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
-      // if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
-      //   this.hideSideNav = true;
-      // } else {
-      //   this.hideSideNav = false;
-      // }
     });
-  }
-
-  ngOnInit() {
-    // if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
-    //   this.hideSideNav = true;
-    // } else {
-    //   this.hideSideNav = false;
-    // }
   }
 }

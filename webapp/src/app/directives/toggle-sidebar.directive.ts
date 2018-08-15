@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2, DoCheck } from '@angular/core';
+import { Directive, ElementRef, DoCheck } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Directive({
@@ -7,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class ToggleSidebarDirective implements DoCheck {
   currentUrl = '';
 
-  constructor(private el: ElementRef, private router: Router, private renderer: Renderer2) {
+  constructor(private el: ElementRef, private router: Router) {
     
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;        
