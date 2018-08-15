@@ -217,20 +217,23 @@
     
     #enterButton {
         font-family: serif;
-        color: black;        
-        cursor: pointer;
-        border: 1px solid rgb(170, 252, 170);
-        border-radius: .5rem;
-        padding: .2rem .45rem .2rem .2rem;
-        background-color: rgb(245, 245, 245);
 
-        &:focus {
-            border: 1px solid rgba(170, 252, 170, 0.63);
-            background-color: rgb(243, 243, 243);
+        &.pulsate {
+            -webkit-animation: pulsate 3s ease-out;
+            -webkit-animation-iteration-count: infinite; 
+            opacity: 0.5;
         }
-        &:hover {
-            border: 1px solid rgba(170, 252, 170, 0.63);
-            background-color: rgb(243, 243, 243);
+
+        @-webkit-keyframes pulsate {
+            0% { 
+                opacity: 0.5;
+            }
+            50% { 
+                opacity: 1.0;
+            }
+            100% { 
+                opacity: 0.5;
+            }
         }
     }
 }

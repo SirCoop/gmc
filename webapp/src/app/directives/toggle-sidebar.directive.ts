@@ -1,10 +1,10 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Directive({
   selector: '[appToggleSidebar]'
 })
-export class ToggleSidebarDirective {
+export class ToggleSidebarDirective implements OnInit {
   currentUrl = '';
 
   constructor(private el: ElementRef, private router: Router, private renderer: Renderer2) {
@@ -12,13 +12,21 @@ export class ToggleSidebarDirective {
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
       
-      if (this.currentUrl === '/') {
-        renderer.addClass(el.nativeElement, 'landing-page');
-        // el.nativeElement.style.display = 'none';
+      console.log('this.currentUrl: ', this.currentUrl);
+      if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
+        this.el.nativeElement.style.visibility = 'hidden';
       } else {
-        // el.nativeElement.style.display = 'block';
+        this.el.nativeElement.style.visibility = 'visible';
       }
      });
+  }
+
+  ngOnInit() {    
+    if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
+      this.el.nativeElement.style.visibility = 'hidden';
+    } else {
+      this.el.nativeElement.style.visibility = 'visible';
+    }
   }
 }
 

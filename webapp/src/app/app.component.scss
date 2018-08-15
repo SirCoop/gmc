@@ -43,12 +43,3 @@ a .material-icons {
     background: #a3b8f7;
   }
 }
-
-// for landing-page only
-mat-sidenav-content>mat-toolbar.landing-page {
-  display: none;
-}
-
-mat-sidenav.landing-page {
-  display: none
-}

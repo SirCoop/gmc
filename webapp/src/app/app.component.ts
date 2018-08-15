@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -9,9 +9,10 @@ import { map } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   currentUrl = '';
+  hideSideNav = true;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -21,14 +22,19 @@ export class AppComponent {
   constructor(private el: ElementRef, private renderer: Renderer2, private router: Router, private breakpointObserver: BreakpointObserver) {
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
-      if (this.currentUrl === '/') {
-        console.log('landing-page: ', this.el.nativeElement);
-        // renderer.addClass(el.nativeElement, 'landing-page');
-        // el.nativeElement.style.display = 'none';
-      } else {
-        console.log('elsewhere: ', this.el.nativeElement);
-        // el.nativeElement.style.display = 'block';
-      }
+      // if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
+      //   this.hideSideNav = true;
+      // } else {
+      //   this.hideSideNav = false;
+      // }
     });
+  }
+
+  ngOnInit() {
+    // if (this.currentUrl === '/' || this.currentUrl === 'undefined') {
+    //   this.hideSideNav = true;
+    // } else {
+    //   this.hideSideNav = false;
+    // }
   }
 }

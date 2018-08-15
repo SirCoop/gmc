@@ -217,7 +217,7 @@
 
     #enterButton {
         font-family: serif;
-        color: gainsboro;
+        color: #dcdcdc;
         cursor: pointer;
 
         -o-transition: .75s;
@@ -229,6 +229,6 @@
         
         &:hover {
             color: black;
-        }    
+        }
     }
 }
