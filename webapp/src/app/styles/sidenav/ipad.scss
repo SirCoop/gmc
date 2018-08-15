@@ -1,0 +1,39 @@
+/* Lanscape */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .sidenav {
+    width: 60px;
+  }
+  .mat-toolbar.mat-toolbar-single-row {
+    display: none;
+    box-sizing: none;
+    padding: 0px 0px;
+    width: 0%;
+    flex-direction: none;
+    align-items: none;
+    white-space: none;
+  }
+  mat-sidenav {
+    background: #a3b8f7;
+  }
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  mat-sidenav-container > mat-sidenav {
+    width: 60px;
+  }
+  .mat-toolbar.mat-toolbar-single-row {
+    display: none;
+    box-sizing: none;
+    padding: 0px 0px;
+    width: 0%;
+    flex-direction: none;
+    align-items: none;
+    white-space: none;
+  }
+  mat-sidenav {
+    background: #a3b8f7;
+  }
+}

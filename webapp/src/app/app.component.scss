@@ -1,3 +1,9 @@
+@import './styles/sidenav/ipad-pro';
+@import './styles/sidenav/ipad';
+@import './styles/sidenav/iphone-5-5s';
+@import './styles/sidenav/iphone-6-7-8';
+@import './styles/sidenav/iphone-6-7-8-plus';
+@import './styles/sidenav/iphone-x';
 // default angular-material css
 .sidenav-container {
   height: 100%;
@@ -10,7 +16,39 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-} 
+  background-color: #000;
+}
 
-// custom css
+/* custom css */
+.app-content {
+  margin: 1rem 1rem;
+}
 
+a .material-icons {
+  color: white;
+  padding-left: 20%;
+}
+// Screens >= 13inch
+@media only screen and (min-device-width: 1140px) {
+  .mat-toolbar.mat-toolbar-single-row {
+    display: none;
+    box-sizing: none;
+    padding: 0px 0px;
+    width: 0%;
+    flex-direction: none;
+    align-items: none;
+    white-space: none;
+  }
+  mat-sidenav {
+    background: #a3b8f7;
+  }
+}
+
+// for landing-page only
+mat-sidenav-content>mat-toolbar.landing-page {
+  display: none;
+}
+
+mat-sidenav.landing-page {
+  display: none
+}

@@ -9,7 +9,6 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { AboutComponent } from './components/about/about.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { HomeComponent } from './components/home/home.component';
@@ -29,12 +28,10 @@ import { ReaderComponent } from './components/reader/reader.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
 import { LayoutModule } from '@angular/cdk/layout';
-import { SidenavResponsiveComponent } from './components/sidenav-responsive/sidenav-responsive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
     AboutComponent,
     TravelComponent,
     HomeComponent,
@@ -52,8 +49,7 @@ import { SidenavResponsiveComponent } from './components/sidenav-responsive/side
     BulletChartComponent,
     ReaderComponent,
     LandingPageComponent,
-    ToggleSidebarDirective,
-    SidenavResponsiveComponent,
+    ToggleSidebarDirective
   ],
   imports: [
     BrowserModule,

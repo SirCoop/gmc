@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Renderer2 } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Directive({
@@ -7,13 +7,16 @@ import { Router, NavigationEnd } from '@angular/router';
 export class ToggleSidebarDirective {
   currentUrl = '';
 
-  constructor(private el: ElementRef, private router: Router) {
+  constructor(private el: ElementRef, private router: Router, private renderer: Renderer2) {
+    
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
+      
       if (this.currentUrl === '/') {
-        el.nativeElement.style.display = 'none';
+        renderer.addClass(el.nativeElement, 'landing-page');
+        // el.nativeElement.style.display = 'none';
       } else {
-        el.nativeElement.style.display = 'block';
+        // el.nativeElement.style.display = 'block';
       }
      });
   }
