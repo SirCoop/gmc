@@ -1,0 +1,37 @@
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  #enterButton {
+    top: 85%;
+    left: 43%;
+  }
+}
+
+/* Portrait */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  #enterButton {
+    top: 85%;
+    left: 41%;
+  }
+}
+
+#enterButton {
+  font-family: serif;
+  &.pulsate {
+    -webkit-animation: pulsate 3.5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+  }
+  @-webkit-keyframes pulsate {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1.0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+}

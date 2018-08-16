@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/landing-page/ipad-pro';
+@import './app/styles/landing-page/ipad';
+@import './app/styles/landing-page/iphone-5-5s';
+@import './app/styles/landing-page/iphone-6-7-8';
+@import './app/styles/landing-page/iphone-6-7-8-plus';
+@import './app/styles/landing-page/iphone-x';
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /*Common Media Queries*/
