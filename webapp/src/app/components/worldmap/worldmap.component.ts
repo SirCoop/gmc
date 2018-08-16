@@ -32,7 +32,9 @@ export class WorldmapComponent implements OnInit {
     /* Set tooltips */
     const tip = d3.tip()
                 .attr('class', 'd3-tip')
-                .offset([-10, 0])
+                // added z-index due to nesting app inside angular material sidenav
+                .style('z-index', 1)
+                .offset([10, -10])
                 .html(function(d) {
                   return (
                     `<strong>Country: </strong><span class="details">${d.properties.name}<br>
@@ -47,7 +49,7 @@ export class WorldmapComponent implements OnInit {
         .domain([10000, 100000, 500000, 1000000, 5000000, 10000000, 50000000, 100000000, 500000000, 1500000000])
         .range(
           [
-            'rgb(247,251,255)',
+            'rgb(222, 222, 222)',
             'rgb(222,235,247)',
             'rgb(198,219,239)',
             'rgb(158,202,225)',
@@ -63,20 +65,20 @@ export class WorldmapComponent implements OnInit {
     let path = d3.geoPath();
     
     const svg = d3.select( '#mapContainer' )
-                .append('svg')
+                .append('svg')                
                 .attr('width', width)
                 .attr('height', height)
                 .append('g')
-                .attr('class', 'map');               
+                .attr('class', 'map');            
+
+    /* Invoke the tip in the context of this visualization */
+    svg.call(tip);
     
     const projection = d3.geoMercator()
                         .scale(250)
                         .translate( [width / 2, height / 1.75]);
     
     path = d3.geoPath().projection(projection);
-
-    /* Invoke the tip in the context of this visualization */
-    svg.call(tip);
 
     const populationById = {};
   
@@ -96,10 +98,14 @@ export class WorldmapComponent implements OnInit {
         .style('opacity', 0.8)
         /* change country styling on focus */
           .style('stroke', 'white')
-          .style('stroke-width', 0.3)
+          .style('stroke-width', 0.3)          
           .on('mouseover', function(d) {            
+            /* 
+            *  d = Feature (country data)
+            *  this = <path> element (target)
+            */
             tip.show(d, this);
-  
+
             d3.select(this)
               .style('opacity', 1)
               .style('stroke', 'white')
