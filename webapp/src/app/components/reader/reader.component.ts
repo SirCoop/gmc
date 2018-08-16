@@ -13,9 +13,11 @@ export class ReaderComponent implements OnInit {
   pdfTitle: string;
   pdfSrc = '';
   zoom = 1.05;
-  originalSize = true;
+  originalSize = false;
   showAll = true;
   renderText = false;
+  fitToPage = true;
+  autoresize = true;
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
 

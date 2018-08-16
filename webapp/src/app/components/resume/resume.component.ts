@@ -9,9 +9,11 @@ export class ResumeComponent implements OnInit {
 
   pdfSrc = '../../../assets/gmc_resume.pdf';
   zoom = 1.45;
-  originalSize = true;
+  originalSize = false;
   showAll = true;
   renderText = false;
+  fitToPage = true;
+  autoresize = true;
 
   constructor() { }
 
