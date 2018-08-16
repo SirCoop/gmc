@@ -1,8 +1,11 @@
-/* Lanscape */
+/* Landscape */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  .sidenav {
+  mat-sidenav-container > mat-sidenav {
     width: 60px;
+    a .material-icons {
+      padding-left: 5%
+    }
   }
   .mat-toolbar.mat-toolbar-single-row {
     display: none;
@@ -23,6 +26,9 @@
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   mat-sidenav-container > mat-sidenav {
     width: 60px;
+    a .material-icons {
+      padding-left: 5%
+    }
   }
   .mat-toolbar.mat-toolbar-single-row {
     display: none;
