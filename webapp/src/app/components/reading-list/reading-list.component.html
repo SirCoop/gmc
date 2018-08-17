@@ -7,7 +7,7 @@
     <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
   </section>
 
-  <mat-tab-group>
+  <mat-tab-group #tabgroup>
     <mat-tab label="Self-Improvement">
       <ng-template matTabContent>
         <h3>These books will absolutely change your life.</h3>
@@ -16,7 +16,7 @@
         </ul>
       </ng-template>
     </mat-tab>
-    <mat-tab label="Leadership | Management | Entrepreneurship">
+    <mat-tab label="Entrepreneurship">
       <ng-template matTabContent>
         <ul *ngFor="let book of books$.business">
           <li>{{book.title}} - {{book.author}}</li>

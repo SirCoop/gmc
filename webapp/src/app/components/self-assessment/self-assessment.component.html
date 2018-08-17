@@ -3,7 +3,7 @@
   <p>Charts created with&nbsp;
     <a href="https://d3js.org/">D3.js</a>
   </p>
-  <mat-tab-group #tabgroup (selectedTabChange)="onTabClick($event)">
+  <mat-tab-group #tabgroup>
     <mat-tab label="Technical Skills">
       <ng-template matTabContent>
         <app-bullet-chart-mobile *ngIf="isMobile" [dataSource]="dataSource"></app-bullet-chart-mobile>      

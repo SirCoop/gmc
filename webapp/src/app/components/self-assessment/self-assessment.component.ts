@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { MatTabChangeEvent } from '../../../../node_modules/@angular/material';
 import frontEndSkills from './front-end.skills';
 import backEndSkills from './back-end.skills';
@@ -9,7 +9,7 @@ import machineLearningSkills from './machine-learning.skills';
   templateUrl: './self-assessment.component.html',
   styleUrls: ['./self-assessment.component.scss']
 })
-export class SelfAssessmentComponent implements OnInit, AfterContentChecked {
+export class SelfAssessmentComponent implements OnInit {
 
   dataSource = [frontEndSkills, backEndSkills, machineLearningSkills];
 
@@ -25,17 +25,6 @@ export class SelfAssessmentComponent implements OnInit, AfterContentChecked {
 
   isMobile = true;
 
-  tab: string;
-
-  iframeLoaded() {
-    const iFrameID = document.getElementById('mb') as HTMLIFrameElement;
-    if (iFrameID) {
-      const el = iFrameID.contentWindow.document.getElementsByTagName('body')[0].addEventListener('click', event => {
-        event.preventDefault();
-      });
-    }
-
-  }
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.isMobile = window.innerWidth <= 980;
@@ -45,15 +34,5 @@ export class SelfAssessmentComponent implements OnInit, AfterContentChecked {
 
   ngOnInit() {
     this.isMobile = window.innerWidth <= 980;
-  }
-
-  ngAfterContentChecked() {
-    if (this.tab === 'Personality Assessment') {
-      this.iframeLoaded();
-    }
-  }
-
-  onTabClick(event: MatTabChangeEvent): void {    
-    this.tab = event.tab.textLabel;    
   }
 }

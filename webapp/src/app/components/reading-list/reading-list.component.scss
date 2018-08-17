@@ -1,21 +1,3 @@
-.reading-list-container {
-  @media (max-width: 1690px) {
-    width: 50%;
-  }
-  @media (max-width: 1280px) {
-    width: 50%;
-  }
-  @media (max-width: 980px) {
-    width: fit-content;
-  }
-  @media (max-width: 736px) {
-    width: fit-content;
-  }
-  @media (max-width: 480px) {
-    width: fit-content;
-  }
-
-  .sub-section {
-    margin-top: 1rem;
-  }
+.sub-section {
+  margin-top: .5rem;
 }
