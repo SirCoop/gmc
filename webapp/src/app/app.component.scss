@@ -20,6 +20,15 @@
 }
 
 /* custom css */
+
+mat-sidenav-container {
+  background: #f3f3f3;
+
+  & a.activated {
+    background: #6392f1;
+  }
+}
+
 .app-content {
   margin: 1rem 1rem;
 }
