@@ -14,9 +14,9 @@
 // @media (max-width: 980px) { ... }
 // @media (max-width: 736px) { ... }
 // @media (max-width: 480px) { ... }
+
 body {
   margin: 0;
-  // background: #ffffff;
   font-family: 'Arial';
   height: 100vh;
 }
@@ -33,7 +33,12 @@ body {
 
 #frontEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
+  // margin: auto;
+
+  // @media (max-width: 980px) { 
+  //   margin: none;
+  //  }  
+
   padding-top: 40px;
   position: relative;
   width: 960px;
@@ -80,7 +85,7 @@ body {
 
 #backEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
+  // margin: auto;
   padding-top: 40px;
   position: relative;
   width: 960px;
@@ -127,7 +132,7 @@ body {
 
 #machineLearningSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: auto;
+  // margin: auto;
   padding-top: 40px;
   position: relative;
   width: 960px;
@@ -172,5 +177,3 @@ body {
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }

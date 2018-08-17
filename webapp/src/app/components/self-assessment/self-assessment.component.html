@@ -1,23 +1,29 @@
-<h1>Self-Assessment</h1>
-<mat-tab-group>
-  <mat-tab label="Technical Skills">
-    <ng-template matTabContent>
-        <h2>Software Engineering</h2>
-        <p>Charts created with&nbsp;<a href="https://d3js.org/">D3.js</a></p>
+<div class="self-assessment-container">
+  <h1>Self-Assessment</h1>
+  <p>Charts created with&nbsp;
+    <a href="https://d3js.org/">D3.js</a>
+  </p>
+  <mat-tab-group>
+    <mat-tab label="Technical Skills">
+      <ng-template matTabContent>        
         <app-bullet-chart [dataSource]="dataSource"></app-bullet-chart>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Behaviorial Analysis">
-    <ng-template matTabContent>
-        <h2>Predictive Index</h2>
-        <p>Made viewable by &nbsp;<a href="https://github.com/VadimDez/ng2-pdf-viewer">ng2-pdf-viewer</a></p>
-        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc" [render-text]="renderText" style="display: block"></pdf-viewer>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Personality Assessment">
-      <ng-template matTabContent>
-          <h2>Meyers Briggs (ENTP): Extroverted | Intuitive | Thinking | Perceptive</h2>
-          <iframe id="mb" src="https://www.mbtionline.com/types/ENTP/"></iframe>
       </ng-template>
     </mat-tab>
-</mat-tab-group>
+    <mat-tab label="Behaviorial Analysis">
+      <ng-template matTabContent>
+        <h2>Predictive Index</h2>
+        <p>Made viewable by &nbsp;
+          <a href="https://github.com/VadimDez/ng2-pdf-viewer">ng2-pdf-viewer</a>
+        </p>
+        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc" [render-text]="renderText"
+          style="display: block"></pdf-viewer>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Personality Assessment">
+      <ng-template matTabContent>
+        <h2>Meyers Briggs (ENTP): Extroverted | Intuitive | Thinking | Perceptive</h2>
+        <iframe id="mb" src="https://www.mbtionline.com/types/ENTP/"></iframe>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -12,11 +12,14 @@ export class SelfAssessmentComponent implements OnInit {
 
   dataSource = [frontEndSkills, backEndSkills, machineLearningSkills];
 
+  pdfTitle: string;
   pdfSrc = '../../../assets/predictive_index.pdf';
-  zoom = 1.45;
-  originalSize = true;
+  zoom = 1.05;
+  originalSize = false;
   showAll = true;
   renderText = false;
+  fitToPage = true;
+  autoresize = true;
 
   // iframeLoaded() {
   //   const iFrameID = document.getElementById('mb') as HTMLIFrameElement;

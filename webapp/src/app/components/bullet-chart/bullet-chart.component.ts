@@ -1,3 +1,4 @@
+import { SelfAssessmentComponent } from './../self-assessment/self-assessment.component';
 import { Component, OnInit, Input } from '@angular/core';
 import d3Bullet from './bullet.js';
 
@@ -11,6 +12,17 @@ declare let d3: any;
 })
 export class BulletChartComponent implements OnInit {
   @Input() dataSource: any[] = [];
+
+  skills = {
+    machineLearningSkills: false,
+    frontEndSkills: false,
+    backEndSkills: false
+  };
+
+  device = {
+    width: window.innerWidth,
+    height: window.innerHeight
+  };
 
   randomize(d) {
     if (!d.randomizer) {
@@ -30,6 +42,7 @@ export class BulletChartComponent implements OnInit {
   ready(data, selector) {
     d3Bullet();
     const margin = { top: 5, right: 40, bottom: 20, left: 300 },
+      // width = this.device.width >= 960 ? 960 - margin.left - margin.right : this.device.width,
       width = 960 - margin.left - margin.right,
       height = 50 - margin.top - margin.bottom;
 
@@ -69,6 +82,9 @@ export class BulletChartComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.forEach(src => {
+      // need to remove # from id in order to make this match skills obj props
+      const matcher = src.selector.split('#')[1];
+      this.skills[matcher] = true;
       this.ready(src.data, src.selector);      
     });
   }
