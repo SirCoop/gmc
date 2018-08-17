@@ -3,7 +3,7 @@
   <p>Charts created with&nbsp;
     <a href="https://d3js.org/">D3.js</a>
   </p>
-  <mat-tab-group>
+  <mat-tab-group #tabgroup (selectedTabChange)="onTabClick($event)">
     <mat-tab label="Technical Skills">
       <ng-template matTabContent>
         <app-bullet-chart-mobile *ngIf="isMobile" [dataSource]="dataSource"></app-bullet-chart-mobile>      
@@ -16,14 +16,18 @@
         <p>Made viewable by &nbsp;
           <a href="https://github.com/VadimDez/ng2-pdf-viewer">ng2-pdf-viewer</a>
         </p>
-        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc" [render-text]="renderText"
+        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc1" [render-text]="renderText"
           style="display: block"></pdf-viewer>
       </ng-template>
     </mat-tab>
     <mat-tab label="Personality Assessment">
       <ng-template matTabContent>
         <h2>Meyers Briggs (ENTP): Extroverted | Intuitive | Thinking | Perceptive</h2>
-        <iframe id="mb" src="https://www.mbtionline.com/types/ENTP/"></iframe>
+        <p>Made viewable by &nbsp;
+          <a href="https://github.com/VadimDez/ng2-pdf-viewer">ng2-pdf-viewer</a>
+        </p>
+        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc2" [render-text]="renderText"
+          style="display: block"></pdf-viewer>
       </ng-template>
     </mat-tab>
   </mat-tab-group>
