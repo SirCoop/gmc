@@ -1,43 +1,43 @@
-<h1>Writings</h1>
+<div class="writings-container">
+  <h1>Writings</h1>
 
-<section>
-  <h3>This section is dedicated to my personal musings.</h3>
+  <section>
+    <h3>This section is dedicated to my personal musings.</h3>
+    <p>I owe my life to writing.</p>
+    <p>
+      My pen has been my best friend ever since I was a child; it never lets me down; never betrays me; knows all of my thoughts,
+      feelings, and secrets; always here for me when I need it, with no judgement and no condescension; gives me the ultimate
+      freedom of expression; never jealous; and always giving until there's nothing left to give; the perfect relationship.
+    </p>
+  </section>
 
-  <p>I owe my life to writing.</p>
-
-  <p>
-    My pen has been my best friend ever since I was a child; it never lets me down; never betrays me; knows all of my thoughts,
-    feelings, and secrets; always here for me when I need it, with no judgement and no condescension; gives me the ultimate
-    freedom of expression; never jealous; and always giving until there's nothing left to give; the perfect relationship.
-  </p>
-</section>
-
-<section>
-    <mat-tab-group>
-        <mat-tab label="Journal">
-          <ng-template matTabContent class="tab-content">
-            <div class="list-container">
-              <div *ngFor="let item of writings$.journal" class="writing-item">
-                  <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
-              </div>
-            </div>              
-          </ng-template>
-        </mat-tab>
-        <mat-tab label="Metaphorical Art">
-          <ng-template matTabContent class="tab-content">
-              <h2>Some Header</h2>
-              <div *ngFor="let item of writings$.metaphoricalArt" class="writing-item">
-                <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
-              </div>              
-          </ng-template>
-        </mat-tab>
-        <mat-tab label="Blue Ocean">
+  <section>
+      <mat-tab-group #tabgroup>
+          <mat-tab label="Journal">
             <ng-template matTabContent class="tab-content">
-                <h2>Some Header</h2>
-                <div *ngFor="let item of writings$.blueOcean" class="writing-item">
-                  <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
+              <div class="list-container">
+                <div *ngFor="let item of writings$.journal" class="writing-item">
+                    <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
                 </div>
+              </div>              
             </ng-template>
           </mat-tab>
-      </mat-tab-group>
-</section>
+          <mat-tab label="Metaphorical Art">
+            <ng-template matTabContent class="tab-content">
+                <h2>Some Header</h2>
+                <div *ngFor="let item of writings$.metaphoricalArt" class="writing-item">
+                  <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
+                </div>              
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Blue Ocean">
+              <ng-template matTabContent class="tab-content">
+                  <h2>Some Header</h2>
+                  <div *ngFor="let item of writings$.blueOcean" class="writing-item">
+                    <a [routerLink]="['./', item.type, item.id]">{{item.value}}</a>
+                  </div>
+              </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+  </section>
+</div>
