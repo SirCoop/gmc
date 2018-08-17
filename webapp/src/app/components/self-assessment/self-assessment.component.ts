@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import frontEndSkills from './front-end.skills';
 import backEndSkills from './back-end.skills';
 import machineLearningSkills from './machine-learning.skills';
@@ -21,6 +21,8 @@ export class SelfAssessmentComponent implements OnInit {
   fitToPage = true;
   autoresize = true;
 
+  isMobile = true;
+
   // iframeLoaded() {
   //   const iFrameID = document.getElementById('mb') as HTMLIFrameElement;
   //     if (iFrameID) {
@@ -31,11 +33,16 @@ export class SelfAssessmentComponent implements OnInit {
   //     }   
     
   // }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.isMobile = window.innerWidth <= 980;
+  }
 
   constructor() { }
 
   ngOnInit() {
     // this.iframeLoaded();
+    this.isMobile = window.innerWidth <= 980;
   }
 
 }

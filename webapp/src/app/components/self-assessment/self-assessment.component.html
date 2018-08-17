@@ -5,8 +5,9 @@
   </p>
   <mat-tab-group>
     <mat-tab label="Technical Skills">
-      <ng-template matTabContent>        
-        <app-bullet-chart [dataSource]="dataSource"></app-bullet-chart>
+      <ng-template matTabContent>
+        <app-bullet-chart-mobile *ngIf="isMobile" [dataSource]="dataSource"></app-bullet-chart-mobile>      
+        <app-bullet-chart *ngIf="!isMobile" [dataSource]="dataSource"></app-bullet-chart>
       </ng-template>
     </mat-tab>
     <mat-tab label="Behaviorial Analysis">

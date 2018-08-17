@@ -1,15 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
-import d3Bullet from './bullet.js';
+import d3Bullet from '../bullet-chart/bullet.js';
 
 /* imported via script tags due to typing and compatibility issues */
 declare let d3: any;
 
 @Component({
-  selector: 'app-bullet-chart',
-  templateUrl: './bullet-chart.component.html',
-  styleUrls: ['./bullet-chart.component.scss']
+  selector: 'app-bullet-chart-mobile',
+  templateUrl: './bullet-chart-mobile.component.html',
+  styleUrls: ['./bullet-chart-mobile.component.scss']
 })
-export class BulletChartComponent implements OnInit {
+export class BulletChartMobileComponent implements OnInit {
   @Input() dataSource: any[] = [];
 
   skills = {
@@ -40,10 +40,9 @@ export class BulletChartComponent implements OnInit {
 
   ready(data, selector) {
     d3Bullet();
-    const margin = { top: 5, right: 40, bottom: 20, left: this.device.width >= 980 ? 300 : 0 },
-      width = this.device.width >= 980 ? 980 - margin.left - margin.right : this.device.width,
-      // width = 960 - margin.left - margin.right,
-      height = 50 - margin.top - margin.bottom;
+    const margin = { top: 5, right: 40, bottom: 20, left: 10 },
+      width = this.device.width - margin.left - margin.right,
+      height = 50;
 
     const chart = d3.bullet()
       .width(width)
@@ -53,15 +52,15 @@ export class BulletChartComponent implements OnInit {
       .data(data)
       .enter().append('svg')
       .attr('class', 'bullet')
+      .style('padding-top', 10)
+      .style('margin-bottom', 5)
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .append('g')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
       .call(chart);
 
-    const title = svg.append('g')
-      .style('text-anchor', 'end')
-      .attr('transform', 'translate(-6,' + height / 2 + ')');
+    const title = svg.append('g');
 
     title.append('text')
       .attr('class', 'title')
@@ -87,5 +86,5 @@ export class BulletChartComponent implements OnInit {
       this.ready(src.data, src.selector);      
     });
   }
-
+ 
 }

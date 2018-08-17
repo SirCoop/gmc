@@ -28,6 +28,7 @@ import { ReaderComponent } from './components/reader/reader.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
 import { LayoutModule } from '@angular/cdk/layout';
+import { BulletChartMobileComponent } from './components/bullet-chart-mobile/bullet-chart-mobile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     BulletChartComponent,
     ReaderComponent,
     LandingPageComponent,
-    ToggleSidebarDirective
+    ToggleSidebarDirective,
+    BulletChartMobileComponent
   ],
   imports: [
     BrowserModule,
