@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PdfViewerComponent } from '../../../../node_modules/ng2-pdf-viewer';
 
 import { DataService } from './../../services/data.service';
 
@@ -9,6 +10,7 @@ import { DataService } from './../../services/data.service';
   styleUrls: ['./reader.component.scss']
 })
 export class ReaderComponent implements OnInit {
+  @ViewChild(PdfViewerComponent) private pdfComponent: PdfViewerComponent;
 
   pdfTitle: string;
   pdfSrc = '';
@@ -29,6 +31,13 @@ export class ReaderComponent implements OnInit {
     const { type, fileName } = this.route.snapshot.params;
     this.pdfTitle = fileName.split('_')[1].split('.')[0];
     this.pdfSrc = `/api/writings/${type}/${fileName}.pdf`;
+  }
+
+  // TODO: get this to work
+  onSearchChange(stringToSearch: string) {
+    this.pdfComponent.pdfFindController.executeCommand('find', {
+      caseSensitive: false, findPrevious: undefined, highlightAll: true, phraseSearch: true, query: stringToSearch
+    });
   }
 
 }

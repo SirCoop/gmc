@@ -14,7 +14,7 @@ export class InlineReaderComponent implements OnInit, OnChanges {
 
   pdfTitle: string;
   pdfSrc = '';
-  zoom = 1.05;
+  zoom = 1.00;
   originalSize = false;
   showAll = true;
   renderText = false;
