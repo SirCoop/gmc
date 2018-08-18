@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { MatTabChangeEvent } from '../../../../node_modules/@angular/material';
 
 @Component({
   selector: 'app-writings',
@@ -8,11 +9,34 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WritingsComponent implements OnInit {
   writings$: any;
+  currentUrl: string;
+  
+  writingType: string;
+  fileName: string;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+    router.events.subscribe((_: NavigationEnd) => {
+      this.currentUrl = _.url;
+           
+    });
+   }
 
   ngOnInit() {
     this.writings$ = this.route.snapshot.data.writings.data;
+    // this.changeRoute('journal');
+  }
+
+  tabChanged = (tabChangeEvent: MatTabChangeEvent): void => {
+    // console.log('tabChangeEvent => ', tabChangeEvent.tab.textLabel);
+  }
+
+  changeRoute(segment) {
+    // this.router.navigate([`/${segment}`, { }], { relativeTo: this.route.url });
+  }
+
+  viewArt(type, fileName) {
+    this.writingType = type;
+    this.fileName = fileName;
   }
 
 }

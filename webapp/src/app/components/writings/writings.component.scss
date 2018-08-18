@@ -1,7 +1,21 @@
 .list-container {
-    padding-top: 1rem;
+    margin-top: 1rem;
+    border-right: 1px solid black;
+    height: 600px;
+    overflow: auto;
 }
 
 .writing-item {
     padding: .3rem .3rem;
+}
+
+#metaphoricalArt {
+    display: flex;
+
+    > .column-left {
+        flex: 20%;
+    }
+    > .column-right {
+        flex: 80%;
+    }
 }
