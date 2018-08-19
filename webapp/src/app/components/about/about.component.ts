@@ -1,6 +1,6 @@
 import { DataService } from '../../services/data.service';
 import { Component, OnInit } from '@angular/core';
-
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-posts',
@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService, private spinnerService: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
+
   }
 
 }

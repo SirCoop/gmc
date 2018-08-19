@@ -1,8 +1,11 @@
 .list-container {
-    margin-top: 1rem;
-    border-right: 1px solid black;
-    height: 600px;
+    margin-top: 1rem;    
     overflow: auto;
+
+    &.mArt {
+        border-right: 1px solid black;
+        height: 600px;
+    }
 }
 
 .writing-item {
@@ -17,5 +20,15 @@
     }
     > .column-right {
         flex: 80%;
+    }
+}
+
+.bo-header {
+    > .quote {
+        font-weight: bold;
+    }
+
+    > .author {
+        text-align: center;
     }
 }

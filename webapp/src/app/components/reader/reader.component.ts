@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PdfViewerComponent } from '../../../../node_modules/ng2-pdf-viewer';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 import { DataService } from './../../services/data.service';
 
@@ -17,20 +18,22 @@ export class ReaderComponent implements OnInit {
   zoom = 1.05;
   originalSize = false;
   showAll = true;
-  renderText = false;
+  renderText = true;
   fitToPage = true;
   autoresize = true;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  constructor(private route: ActivatedRoute, private dataService: DataService, private spinnerService: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
     this.fetchPdf();
   }
 
   fetchPdf() {
+    this.spinnerService.show();
     const { type, fileName } = this.route.snapshot.params;
     this.pdfTitle = fileName.split('_')[1].split('.')[0];
     this.pdfSrc = `/api/writings/${type}/${fileName}.pdf`;
+    this.spinnerService.hide();
   }
 
   // TODO: get this to work

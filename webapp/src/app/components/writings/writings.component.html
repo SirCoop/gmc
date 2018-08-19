@@ -13,21 +13,21 @@
 
   <section>
       <mat-tab-group #tabgroup (selectedTabChange)="tabChanged($event)">
-          <mat-tab label="journal">
+          <mat-tab label="Journal">
             <ng-template matTabContent class="tab-content">
               <div class="list-container">
-                <div *ngFor="let item of writings$.journal" class="writing-item">
+                <div *ngFor="let item of sortedTitles(writings$.journal)" class="writing-item">
                     <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
                 </div>
               </div>              
             </ng-template>
           </mat-tab>
-          <mat-tab label="metaphorical_art">
+          <mat-tab label="Metaphorical Art">
             <ng-template matTabContent class="tab-content">
               <div id="metaphoricalArt" class="row">
                 <div class="column-left">
-                  <div class="list-container">
-                    <div *ngFor="let item of writings$.metaphorical_art" class="writing-item">
+                  <div class="list-container mArt">
+                    <div *ngFor="let item of sortedTitles(writings$.metaphorical_art)" class="writing-item">
                       <a href="javascript:void(0)" (click)="viewArt(item.type, item.fileName)">{{item.value}}</a>
                     </div>
                   </div> 
@@ -40,10 +40,19 @@
               </div>              
             </ng-template>
           </mat-tab>
-          <mat-tab label="blue_ocean">
+          <mat-tab label="Blue Ocean">
               <ng-template matTabContent class="tab-content">
+                <div class="bo-header">
+                  <p class="quote">
+                      “Pythagoras was misunderstood, and Socrates, and Jesus, and Luther, and Copernicus, and Galileo, and Newton,
+                      and every pure and wise spirit that ever took flesh. To be great is to be misunderstood.”
+                  </p>
+                  <p class="author">
+                    --Ralph Waldo Emerson
+                  </p>
+                </div>
                 <div class="list-container">
-                  <div *ngFor="let item of writings$.blue_ocean" class="writing-item">
+                  <div *ngFor="let item of sortedTitles(writings$.blue_ocean)" class="writing-item">
                     <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatTabsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule  } from '@angular/material';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
@@ -69,7 +70,8 @@ import { InlineReaderComponent } from './components/inline-reader/inline-reader.
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule    
+    MatListModule,
+    Ng4LoadingSpinnerModule.forRoot()  
   ],
   providers: [],
   bootstrap: [AppComponent],

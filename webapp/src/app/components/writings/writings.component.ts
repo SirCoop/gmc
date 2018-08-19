@@ -39,4 +39,16 @@ export class WritingsComponent implements OnInit {
     this.fileName = fileName;
   }
 
+  sortedTitles(arr) {
+    let sorted = [];
+    if (arr.length) {
+      sorted = arr.sort((a, b) => {
+        const textA = a.value.toUpperCase();
+        const textB = b.value.toUpperCase();
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
+    }
+    return sorted;
+  }
+
 }
