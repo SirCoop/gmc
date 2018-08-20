@@ -1,4 +1,5 @@
 import { Component, ViewChild, NgZone } from '@angular/core';
+import 'hammerjs';
 import {
   Router,
   // import as RouterEvent to avoid confusion with the DOM Event
