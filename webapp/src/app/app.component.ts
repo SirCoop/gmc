@@ -1,5 +1,13 @@
-import { Component, ViewChild } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, ViewChild, NgZone, Renderer } from '@angular/core';
+import {
+  Router,
+  // import as RouterEvent to avoid confusion with the DOM Event
+  Event as RouterEvent,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError
+} from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -26,14 +34,43 @@ export class AppComponent {
 
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
-  constructor(private router: Router, private breakpointObserver: BreakpointObserver, private spinnerService: Ng4LoadingSpinnerService) {
-    router.events.subscribe((_: NavigationEnd) => {
+  constructor(private router: Router,
+              private ngZone: NgZone,
+              private breakpointObserver: BreakpointObserver,
+              private spinnerService: Ng4LoadingSpinnerService) {
+    this.router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
       // force mat-sidenav to close after clicking icon on mobile
       if (this.isScreenSmall()) {
         this.sidenav.close();
       }      
     });
+
+    this.router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event);
+    });
+  }
+
+  // Shows and hides the loading spinner during RouterEvent changes
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart) {
+      // We wanna run this function outside of Angular's zone to
+      // bypass change detection
+      this.ngZone.runOutsideAngular(() => {
+        this.spinnerService.show();
+      });
+    }
+    if (event instanceof NavigationEnd) {
+      this.spinnerService.hide();
+    }
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel) {
+      this.spinnerService.hide();
+    }
+    if (event instanceof NavigationError) {
+      this.spinnerService.hide();
+    }
   }
 
   /* use these methods to toggle spinner
