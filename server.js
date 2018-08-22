@@ -101,25 +101,6 @@ app.get('/api/threejs/:item', (req, res) => {
   });
 });
 
-/* TODO: figure out how to change base url of three.js fileloader so that I can replace these routes */
-app.get('Face_Color.jpg', (req, res) => {
-  res.set('Content-Type', 'image/jpeg');
-  res.sendFile('Face_Color.jpg', {}, (err) => {
-    if (err) {
-      res.status(404).end('Not found');
-    }
-  });
-});
-
-app.get('Face_Disp.jpg', (req, res) => {
-  res.set('Content-Type', 'image/jpeg');
-  res.sendFile('Face_Disp.jpg', {}, (err) => {
-    if (err) {
-      res.status(404).end('Not found');
-    }
-  });
-});
-
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
     res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);

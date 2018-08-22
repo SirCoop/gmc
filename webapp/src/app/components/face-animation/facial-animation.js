@@ -13,10 +13,9 @@ const renderFacialAnimation = function () {
     function init() {
       renderer = new THREE.WebGLRenderer();
       renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth - 20, window.innerHeight - 20);
+      renderer.setSize(window.innerWidth, window.innerHeight);
       container = document.getElementById('facial-animation-canvas');
       container.appendChild(renderer.domElement);
-      // document.body.appendChild(renderer.domElement);
 
       camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000);
       camera.position.z = 400;
