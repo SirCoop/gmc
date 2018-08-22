@@ -75,6 +75,51 @@ app.get(`${base_api_url}/writings/:type/:fileName`, (req, res) => {
   file.pipe(res);
 });
 
+/* Three.js */
+app.get('/api/threejs/:item', (req, res) => {
+  const item = req.params.item;
+  const itemPath = path.join(__dirname, `assets/threejs/${item}`);
+
+  const mime = {
+    gif: 'image/gif',
+    jpg: 'image/jpeg',
+    png: 'image/png',
+    svg: 'image/svg+xml',
+    json: 'application/*'
+  };
+
+  const type = mime[path.extname(item).slice(1)] || 'text/plain';
+  const s = fs.createReadStream(itemPath);
+  
+  s.on('open', function () {
+      res.set('Content-Type', type);
+      s.pipe(res);
+  });
+  s.on('error', function () {
+      res.set('Content-Type', 'text/plain');
+      res.status(404).end('Not found');
+  });
+});
+
+/* TODO: figure out how to change base url of three.js fileloader so that I can replace these routes */
+app.get('Face_Color.jpg', (req, res) => {
+  res.set('Content-Type', 'image/jpeg');
+  res.sendFile('Face_Color.jpg', {}, (err) => {
+    if (err) {
+      res.status(404).end('Not found');
+    }
+  });
+});
+
+app.get('Face_Disp.jpg', (req, res) => {
+  res.set('Content-Type', 'image/jpeg');
+  res.sendFile('Face_Disp.jpg', {}, (err) => {
+    if (err) {
+      res.status(404).end('Not found');
+    }
+  });
+});
+
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
     res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);

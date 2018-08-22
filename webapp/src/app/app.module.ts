@@ -67,6 +67,7 @@ import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BulletChartMobileComponent } from './components/bullet-chart-mobile/bullet-chart-mobile.component';
 import { InlineReaderComponent } from './components/inline-reader/inline-reader.component';
+import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { InlineReaderComponent } from './components/inline-reader/inline-reader.
     LandingPageComponent,
     ToggleSidebarDirective,
     BulletChartMobileComponent,
-    InlineReaderComponent
+    InlineReaderComponent,
+    FaceAnimationComponent
   ],
   imports: [
     BrowserModule,

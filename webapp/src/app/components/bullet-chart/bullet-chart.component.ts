@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import d3Bullet from './bullet.js';
+import d3Bullet from './bullet';
 
 /* imported via script tags due to typing and compatibility issues */
 declare let d3: any;
