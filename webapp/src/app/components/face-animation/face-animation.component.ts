@@ -14,6 +14,6 @@ export class FaceAnimationComponent implements OnInit {
   ngOnInit() {
     this.spinnerService.show();
     renderFacialAnimation()
-      .then(() => this.spinnerService.hide());     
+      .then(() => this.spinnerService.hide());
   }
 }

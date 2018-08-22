@@ -17,6 +17,8 @@ import { FailuresComponent } from './components/failures/failures.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { ReaderComponent } from './components/reader/reader.component';
+import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
+
 
 const routes: Routes = [
   {
@@ -76,6 +78,10 @@ const routes: Routes = [
   {
     path: 'resume',
     component: ResumeComponent
+  },
+  {
+    path: 'animation',
+    component: FaceAnimationComponent
   }
 ];
 
