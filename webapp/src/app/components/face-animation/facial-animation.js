@@ -36,7 +36,13 @@ const renderFacialAnimation = function () {
       // scene.add(polarGridHelper);
 
       var loader = new THREE.JSONLoader();
+      /* These files are JSON Model Format 3 */
       loader.load('/api/threejs/lps_head.json', function (geometry, materials) {
+      // loader.load('/api/threejs/test.json', function (geometry, materials) {
+
+      // var loader = new THREE.ObjectLoader();
+      /* this file is JSON Object Scene Format 4*/
+      // loader.load('/api/threejs/gmc_3_120sec_shoulders.json', function (geometry, materials) {        
         var material = new THREE.MeshLambertMaterial();
         var group = new THREE.Group();
         group.scale.multiplyScalar(50);
