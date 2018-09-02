@@ -1,8 +1,8 @@
-import { Component, ViewChild, NgZone } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import 'hammerjs';
 import {
   Router,
-  // import as RouterEvent to avoid confusion with the DOM Event
+  /* import as RouterEvent to avoid confusion with the DOM Event */
   Event as RouterEvent,
   NavigationStart,
   NavigationEnd,
@@ -12,7 +12,6 @@ import {
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { MatSidenav } from '../../node_modules/@angular/material';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
@@ -33,18 +32,12 @@ export class AppComponent {
       map(result => result.matches)
     );
 
-  @ViewChild(MatSidenav) sidenav: MatSidenav;
-
   constructor(private router: Router,
-              private ngZone: NgZone,
-              private breakpointObserver: BreakpointObserver,
-              private spinnerService: Ng4LoadingSpinnerService) {
+    private ngZone: NgZone,
+    private breakpointObserver: BreakpointObserver,
+    private spinnerService: Ng4LoadingSpinnerService) {
     this.router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
-      // force mat-sidenav to close after clicking icon on mobile
-      if (this.isScreenSmall()) {
-        this.sidenav.close();
-      }      
     });
 
     this.router.events.subscribe((event: RouterEvent) => {
@@ -52,11 +45,10 @@ export class AppComponent {
     });
   }
 
-  // Shows and hides the loading spinner during RouterEvent changes
+  /* Shows and hides the loading spinner during RouterEvent changes */
   navigationInterceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
-      // We wanna run this function outside of Angular's zone to
-      // bypass change detection
+      /* We wanna run this function outside of Angular's zone to bypass change detection */
       this.ngZone.runOutsideAngular(() => {
         this.spinnerService.show();
       });
@@ -65,7 +57,7 @@ export class AppComponent {
       this.spinnerService.hide();
     }
 
-    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    /* Set loading state to false in both of the below events to hide the spinner in case a request fails */
     if (event instanceof NavigationCancel) {
       this.spinnerService.hide();
     }
@@ -74,13 +66,16 @@ export class AppComponent {
     }
   }
 
-  /* use these methods to toggle spinner
-  *  this.spinnerService.show();
-  *  this.spinnerService.hide();
-  * */
+  /* Set the width of the side navigation to 250px */
+  openNav() {
+    const el = document.getElementById('sidenav');
+    el.classList.add('sidenav-opened');
+  }
 
-  isScreenSmall(): boolean {
-    return window.innerWidth < this.ipadWidth && window.innerHeight < this.ipadHeight;
+  /* Set the width of the side navigation to 0 */
+  closeNav() {
+    const el = document.getElementById('sidenav');
+    el.classList.remove('sidenav-opened');
   }
 
 }

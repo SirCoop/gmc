@@ -1,45 +1,15 @@
 /* Landscape */
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-  mat-sidenav-container > mat-sidenav {
-    width: 60px;
-    a .material-icons {
-      padding-left: 5%
-    }
-  }
-  .mat-toolbar.mat-toolbar-single-row {
-    display: none;
-    box-sizing: none;
-    padding: 0px 0px;
-    width: 0%;
-    flex-direction: none;
-    align-items: none;
-    white-space: none;
-  }
-  mat-sidenav {
-    background: #a3b8f7;
+  #sidenav.sidenav-opened {
+    width: 75%;
   }
 }
 
 /* Portrait */
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
-  mat-sidenav-container > mat-sidenav {
-    width: 60px;
-    a .material-icons {
-      padding-left: 5%
-    }
-  }
-  .mat-toolbar.mat-toolbar-single-row {
-    display: none;
-    box-sizing: none;
-    padding: 0px 0px;
-    width: 0%;
-    flex-direction: none;
-    align-items: none;
-    white-space: none;
-  }
-  mat-sidenav {
-    background: #a3b8f7;
+  #sidenav.sidenav-opened {
+    width: 75%;
   }
 }

@@ -1,55 +1,23 @@
-<mat-sidenav-container class="sidenav-container" >
-  <mat-sidenav appToggleSidebar #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
-    <mat-toolbar>GMC</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="home" [class.activated]="currentUrl == '/home'">
-        <i class="material-icons">location_city</i>
-      </a>
-      <a mat-list-item routerLink="about" [class.activated]="currentUrl == '/about'">
-        <i class="material-icons">fingerprint</i>
-      </a>
-      <a mat-list-item routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')">
-        <i class="material-icons">airplanemode_active</i>
-      </a>
-      <a mat-list-item routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'">
-        <i class="material-icons">assessment</i>
-      </a>
-      <a mat-list-item routerLink="apps" [class.activated]="currentUrl == '/apps'">
-        <i class="material-icons">view_module</i>
-      </a>
-      <a mat-list-item routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'">
-        <i class="material-icons">list</i>
-      </a>
-      <a mat-list-item routerLink="writings" [class.activated]="currentUrl.includes('writings')">
-        <i class="material-icons">create</i>
-      </a>
-      <a mat-list-item routerLink="successes" [class.activated]="currentUrl == '/successes'">
-        <i class="material-icons">done</i>
-      </a>
-      <a mat-list-item routerLink="failures" [class.activated]="currentUrl == '/failures'">
-        <i class="material-icons">highlight_off</i>
-      </a>
-      <a mat-list-item routerLink="resume" [class.activated]="currentUrl == '/resume'">
-        <i class="material-icons">assignment</i>
-      </a>
-      <a mat-list-item routerLink="animation" [class.activated]="currentUrl == '/animation'">
-        <i class="material-icons">3d_rotation</i>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar appToggleSidebar color="">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span></span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-    <div id="app-content">
-      <router-outlet></router-outlet>
-      <ng4-loading-spinner [threshold]="2000" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div id="sidenav" class="nav-container">
+  <a href="javascript:void(0)" id="closeButton" (click)="closeNav()">&times;</a>
+  <a href="javascript:void(0)" routerLink="home" [class.activated]="currentUrl == '/home'" (click)="closeNav()">home</a>
+  <a routerLink="about" [class.activated]="currentUrl == '/about'" (click)="closeNav()">about</a>
+  <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')" (click)="closeNav()">travel gallery</a>
+  <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'" (click)="closeNav()">skills & personality</a>
+  <a routerLink="apps" [class.activated]="currentUrl == '/apps'" (click)="closeNav()">apps</a>
+  <a routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'" (click)="closeNav()">good reads</a>
+  <a routerLink="writings" [class.activated]="currentUrl.includes('writings')" (click)="closeNav()">musings</a>
+  <a routerLink="successes" [class.activated]="currentUrl == '/successes'" (click)="closeNav()">successes</a>
+  <a routerLink="failures" [class.activated]="currentUrl == '/failures'" (click)="closeNav()">failures</a>
+  <a routerLink="resume" [class.activated]="currentUrl == '/resume'" (click)="closeNav()">resume</a>
+  <a routerLink="animation" [class.activated]="currentUrl == '/animation'" (click)="closeNav()">animations</a>
+</div>
 
+<!-- Use any element to open the sidenav -->
+<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+  <router-outlet></router-outlet>
+  <ng4-loading-spinner [threshold]="2000" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>
+</div>
