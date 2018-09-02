@@ -2,7 +2,11 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #sidenav.sidenav-opened {
-    width: 75%;
+    width: 30%;
+  }
+
+  #navIcon-mobile {
+    font-size: 3rem;
   }
 }
 
@@ -10,6 +14,19 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   #sidenav.sidenav-opened {
-    width: 75%;
+    width: 40%;
+  }
+
+  #navIcon-mobile {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+
+  div.page-content {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    margin-left: 1rem;
+    overflow: auto;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit, HostListener } from '@angular/core';
 import 'hammerjs';
 import {
   Router,
@@ -33,6 +33,11 @@ export class AppComponent implements OnInit {
       map(result => result.matches)
     );
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.toggleMenu();
+  }
+
   constructor(private router: Router,
     private ngZone: NgZone,
     private breakpointObserver: BreakpointObserver,
@@ -47,6 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.toggleMenu();    
   }
 
   /* Shows and hides the loading spinner during RouterEvent changes */
@@ -97,6 +103,22 @@ export class AppComponent implements OnInit {
     e.stopPropagation();
     const el = document.getElementById('sidenav');
     el.classList.remove('sidenav-opened');
+  }
+
+  isScreenSmall(): boolean {
+    return window.innerWidth <= this.ipadWidth && window.innerHeight <= this.ipadHeight;
+  }
+
+  toggleMenu() {
+    const largeNav = document.getElementById('navIcon-desktop');
+    const smallNav = document.getElementById('navIcon-mobile');
+    if (!this.isScreenSmall()) {
+      largeNav.style.display = 'block';
+      smallNav.style.display = 'none';
+    } else {
+      largeNav.style.display = 'none';
+      smallNav.style.display = 'block';
+    }
   }
 
 }
