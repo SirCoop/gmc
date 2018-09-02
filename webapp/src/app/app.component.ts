@@ -10,8 +10,8 @@ import {
   NavigationError
 } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable, fromEvent } from 'rxjs';
-import { map, debounceTime } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
@@ -74,29 +74,21 @@ export class AppComponent implements OnInit {
   /* Set the width of the side navigation to 250px */
   openNav(e) {
     e.stopPropagation();
-    /* TODO: debounce this later */
+    /* TODO: debounce this later - possibly use setTimeout reference and then clearTimeout() */
     const el = document.getElementById('sidenav');
     el.classList.add('sidenav-opened');
 
-    // console.log('to: ', this.timeOut);
-    // if (!this.timeOut) {
-    //   this.timeOut = setTimeout(() => {
-        // const el = document.getElementById('sidenav');
-        // el.classList.add('sidenav-opened');
-    //   }, 200);
-      
-    // }     
-    // clearTimeout(this.timeOut);
-
-
-    /* Proper use of this api but wrong implementation for what I need */
-    // const hover = fromEvent(e.target, 'mouseenter');
-    // const result = hover.pipe(debounceTime(250));
-    // result.subscribe(x => {
-    //   console.log('debounce log: ', x);
-      // const el = document.getElementById('sidenav');
-      // el.classList.add('sidenav-opened');
-    // });    
+    /* 
+    * Proper use of this api but wrong implementation for what I need
+    * 
+    * const hover = fromEvent(e.target, 'mouseenter');
+    * const result = hover.pipe(debounceTime(250));
+    * result.subscribe(x => {
+    *   console.log('debounce log: ', x);
+    *   const el = document.getElementById('sidenav');
+    *   el.classList.add('sidenav-opened');
+    * });       
+    */       
     
   }
 

@@ -23,6 +23,22 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+
+  /* sidenav opened */
+  >span {
+    &.arrow {
+      display: inline-block;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    &.arrow-right {
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 20px solid #111;
+    }
+  }
 }
 
 .nav-container a {
@@ -44,15 +60,25 @@
 
 #navIcon {
   height: 100%;
-  background-color:transparent;
-  width: 2%;
-  border-right: 1px solid gray;
-  // width: 75px;
-  // position: fixed;
-  // top: 43vh;
-  // left: 10px;
-  // font-size: 4rem;
-  // cursor:pointer
+  width: 1%;
+  background-color: transparent;
+
+  /* sidenav closed */
+  >div.arrow-right {
+    border: 1px solid #000;
+    border-width: 0 0 2px 2px;
+    width: 20px;
+    height: 20px;
+    line-height: 0;
+    font-size: 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+    position: fixed;
+    top: 43vh;
+    left: 5px;
+  }
 }
 
 #closeButton {
@@ -64,6 +90,11 @@
 }
 
 @media screen and (max-height: 450px) {
-.nav-container {padding-top: 15px;}
-.nav-container a {font-size: 18px;}
+  .nav-container {
+    padding-top: 15px;
+  }
+
+  .nav-container a {
+    font-size: 18px;
+  }
 }

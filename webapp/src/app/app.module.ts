@@ -68,7 +68,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { BulletChartMobileComponent } from './components/bullet-chart-mobile/bullet-chart-mobile.component';
 import { InlineReaderComponent } from './components/inline-reader/inline-reader.component';
 import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
-import { DebounceHoverDirective } from './directives/debounce-hover.directive';
 
 @NgModule({
   declarations: [
@@ -93,8 +92,7 @@ import { DebounceHoverDirective } from './directives/debounce-hover.directive';
     ToggleSidebarDirective,
     BulletChartMobileComponent,
     InlineReaderComponent,
-    FaceAnimationComponent,
-    DebounceHoverDirective
+    FaceAnimationComponent
   ],
   imports: [
     BrowserModule,
