@@ -32,7 +32,17 @@ body {
 }
 
 .page-content {
-  margin: 2rem 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1rem 5rem;
+
+  @media (max-width: 980px) { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0rem 1rem;
+  }
 }
 
 #frontEndSkills {

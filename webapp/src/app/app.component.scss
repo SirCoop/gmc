@@ -24,21 +24,6 @@
   transition: 0.5s;
   padding-top: 60px;
 
-  /* sidenav opened */
-  >span {
-    &.arrow {
-      display: inline-block;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
-
-    &.arrow-right {
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 20px solid #111;
-    }
-  }
 }
 
 .nav-container a {
@@ -58,7 +43,7 @@
   width: 16%;
 }
 
-#navIcon {
+#navIcon-desktop {
   height: 100%;
   width: 1%;
   background-color: transparent;

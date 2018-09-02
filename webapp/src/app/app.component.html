@@ -1,7 +1,4 @@
-<!-- <div id="hoverSpace" (mouseover)="openNav($event)"></div>
-<div id="sidenav" class="nav-container" (mouseleave)="closeNav($event)"> -->
-<div id="sidenav" class="nav-container nav-container-arrow" (mouseleave)="closeNav($event)">
-  <!-- <span class="arrow arrow-right"></span> -->
+<div id="sidenav" class="nav-container" (mouseleave)="closeNav($event)">
   <a href="javascript:void(0)" id="closeButton" (click)="closeNav($event)">&times;</a>
   <a routerLink="know-thyself" [class.activated]="currentUrl == '/know-thyself'" (click)="closeNav($event)">nosce te ipsum</a>
   <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')" (click)="closeNav($event)">travel gallery</a>
@@ -17,8 +14,8 @@
 </div>
 
 <!-- Use any element to open the sidenav -->
-<!-- <span id="navIcon" (click)="openNav()">&#9776;</span> -->
-<div id="navIcon" (mouseenter)="openNav($event)">
+<span id="navIcon-mobile" (click)="openNav($event)">&#9776;</span>
+<div id="navIcon-desktop" (mouseenter)="openNav($event)">
   <div class="arrow-right" (click)="openNav($event)"></div>
 </div>
 
