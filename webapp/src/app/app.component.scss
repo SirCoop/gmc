@@ -5,6 +5,13 @@
 @import './styles/sidenav/iphone-6-7-8-plus';
 @import './styles/sidenav/iphone-x';
 
+#hoverSpace {
+  height: 900px;
+  width: 10%;
+  z-index: 9998;
+  background-color: transparent;
+}
+
 .nav-container {
   height: 100%;
   width: 0;
@@ -33,6 +40,19 @@
 
 .nav-container.sidenav-opened {
   width: 16%;
+}
+
+#navIcon {
+  height: 100%;
+  background-color:transparent;
+  width: 2%;
+  border-right: 1px solid gray;
+  // width: 75px;
+  // position: fixed;
+  // top: 43vh;
+  // left: 10px;
+  // font-size: 4rem;
+  // cursor:pointer
 }
 
 #closeButton {

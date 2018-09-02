@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import 'hammerjs';
 import {
   Router,
@@ -10,8 +10,8 @@ import {
   NavigationError
 } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, fromEvent } from 'rxjs';
+import { map, debounceTime } from 'rxjs/operators';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
@@ -19,13 +19,14 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
   currentUrl = '';
   hideSideNav = true;
   ipadWidth = 768;
   ipadHeight = 1024;
   activeSpinner = false;
+  timeOut: any;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -43,6 +44,9 @@ export class AppComponent {
     this.router.events.subscribe((event: RouterEvent) => {
       this.navigationInterceptor(event);
     });
+  }
+
+  ngOnInit() {
   }
 
   /* Shows and hides the loading spinner during RouterEvent changes */
@@ -66,14 +70,39 @@ export class AppComponent {
     }
   }
 
+
   /* Set the width of the side navigation to 250px */
-  openNav() {
+  openNav(e) {
+    e.stopPropagation();
+    /* TODO: debounce this later */
     const el = document.getElementById('sidenav');
     el.classList.add('sidenav-opened');
+
+    // console.log('to: ', this.timeOut);
+    // if (!this.timeOut) {
+    //   this.timeOut = setTimeout(() => {
+        // const el = document.getElementById('sidenav');
+        // el.classList.add('sidenav-opened');
+    //   }, 200);
+      
+    // }     
+    // clearTimeout(this.timeOut);
+
+
+    /* Proper use of this api but wrong implementation for what I need */
+    // const hover = fromEvent(e.target, 'mouseenter');
+    // const result = hover.pipe(debounceTime(250));
+    // result.subscribe(x => {
+    //   console.log('debounce log: ', x);
+      // const el = document.getElementById('sidenav');
+      // el.classList.add('sidenav-opened');
+    // });    
+    
   }
 
   /* Set the width of the side navigation to 0 */
-  closeNav() {
+  closeNav(e) {
+    e.stopPropagation();
     const el = document.getElementById('sidenav');
     el.classList.remove('sidenav-opened');
   }

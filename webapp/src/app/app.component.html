@@ -1,23 +1,30 @@
-<div id="sidenav" class="nav-container">
-  <a href="javascript:void(0)" id="closeButton" (click)="closeNav()">&times;</a>
-  <a href="javascript:void(0)" routerLink="home" [class.activated]="currentUrl == '/home'" (click)="closeNav()">home</a>
-  <a routerLink="about" [class.activated]="currentUrl == '/about'" (click)="closeNav()">about</a>
-  <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')" (click)="closeNav()">travel gallery</a>
-  <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'" (click)="closeNav()">skills & personality</a>
-  <a routerLink="apps" [class.activated]="currentUrl == '/apps'" (click)="closeNav()">apps</a>
-  <a routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'" (click)="closeNav()">good reads</a>
-  <a routerLink="writings" [class.activated]="currentUrl.includes('writings')" (click)="closeNav()">musings</a>
-  <a routerLink="successes" [class.activated]="currentUrl == '/successes'" (click)="closeNav()">successes</a>
-  <a routerLink="failures" [class.activated]="currentUrl == '/failures'" (click)="closeNav()">failures</a>
-  <a routerLink="resume" [class.activated]="currentUrl == '/resume'" (click)="closeNav()">resume</a>
-  <a routerLink="animation" [class.activated]="currentUrl == '/animation'" (click)="closeNav()">animations</a>
+<!-- <div id="hoverSpace" (mouseover)="openNav($event)"></div>
+<div id="sidenav" class="nav-container" (mouseleave)="closeNav($event)"> -->
+<div id="sidenav" class="nav-container" (mouseleave)="closeNav($event)">
+  <a href="javascript:void(0)" id="closeButton" (click)="closeNav($event)">&times;</a>
+  <a routerLink="know-thyself" [class.activated]="currentUrl == '/know-thyself'" (click)="closeNav($event)">nosce te ipsum</a>
+  <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')" (click)="closeNav($event)">travel gallery</a>
+  <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'" (click)="closeNav($event)">skills & personality</a>
+  <a routerLink="apps" [class.activated]="currentUrl == '/apps'" (click)="closeNav($event)">apps</a>
+  <a routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'" (click)="closeNav($event)">good reads</a>
+  <a routerLink="writings" [class.activated]="currentUrl.includes('writings')" (click)="closeNav($event)">musings</a>
+  <a routerLink="successes" [class.activated]="currentUrl == '/successes'" (click)="closeNav($event)">successes</a>
+  <a routerLink="failures" [class.activated]="currentUrl == '/failures'" (click)="closeNav($event)">failures</a>
+  <a routerLink="resume" [class.activated]="currentUrl == '/resume'" (click)="closeNav($event)">resume</a>
+  <a routerLink="animation" [class.activated]="currentUrl == '/animation'" (click)="closeNav($event)">animations</a>
+  <a routerLink="" [class.activated]="currentUrl == ''" (click)="closeNav($event)">dna</a>
 </div>
 
 <!-- Use any element to open the sidenav -->
-<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+<!-- <span id="navIcon" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span> -->
+<div id="navIcon" (click)="openNav($event)" (mouseenter)="openNav($event)">
+  <div></div>
+</div>
+<!-- <span id="navIcon" (click)="openNav()">&#62;</span> -->
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-<div id="main">
-  <router-outlet></router-outlet>
-  <ng4-loading-spinner [threshold]="2000" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>
-</div>
+<!-- <div id="main">
+</div> -->
+
+<router-outlet></router-outlet>
+<ng4-loading-spinner [threshold]="2000" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>

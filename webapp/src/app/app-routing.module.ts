@@ -7,7 +7,6 @@ import { WritingsResolver } from './resolvers/writings.resolver';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
-import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
 import { AppsComponent } from './components/apps/apps.component';
@@ -26,11 +25,7 @@ const routes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
+    path: 'know-thyself',
     component: AboutComponent
   },
   {
