@@ -1,9 +1,9 @@
-@import './styles/sidenav/ipad-pro';
-@import './styles/sidenav/ipad';
-@import './styles/sidenav/iphone-5-5s';
-@import './styles/sidenav/iphone-6-7-8';
-@import './styles/sidenav/iphone-6-7-8-plus';
-@import './styles/sidenav/iphone-x';
+@import './styles/ipad-pro';
+@import './styles/ipad';
+@import './styles/iphone-5-5s';
+@import './styles/iphone-6-7-8';
+@import './styles/iphone-6-7-8-plus';
+@import './styles/iphone-x';
 
 .nav-container {
   height: 100%;
@@ -158,3 +158,4 @@
     font-size: 18px;
   }
 }
+

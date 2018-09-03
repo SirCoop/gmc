@@ -1,10 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/styles/landing-page/ipad-pro';
-@import './app/styles/landing-page/ipad';
-@import './app/styles/landing-page/iphone-5-5s';
-@import './app/styles/landing-page/iphone-6-7-8';
-@import './app/styles/landing-page/iphone-6-7-8-plus';
-@import './app/styles/landing-page/iphone-x';
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /*Common Media Queries*/
@@ -30,20 +24,6 @@ body {
     
   }
 }
-
-// .page-content {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   margin: 1rem 5rem;
-
-//   @media (max-width: 980px) { 
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     margin: 0rem 1rem;
-//   }
-// }
 
 #frontEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -4,6 +4,14 @@
   #sidenav.sidenav-opened {
     width: 30%;
   }
+
+  div.page-content {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    margin-left: 1rem;
+    overflow: auto;
+  }
 }
 
 /* Portrait */
@@ -11,5 +19,13 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
   #sidenav.sidenav-opened {
     width: 30%;
+  }
+
+  div.page-content {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    margin-left: 1rem;
+    overflow: auto;
   }
 }
