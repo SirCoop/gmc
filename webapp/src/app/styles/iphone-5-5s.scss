@@ -9,6 +9,7 @@
     font-size: 2rem;
     margin-left: .5rem;
   }
+
 }
 
 /* Portrait */
@@ -16,6 +17,8 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   #sidenav.sidenav-opened {
     width: 75%;
+    height: 700px;
+    overflow: auto;
   }
 
   #navIcon-mobile {
@@ -24,10 +27,13 @@
   }
 
   div.page-content {
-    position: fixed;
-    top: 5rem;
-    left: 0;
-    margin-left: 1rem;
-    overflow: auto;
+    height: 100%;
   }
+
+
 }
+
+/* general rules */
+
+
+
