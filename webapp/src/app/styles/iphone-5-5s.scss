@@ -1,24 +1,46 @@
 /* Landscape */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-  #sidenav.sidenav-opened {
-    width: 75%;
+  #sidenav.nav-container {
+    &.sidenav-opened {
+      width: 75%;
+      padding-top: 10px;
+
+      #closeButton {
+        font-size: 2rem;
+      }
+
+      a {
+        font-size: 1.25rem;        
+      }
+    }    
+
   }
 
   #navIcon-mobile {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-left: .5rem;
   }
-
+  
 }
 
 /* Portrait */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
-  #sidenav.sidenav-opened {
-    width: 75%;
-    height: 700px;
-    overflow: auto;
+  #sidenav.nav-container {
+    &.sidenav-opened {
+      width: 75%;
+      padding-top: 10px;
+
+      #closeButton {
+        font-size: 2rem;
+      }
+
+      a {
+        font-size: 1.25rem;
+      }
+    }    
+
   }
 
   #navIcon-mobile {
@@ -26,14 +48,7 @@
     margin-left: .5rem;
   }
 
-  div.page-content {
-    height: 100%;
-  }
-
-
 }
-
-/* general rules */
 
 
 

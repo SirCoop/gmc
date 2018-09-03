@@ -80,22 +80,8 @@ export class AppComponent implements OnInit {
   /* Set the width of the side navigation to 250px */
   openNav(e) {
     e.stopPropagation();
-    /* TODO: debounce this later - possibly use setTimeout reference and then clearTimeout() */
     const el = document.getElementById('sidenav');
     el.classList.add('sidenav-opened');
-
-    /* 
-    * Proper use of this api but wrong implementation for what I need
-    * 
-    * const hover = fromEvent(e.target, 'mouseenter');
-    * const result = hover.pipe(debounceTime(250));
-    * result.subscribe(x => {
-    *   console.log('debounce log: ', x);
-    *   const el = document.getElementById('sidenav');
-    *   el.classList.add('sidenav-opened');
-    * });       
-    */       
-    
   }
 
   /* Set the width of the side navigation to 0 */

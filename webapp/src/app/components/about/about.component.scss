@@ -1,8 +1,4 @@
-/* 
-* styles/iPad-Pro.scss isn't reaching div.page-content so I am placing the rules here
-*
-* Landscape 
-*/
+/* Landscape */
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
     #sidenav.sidenav-opened {
