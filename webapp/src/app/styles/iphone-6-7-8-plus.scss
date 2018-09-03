@@ -1,8 +1,20 @@
 /* Landscape */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-  #sidenav.sidenav-opened {
-    width: 75%;
+  #sidenav.nav-container {
+    &.sidenav-opened {
+      width: 60%;
+      padding-top: 10px;
+
+      #closeButton {
+        font-size: 2.25rem;
+      }
+
+      a {
+        font-size: 1.5rem;        
+      }
+    }    
+
   }
 
   #navIcon-mobile {
@@ -14,8 +26,20 @@
 /* Portrait */
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: portrait) {
-  #sidenav.sidenav-opened {
-    width: 75%;
+  #sidenav.nav-container {
+    &.sidenav-opened {
+      width: 75%;
+      padding-top: 10px;
+
+      #closeButton {
+        font-size: 2.25rem;
+      }
+
+      a {
+        font-size: 1.5rem;
+      }
+    }    
+
   }
 
   #navIcon-mobile {
