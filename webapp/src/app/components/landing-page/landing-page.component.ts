@@ -14,7 +14,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   enterApp() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 
 }

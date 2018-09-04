@@ -8,7 +8,6 @@
     /*dna*/
     .dna-wrapper {
         font-size: 26px;
-        // min-height: 800px;
         width: inherit;
     }
 
@@ -215,19 +214,4 @@
 
     /*end dna*/
 
-    #enterButton {
-        color: #b1b1b1;
-        cursor: pointer;
-
-        -o-transition: .75s;
-        -ms-transition: .75s;
-        -moz-transition: .75s;
-        -webkit-transition: .75s;
-        /* for the proper property */
-        transition:.75s;
-        
-        &:hover {
-            color: black;
-        }
-    }
 }

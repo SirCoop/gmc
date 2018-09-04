@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.router.events.subscribe((_: NavigationEnd) => {
-      this.currentUrl = _.url;
+      this.currentUrl = _.url;     
     });
 
     this.router.events.subscribe((event: RouterEvent) => {

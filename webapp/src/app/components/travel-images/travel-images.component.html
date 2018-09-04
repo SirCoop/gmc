@@ -1,9 +1,11 @@
-<div *ngIf="imageUrls$.length">
-  <div *ngFor="let url of imageUrls$" class="image-container">
-    <img [src]="url | urlSanitizer" (click)="openDialog(url)"/>
+<div class="travel-images-container page-content">
+  <div *ngIf="imageUrls$.length">
+    <div *ngFor="let url of imageUrls$" class="image-container">
+      <img [src]="url | urlSanitizer" (click)="openDialog(url)" />
+    </div>
   </div>
-</div>
 
-<div *ngIf="!imageUrls$.length">
-  This one is on the bucket list!
+  <div *ngIf="!imageUrls$.length">
+    This one is on the bucket list!
+  </div>
 </div>
