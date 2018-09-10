@@ -25,7 +25,7 @@ const routes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: 'know-thyself',
+    path: 'about',
     component: AboutComponent
   },
   {
@@ -40,7 +40,7 @@ const routes: Routes = [
     }
   },
   {
-    path: 'self-assessment',
+    path: 'know-thyself',
     component: SelfAssessmentComponent
   },
   {

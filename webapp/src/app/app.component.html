@@ -1,8 +1,8 @@
 <div id="sidenav" class="nav-container" (mouseleave)="closeNav($event)">
   <a href="javascript:void(0)" id="closeButton" (click)="closeNav($event)">&times;</a>
-  <a routerLink="know-thyself" [class.activated]="currentUrl == '/know-thyself'" (click)="closeNav($event)">nosce te ipsum</a>
+  <a routerLink="about" [class.activated]="currentUrl == '/about'" (click)="closeNav($event)">about</a>
   <a routerLink="travel-gallery" [class.activated]="currentUrl.includes('travel-gallery')" (click)="closeNav($event)">travel gallery</a>
-  <a routerLink="self-assessment" [class.activated]="currentUrl == '/self-assessment'" (click)="closeNav($event)">cognition</a>
+  <a routerLink="know-thyself" [class.activated]="currentUrl == '/know-thyself'" (click)="closeNav($event)">nosce te ipsum</a>
   <a routerLink="apps" [class.activated]="currentUrl == '/apps'" (click)="closeNav($event)">apps</a>
   <a routerLink="reading-list" [class.activated]="currentUrl == '/reading-list'" (click)="closeNav($event)">good reads</a>
   <a routerLink="writings" [class.activated]="currentUrl.includes('writings')" (click)="closeNav($event)">musings</a>
