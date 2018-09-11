@@ -38,8 +38,13 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule
+  MatTreeModule,
+  ErrorStateMatcher,
+  ShowOnDirtyErrorStateMatcher
 } from '@angular/material';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -139,9 +144,11 @@ import { ContactComponent } from './components/contact/contact.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],
   entryComponents: [ImageDialogComponent]
 })
