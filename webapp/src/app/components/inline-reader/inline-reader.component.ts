@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from './../../services/data.service';
 
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+
 @Component({
   selector: 'app-inline-reader',
   templateUrl: './inline-reader.component.html',
@@ -21,7 +23,7 @@ export class InlineReaderComponent implements OnInit, OnChanges {
   fitToPage = true;
   autoresize = true;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+  constructor(private route: ActivatedRoute, private dataService: DataService, private spinnerService: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
   }
@@ -33,8 +35,17 @@ export class InlineReaderComponent implements OnInit, OnChanges {
   }
 
   fetchPdf() {
+    this.spinnerService.show();
     this.pdfTitle = this.fileName.split('_')[1].split('.')[0];
     this.pdfSrc = `/api/writings/${this.writingType}/${this.fileName}.pdf`;
+  }
+
+  pageRendered(e: CustomEvent) {
+    this.spinnerService.hide();
+  }
+
+  onError(e: any) {
+    this.spinnerService.hide();
   }
 
 }
