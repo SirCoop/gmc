@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   countries = countriesByCode;
 
-  formGroup: any;
+  contactFormGroup: any;
 
   /* FormControl is a class that powers an individual form control, tracks the value and validation status, whilst offering a wide set of public API methods */
   firstNameFormControl = new FormControl('', [Validators.required]);
@@ -42,9 +42,9 @@ export class ContactComponent implements OnInit {
     Validators.email
   ]);  
 
-  phoneNumberFormControl = new FormControl('', Validators.compose([
+  phoneFormControl = new FormControl('', Validators.compose([
     Validators.required,
-    PhoneValidator.validCountryPhone(this.countryFormControl)
+    // PhoneValidator.validCountryPhone(this.countryFormControl)
   ]));
 
   commentFormControl = new FormControl('', [Validators.required]);
@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.formGroup = new FormGroup({
+    this.contactFormGroup = new FormGroup({
       'firstName': this.firstNameFormControl,
       'lastName': this.lastNameFormControl,
       'city': this.cityFormControl,
@@ -62,16 +62,18 @@ export class ContactComponent implements OnInit {
       'country': this.countryFormControl,
       'organization': this.organizationFormControl,
       'email': this.emailFormControl,
-      'phone': this.phoneNumberFormControl,
+      'phone': this.phoneFormControl,
       'comment': this.commentFormControl
     });
 
     /* set US as default country */
     const setCountry = this.countries.find(c => c.code === 'US');
-    this.formGroup.get('country').setValue(setCountry.code);
+    this.contactFormGroup.get('country').setValue(setCountry.code);
+  }
 
-    console.log('formGroup: ', this.formGroup);
-
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.log('on submit: ', this.contactFormGroup.value);
   }
 
 }
