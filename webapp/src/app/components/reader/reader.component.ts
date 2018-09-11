@@ -33,7 +33,6 @@ export class ReaderComponent implements OnInit {
     const { type, fileName } = this.route.snapshot.params;
     this.pdfTitle = fileName.split('_')[1].split('.')[0];
     this.pdfSrc = `/api/writings/${type}/${fileName}.pdf`;
-    this.spinnerService.hide();
   }
 
   // TODO: get this to work
@@ -41,6 +40,14 @@ export class ReaderComponent implements OnInit {
     this.pdfComponent.pdfFindController.executeCommand('find', {
       caseSensitive: false, findPrevious: undefined, highlightAll: true, phraseSearch: true, query: stringToSearch
     });
+  }
+
+  pageRendered(e: CustomEvent) {
+    this.spinnerService.hide();
+  }
+
+  onError(e: any) {
+    this.spinnerService.hide();
   }
 
 }
