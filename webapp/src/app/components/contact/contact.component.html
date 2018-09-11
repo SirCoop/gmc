@@ -1,79 +1,90 @@
 <div class="contact-container page-content">
   <div class="contact-form-container">
-    <form [formGroup]="contactFormGroup" class="contact-form" novalidate (ngSubmit)="onSubmit()">
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="First Name" value="" formControlName="firstName">
-        <mat-error *ngIf="firstNameFormControl.hasError('required')">
-          First name is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+    <mat-card>
+      <form [formGroup]="contactFormGroup" class="contact-form" novalidate (ngSubmit)="onSubmit()">
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="Last Name" value="" formControlName="lastName">
-        <mat-error *ngIf="lastNameFormControl.hasError('required')">
-          Last name is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <!-- <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list> -->
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="City" value="" formControlName="city">
-        <mat-error *ngIf="cityFormControl.hasError('required')">
-          City is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="State" value="" formControlName="state">
-        <mat-error *ngIf="stateFormControl.hasError('required')">
-          State is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="First Name" value="" formControlName="firstName">
+          <mat-error *ngIf="firstNameFormControl.hasError('required')">
+            First name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field>
-        <mat-select placeholder="Country" formControlName="country">
-          <mat-option *ngFor="let country of countries" [value]="country.code">
-            {{country.name}}
-          </mat-option>
-        </mat-select>
-        <mat-error *ngIf="countryFormControl.hasError('required')">
-          Country is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="Last Name" value="" formControlName="lastName">
+          <mat-error *ngIf="lastNameFormControl.hasError('required')">
+            Last name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="Organization" value="" formControlName="organization">
-        <mat-error *ngIf="organizationFormControl.hasError('required')">
-          Organization is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="City" value="" formControlName="city">
+          <mat-error *ngIf="cityFormControl.hasError('required')">
+            City is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="Email" [errorStateMatcher]="matcher" formControlName="email">
-        <mat-hint></mat-hint>
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-          Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="State" value="" formControlName="state">
+          <mat-error *ngIf="stateFormControl.hasError('required')">
+            State is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field class="field-full-width">
-        <input matInput placeholder="Phone Number" value="" formControlName="phone">
-        <mat-error *ngIf="phoneFormControl.hasError('required')">
-          Phone number is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="Country" formControlName="country">
+            <mat-option *ngFor="let country of countries" [value]="country.code">
+              {{country.name}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="countryFormControl.hasError('required')">
+            Country is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field class="field-full-width">
-        <textarea matInput placeholder="Leave a comment" formControlName="comment"></textarea>
-        <mat-error *ngIf="commentFormControl.hasError('required')">
-          Comment is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="Organization" value="" formControlName="organization">
+          <mat-error *ngIf="organizationFormControl.hasError('required')">
+            Organization is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
 
-      <button mat-raised-button color="primary" [disabled]="!contactFormGroup.valid">Send</button>
-    </form>
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="Email" [errorStateMatcher]="matcher" formControlName="email">
+          <mat-hint></mat-hint>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+          <input matInput placeholder="Phone Number" value="" formControlName="phone">
+          <mat-error *ngIf="phoneFormControl.hasError('required')">
+            Phone number is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width">
+          <textarea id="commentText" matInput placeholder="Leave a comment" formControlName="comment"></textarea>
+          <mat-error *ngIf="commentFormControl.hasError('required')">
+            Comment is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-card-actions>
+          <button mat-raised-button color="primary" [disabled]="!contactFormGroup.valid">Send</button>
+        </mat-card-actions>
+      </form>
+    </mat-card>
   </div>
 
 </div>
