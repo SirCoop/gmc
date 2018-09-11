@@ -29,7 +29,7 @@ export class ReaderComponent implements OnInit {
   }
 
   fetchPdf() {
-    this.spinnerService.show();    
+    this.spinnerService.show();   
     const { type, fileName } = this.route.snapshot.params;
     this.pdfTitle = fileName.split('_')[1].split('.')[0];
     this.pdfSrc = `/api/writings/${type}/${fileName}.pdf`;

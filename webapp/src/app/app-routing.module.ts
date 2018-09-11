@@ -17,6 +17,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { ReaderComponent } from './components/reader/reader.component';
 import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 const routes: Routes = [
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path: 'animation',
     component: FaceAnimationComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 

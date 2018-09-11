@@ -29,7 +29,7 @@ export class DataService {
     return this.http.get(`${this.baseUrl}/writings/${type}/${fileName}.pdf`);
   }
 
-  getHeadScan(fileName: string):  Observable<any> {
+  getHeadScan(fileName: string): Observable<any> {
     // TODO: figure out how to set base url path in three.js file loader for the face files.
     // Three.js pulls from root by default
     return this.http.get(`${this.baseUrl}/threejs/${fileName}`);

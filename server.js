@@ -66,7 +66,6 @@ app.get(`${base_api_url}/writings/:type/:fileName`, (req, res) => {
   const type = req.params.type;
   const fileName = req.params.fileName;
   const path = `${CONSTANTS.webapp.writings}/${type}/${fileName}`;
-  console.log('here is the path: ', path);
   const file = fs.createReadStream(path);
   const stat = fs.statSync(path);
   res.setHeader('Content-Length', stat.size);
