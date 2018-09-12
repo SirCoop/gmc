@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const auth = require('./gmail.auth');
+const auth = require('./auth');
 
 module.exports = {
 

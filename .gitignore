@@ -9,5 +9,5 @@ assets/writings/**/*
 
 dist/
 
-services/gmail.auth.js
+services/auth.js
 
