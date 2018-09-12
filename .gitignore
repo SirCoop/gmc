@@ -8,3 +8,5 @@ assets/writings/**/*
 !.elasticbeanstalk/*.global.yml
 
 dist/
+
+services/gmail.auth.js

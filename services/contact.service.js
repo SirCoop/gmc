@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const auth = require('./gmail.auth');
 
 module.exports = {
 
@@ -6,9 +7,9 @@ module.exports = {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-               user: 'noreply.garycooper@gmail.com',
-               pass: 'N0R3ply@'
-           }
+            user: auth.user,
+            pass: auth.pass
+        }
        });
 
     /* 
@@ -30,7 +31,10 @@ module.exports = {
         to: postBody.email,
         subject: 'Thank you for your interest!',
         text: 'I have received your letter and will review as soon as possible.',
-        html: '<p>I have received your letter and will review it as soon as possible.</p>'
+        html: `<hr>
+            <h2>Letter from ${postBody.firstName} ${postBody.lastName}</h2>
+            <p>Date: ${postBody.date}</p>            
+            <p>${postBody.comment}</p><hr>`
     };
 
     transporter.sendMail(message);
