@@ -1,5 +1,3 @@
-const path = require('path');
-
 const contactService = require('../services/contact.service');
 
 module.exports = {

@@ -1,9 +1,4 @@
-const fs = require('fs');
-const util = require('util');
-
-/* beautiful async/await */
-const readdir = util.promisify(fs.readdir);
-// const readfile = util.promisify(fs.readFile);
+const nodemailer = require('nodemailer');
 
 module.exports = {
 
@@ -35,7 +30,7 @@ module.exports = {
         to: postBody.email,
         subject: 'Thank you for your interest!',
         text: 'I have received your letter and will review as soon as possible.',
-        html: '<p>HTML version of the message</p>'
+        html: '<p>I have received your letter and will review as soon as possible.</p>'
     };
 
     transporter.sendMail(message);
