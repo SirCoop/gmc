@@ -30,14 +30,15 @@ module.exports = {
     const message = {
       from: 'noreply.garycooper@gmail.com',
       to: postBody.email,
-      subject: 'Thank you for your interest!',
+      subject: 'Thank You for your interest!',
       text: '',
       html: `<hr>
             <h2>Letter from ${postBody.firstName} ${postBody.lastName}</h2>
             <p><b>Received:</b> ${postBody.date}</p>
-            <p><b>Content:</b> ${postBody.comment}</p>
-            <hr>
-            <p>Your letter has been received and will be reviewed as soon as possible.</p>`
+            <p><b>Message:</b> ${postBody.comment}</p>
+            <p>Your letter has been received and will be reviewed as soon as possible.</p>
+            <p>-- Gary Cooper </p>
+            <hr>`
     };
 
     transporter.sendMail(message);
