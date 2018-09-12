@@ -5,12 +5,12 @@ module.exports = {
 
   sendEmail: (postBody) => {
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: auth.user,
-            pass: auth.pass
-        }
-       });
+      service: 'gmail',
+      auth: {
+        user: auth.user,
+        pass: auth.pass
+      }
+    });
 
     /* 
         postBody = {
@@ -26,19 +26,21 @@ module.exports = {
             state: string
         }
     */
+
     const message = {
-        from: 'noreply.garycooper@gmail.com',
-        to: postBody.email,
-        subject: 'Thank you for your interest!',
-        text: 'I have received your letter and will review as soon as possible.',
-        html: `<hr>
+      from: 'noreply.garycooper@gmail.com',
+      to: postBody.email,
+      subject: 'Thank you for your interest!',
+      text: '',
+      html: `<hr>
             <h2>Letter from ${postBody.firstName} ${postBody.lastName}</h2>
-            <p>Date: ${postBody.date}</p>            
-            <p>${postBody.comment}</p><hr>`
+            <p><b>Received:</b> ${postBody.date}</p>
+            <p><b>Content:</b> ${postBody.comment}</p>
+            <hr>
+            <p>Your letter has been received and will be reviewed as soon as possible.</p>`
     };
 
     transporter.sendMail(message);
   }
 
 }
-
