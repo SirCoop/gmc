@@ -75,7 +75,7 @@ export class ContactComponent implements OnInit {
     };
 
     this.dataservice.sendCommentForm(contactFormObj).subscribe(
-      success => this.openSnackBar('Thank you for your interest!.', ''),
+      success => this.openSnackBar('Thank you for your interest!', ''),
       error => this.openSnackBar('Your letter was not delivered.', 'Please resend.')
     );
   }
