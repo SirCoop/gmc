@@ -3,6 +3,33 @@
 // @media (max-width: 980px) { ... }
 // @media (max-width: 736px) { ... }
 // @media (max-width: 480px) { ... }
+#contactFormContainer {
+  background-image: url('../../../assets/papyrus.jpg');
+
+  /* Change Autocomplete styles in Chrome*/
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: 1px solid rgba(56, 56, 55, 0.555);
+    -webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(226, 188, 132) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  #footerButtonContainer {
+    text-align: center;
+
+    > button {
+      &.send-enabled {
+        background-color: #3fb5578a;
+      }
+    }
+  }
+}
 
 .contact-form {
   min-width: 150px;
@@ -12,6 +39,10 @@
 
 .field-full-width {
   width: 100%;
+}
+
+.note-header {
+  font-family: 'AlexBrush';
 }
 
 @media only screen and (max-device-width: 812px) {

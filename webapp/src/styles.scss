@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: 'AlexBrush';
+  // src: url('FileName.eot');
+  // src: url('FileName.eot?#iefix') format('embedded-opentype'),
+      //  url('FileName.woff') format('woff'),
+  src: url('./assets/alex-brush/AlexBrush-Regular.ttf') format('truetype');
+      //  url('FileName.svg#FontName') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
 /*Common Media Queries*/
 
 // @media (max-width: 1690px) { ... }

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { PhoneValidator } from './phone.validator';
+import { DataService } from './../../services/data.service';
+import * as moment from 'moment';
+
 import countriesByCode from './countries';
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -21,37 +24,30 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class ContactComponent implements OnInit {
 
   countries = countriesByCode;
-
   contactFormGroup: any;
+  messageSuccess: boolean;
+  messageError: boolean;
+  today = moment().format('dddd, MMMM Do YYYY');
 
   /* FormControl is a class that powers an individual form control, tracks the value and validation status, whilst offering a wide set of public API methods */
   firstNameFormControl = new FormControl('', [Validators.required]);
-
   lastNameFormControl = new FormControl('', [Validators.required]);
-
   cityFormControl = new FormControl('', [Validators.required]);
-
   stateFormControl = new FormControl('', [Validators.required]);
-
   countryFormControl = new FormControl('', [Validators.required]);
-
   organizationFormControl = new FormControl('', [Validators.required]);
-
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email
-  ]);  
-
+  ]);
   phoneFormControl = new FormControl('', Validators.compose([
     Validators.required,
-    // PhoneValidator.validCountryPhone(this.countryFormControl)
   ]));
-
   commentFormControl = new FormControl('', [Validators.required]);
 
   matcher = new MyErrorStateMatcher();
 
-  constructor() { }
+  constructor(private dataservice: DataService, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.contactFormGroup = new FormGroup({
@@ -73,7 +69,22 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.log('on submit: ', this.contactFormGroup.value);
+    const contactFormObj = {
+      ...this.contactFormGroup.value,
+      date: this.today
+    };
+
+    this.dataservice.sendCommentForm(contactFormObj).subscribe(
+      success => this.openSnackBar('Thank you for your interest!.', 'Your letter has been delivered.'),
+      error => this.openSnackBar('Your letter was not delivered.', 'Please resend.')
+    );
   }
+
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+  }
+
 
 }

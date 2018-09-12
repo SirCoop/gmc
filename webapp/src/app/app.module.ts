@@ -40,13 +40,11 @@ import {
   MatTooltipModule,
   MatTreeModule,
   ErrorStateMatcher,
-  ShowOnDirtyErrorStateMatcher
+  ShowOnDirtyErrorStateMatcher,
 } from '@angular/material';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
-
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -146,7 +144,7 @@ import { ContactComponent } from './components/contact/contact.component';
     MatTooltipModule,
     MatTreeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],

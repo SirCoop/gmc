@@ -1,13 +1,10 @@
 <div class="contact-container page-content">
   <div class="contact-form-container">
-    <mat-card>
+    <mat-card id="contactFormContainer">
       <form [formGroup]="contactFormGroup" class="contact-form" novalidate (ngSubmit)="onSubmit()">
-
-        <!-- <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-      </mat-grid-list> -->
-
+        <mat-card-title ><span class="note-header"><b>To:</b>&nbsp; Mr. Gary M. Cooper</span></mat-card-title>
+        <mat-card-title><span class="note-header"><b>Date:</b>&nbsp; {{today}}</span></mat-card-title>
+        <mat-card-title><span class="note-header"><b>From:</b>&nbsp;</span></mat-card-title>
 
         <mat-form-field class="field-full-width">
           <input matInput placeholder="First Name" value="" formControlName="firstName">
@@ -80,8 +77,9 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-card-actions>
-          <button mat-raised-button color="primary" [disabled]="!contactFormGroup.valid">Send</button>
+        <mat-card-actions id="footerButtonContainer">
+          <button mat-raised-button class="send-disabled" *ngIf="!contactFormGroup.valid" [disabled]="!contactFormGroup.valid">Send</button>
+          <button mat-raised-button class="send-enabled" *ngIf="contactFormGroup.valid" [disabled]="!contactFormGroup.valid">Send</button>
         </mat-card-actions>
       </form>
     </mat-card>

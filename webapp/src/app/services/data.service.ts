@@ -36,4 +36,8 @@ export class DataService {
     // return this.http.get(`${fileName}`);
   }
 
+  sendCommentForm(contactForm: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/contact`, contactForm);
+  }
+
 }
