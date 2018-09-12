@@ -100,6 +100,11 @@ app.get('/api/threejs/:item', (req, res) => {
   });
 });
 
+/* Contact Me */
+const contactController = require('./controllers/contact.controller');
+// get List - All
+app.use(`${base_api_url}/contact`, contactController.contactMe);
+
 /* Catch all other routes and return the index file */
 app.get('*', (req, res) => {
     res.sendFile(`${CONSTANTS.webapp.dist}/index.html`);
