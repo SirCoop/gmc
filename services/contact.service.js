@@ -36,9 +36,10 @@ module.exports = {
             <h2>Letter from ${postBody.firstName} ${postBody.lastName}</h2>
             <p><b>Received:</b> ${postBody.date}</p>
             <p><b>Message:</b> ${postBody.comment}</p>
+            <hr>
             <p>Your letter has been received and will be reviewed as soon as possible.</p>
             <p>-- Gary Cooper </p>
-            <hr>`
+            `
     };
 
     transporter.sendMail(message);
