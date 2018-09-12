@@ -5,9 +5,9 @@ const contactService = require('../services/contact.service');
 module.exports = {
   /* node's util.promisfy makes this async/await possible */
   contactMe: async function (req, res) {
-    console.log('req: ', req.body);
+    const { body } = req;
     try {
-        contactService.sendEmail();
+        await contactService.sendEmail(body);
         res.status(200).json({message: 'GMC received your message'});
 
     } catch (error) {
