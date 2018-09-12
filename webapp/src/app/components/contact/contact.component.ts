@@ -75,14 +75,14 @@ export class ContactComponent implements OnInit {
     };
 
     this.dataservice.sendCommentForm(contactFormObj).subscribe(
-      success => this.openSnackBar('Thank you for your interest!.', 'Your letter has been delivered.'),
+      success => this.openSnackBar('Thank you for your interest!.', ''),
       error => this.openSnackBar('Your letter was not delivered.', 'Please resend.')
     );
   }
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      duration: 2000,
+      duration: 2500,
     });
   }
 
