@@ -30,7 +30,7 @@ module.exports = {
         to: postBody.email,
         subject: 'Thank you for your interest!',
         text: 'I have received your letter and will review as soon as possible.',
-        html: '<p>I have received your letter and will review as soon as possible.</p>'
+        html: '<p>I have received your letter and will review it as soon as possible.</p>'
     };
 
     transporter.sendMail(message);
