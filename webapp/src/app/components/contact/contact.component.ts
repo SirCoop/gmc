@@ -3,6 +3,7 @@ import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '
 import { MatSnackBar } from '@angular/material';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { DataService } from './../../services/data.service';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import * as moment from 'moment';
 
 import countriesByCode from './countries';
@@ -47,7 +48,7 @@ export class ContactComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor(private dataservice: DataService, public snackBar: MatSnackBar) { }
+  constructor(private dataservice: DataService, public snackBar: MatSnackBar, private spinnerService: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
     this.contactFormGroup = new FormGroup({
@@ -68,6 +69,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    this.spinnerService.show();
     // TODO: Use EventEmitter with form value
     const contactFormObj = {
       ...this.contactFormGroup.value,
@@ -75,14 +77,21 @@ export class ContactComponent implements OnInit {
     };
 
     this.dataservice.sendCommentForm(contactFormObj).subscribe(
-      success => this.openSnackBar('Thank you for your interest!', ''),
-      error => this.openSnackBar('Your letter was not delivered.', 'Please resend.')
+      // success
+      () => {
+        this.openSnackBar('Thank you for your interest!', '');
+      },
+      // fail
+      () => {
+        this.openSnackBar('Your letter was not delivered.', 'Please resend.');
+      }
     );
   }
 
   openSnackBar(message: string, action: string) {
+    this.spinnerService.hide();
     this.snackBar.open(message, action, {
-      duration: 2500,
+      duration: 3000,
     });
   }
 

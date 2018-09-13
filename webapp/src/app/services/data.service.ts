@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -36,8 +37,11 @@ export class DataService {
     // return this.http.get(`${fileName}`);
   }
 
-  sendCommentForm(contactForm: any): Observable<any> {
-    return this.http.post(`${this.baseUrl}/contact`, contactForm);
+  sendCommentForm(contactForm: any): Observable<Object> {
+    // if return type is Observable<Promise<any>> then the following works
+    // return this.http.post(`${this.baseUrl}/contact`, contactForm).pipe(map((res: Response) => res.json()));
+
+    return this.http.post(`${this.baseUrl}/contact`, contactForm).pipe(map(res => res));
   }
 
 }
