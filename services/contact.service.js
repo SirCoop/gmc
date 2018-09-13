@@ -27,7 +27,7 @@ module.exports = {
         }
     */
 
-    const message = {
+    const mailOptions = {
       from: 'noreply.garycooper@gmail.com',
       to: postBody.email,
       subject: 'Thank You for your interest!',
@@ -45,7 +45,7 @@ module.exports = {
             `
     };
 
-    transporter.sendMail(message);
+    return transporter.sendMail(mailOptions);
   }
 
 }
