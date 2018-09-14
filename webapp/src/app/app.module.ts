@@ -46,6 +46,7 @@ import {
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { NgDraggableWidgetModule } from 'ngx-draggable-widget';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -72,6 +73,7 @@ import { BulletChartMobileComponent } from './components/bullet-chart-mobile/bul
 import { InlineReaderComponent } from './components/inline-reader/inline-reader.component';
 import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
 
 @NgModule({
   declarations: [
@@ -97,7 +99,8 @@ import { ContactComponent } from './components/contact/contact.component';
     BulletChartMobileComponent,
     InlineReaderComponent,
     FaceAnimationComponent,
-    ContactComponent
+    ContactComponent,
+    DraggableDesktopComponent
   ],
   imports: [
     BrowserModule,
@@ -145,6 +148,7 @@ import { ContactComponent } from './components/contact/contact.component';
     MatTreeModule,
     FormsModule,
     ReactiveFormsModule,
+    NgDraggableWidgetModule
   ],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],

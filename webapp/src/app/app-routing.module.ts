@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CountryImagesResolver } from './resolvers/country-images.resolver';
 import { WritingsResolver } from './resolvers/writings.resolver';
 
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+// import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { AboutComponent } from './components/about/about.component';
@@ -18,12 +18,12 @@ import { SelfAssessmentComponent } from './components/self-assessment/self-asses
 import { ReaderComponent } from './components/reader/reader.component';
 import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LandingPageComponent
+    component: DraggableDesktopComponent
   },
   {
     path: 'about',
