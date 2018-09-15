@@ -16,9 +16,10 @@ import { FailuresComponent } from './components/failures/failures.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { ReaderComponent } from './components/reader/reader.component';
-import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
+import { AnimationsComponent } from './components/animations/animations.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
+import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,42 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'animations',
+    component: AnimationsComponent
+  },
+  {
+    path: 'apps',
+    component: AppsComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'dark-secret',
+    component: DarkSecretComponent
+  },
+  {
+    path: 'failures',
+    component: FailuresComponent
+  },
+  {
+    path: 'know-thyself',
+    component: SelfAssessmentComponent
+  },
+  {
+    path: 'reading-list',
+    component: ReadingListComponent
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent
+  },
+  {
+    path: 'successes',
+    component: SuccessesComponent
   },
   {
     path: 'travel-gallery',
@@ -41,18 +78,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'know-thyself',
-    component: SelfAssessmentComponent
-  },
-  {
-    path: 'apps',
-    component: AppsComponent
-  },
-  {
-    path: 'reading-list',
-    component: ReadingListComponent
-  },
-  {
     path: 'writings',
     component: WritingsComponent,
     resolve: {
@@ -62,26 +87,6 @@ const routes: Routes = [
   {
     path: 'writings/:type/:fileName',
     component: ReaderComponent
-  },
-  {
-    path: 'successes',
-    component: SuccessesComponent
-  },
-  {
-    path: 'failures',
-    component: FailuresComponent
-  },
-  {
-    path: 'resume',
-    component: ResumeComponent
-  },
-  {
-    path: 'animation',
-    component: FaceAnimationComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
   }
 ];
 

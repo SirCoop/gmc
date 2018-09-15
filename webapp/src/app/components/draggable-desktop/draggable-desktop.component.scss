@@ -1,11 +1,14 @@
 .draggable-desktop-container {
-  background-color: #282828;
+    height: 100vh;
+    background-color: #282828;
 
   .widget-container {
     // consider changing color to white
     background-color: #282828;
     position: relative;
     width: 100%;
+    top: 10%;
+    transform:translateY(9%);
 
     >#centeringWrapper {
       position: inherit;

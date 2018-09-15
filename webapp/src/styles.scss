@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 // angular-materialize responsive grid layout
 @import "m-modified.css";
 // angular material theme
@@ -9,20 +8,19 @@
   font-family: 'AlexBrush';
   // src: url('FileName.eot');
   // src: url('FileName.eot?#iefix') format('embedded-opentype'),
-      //  url('FileName.woff') format('woff'),
+  //  url('FileName.woff') format('woff'),
   src: url('./assets/alex-brush/AlexBrush-Regular.ttf') format('truetype');
-      //  url('FileName.svg#FontName') format('svg');
+  //  url('FileName.svg#FontName') format('svg');
   font-style: normal;
   font-weight: normal;
 }
-/*Common Media Queries*/
 
+/*Common Media Queries*/
 // @media (max-width: 1690px) { ... }
 // @media (max-width: 1280px) { ... }
 // @media (max-width: 980px) { ... }
 // @media (max-width: 736px) { ... }
 // @media (max-width: 480px) { ... }
-
 body {
   margin: 0;
   font-family: 'Heebo';
@@ -33,18 +31,17 @@ body {
   display: grid;
   grid-template-columns: 4% auto;
   height: 100%;
+
   #content {
     padding: 30px 50px;
-    
   }
 }
 
 /* page position */
-
 @media only screen and (min-device-width: 1366px) {
   #mainContent {
     div.page-content {
-      position: absolute !important; 
+      position: absolute !important;
       top: 0;
       left: 0;
       margin-left: 10%;
@@ -52,34 +49,41 @@ body {
       margin-top: 1%;
     }
   }
-
 }
 
 #frontEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 10px;
+
   >svg.bullet {
     font: 10px sans-serif;
+
     >g {
       >rect.range.s0 {
         fill: #eee;
       }
+
       >rect.range.s1 {
         fill: #ddd;
       }
+
       >rect.range.s2 {
         fill: #ccc;
       }
+
       >rect.measure.s0 {
         fill: rgb(70, 180, 107);
       }
+
       >rect.measure.s1 {
         fill: rgb(70, 180, 107);
       }
+
       >line.marker {
         stroke: #000;
         stroke-width: 2px;
       }
+
       >g {
         & .tick {
           >line {
@@ -87,10 +91,12 @@ body {
             stroke-width: .5px;
           }
         }
+
         >text.title {
           font-size: 14px;
           font-weight: bold;
         }
+
         >text.subtitle {
           fill: #999;
         }
@@ -102,28 +108,36 @@ body {
 #backEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 10px;
+
   >svg.bullet {
     font: 10px sans-serif;
+
     >g {
       >rect.range.s0 {
         fill: #eee;
       }
+
       >rect.range.s1 {
         fill: #ddd;
       }
+
       >rect.range.s2 {
         fill: #ccc;
       }
+
       >rect.measure.s0 {
         fill: rgb(70, 158, 180);
       }
+
       >rect.measure.s1 {
         fill: rgb(70, 158, 180);
       }
+
       >line.marker {
         stroke: #000;
         stroke-width: 2px;
       }
+
       >g {
         & .tick {
           >line {
@@ -131,10 +145,12 @@ body {
             stroke-width: .5px;
           }
         }
+
         >text.title {
           font-size: 14px;
           font-weight: bold;
         }
+
         >text.subtitle {
           fill: #999;
         }
@@ -146,28 +162,36 @@ body {
 #machineLearningSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 10px;
+
   >svg.bullet {
     font: 10px sans-serif;
+
     >g {
       >rect.range.s0 {
         fill: #eee;
       }
+
       >rect.range.s1 {
         fill: #ddd;
       }
+
       >rect.range.s2 {
         fill: #ccc;
       }
+
       >rect.measure.s0 {
         fill: rgb(127, 70, 180);
       }
+
       >rect.measure.s1 {
         fill: rgb(127, 70, 180);
       }
+
       >line.marker {
         stroke: #000;
         stroke-width: 2px;
       }
+
       >g {
         & .tick {
           >line {
@@ -175,10 +199,12 @@ body {
             stroke-width: .5px;
           }
         }
+
         >text.title {
           font-size: 14px;
           font-weight: bold;
         }
+
         >text.subtitle {
           fill: #999;
         }
@@ -186,4 +212,3 @@ body {
     }
   }
 }
-

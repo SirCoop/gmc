@@ -74,6 +74,9 @@ import { InlineReaderComponent } from './components/inline-reader/inline-reader.
 import { FaceAnimationComponent } from './components/face-animation/face-animation.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
+import { AnimationsComponent } from './components/animations/animations.component';
+import { DnaComponent } from './components/dna/dna.component';
+import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +103,10 @@ import { DraggableDesktopComponent } from './components/draggable-desktop/dragga
     InlineReaderComponent,
     FaceAnimationComponent,
     ContactComponent,
-    DraggableDesktopComponent
+    DraggableDesktopComponent,
+    AnimationsComponent,
+    DnaComponent,
+    DarkSecretComponent
   ],
   imports: [
     BrowserModule,
