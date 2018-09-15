@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.toggleMenu();    
+    // this.toggleMenu();
   }
 
   /* Shows and hides the loading spinner during RouterEvent changes */
