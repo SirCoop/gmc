@@ -1,20 +1,40 @@
 /* Any screen larger than iPad Pro */
 
 @media only screen and (min-device-width: 1367px) {
-    #sidenav.nav-container {
-      &.sidenav-opened {
-        width: 16%;
-        padding-top: 60px;
+    // #sidenav.nav-container {
+    //   &.sidenav-opened {
+    //     width: 16%;
+    //     padding-top: 60px;
   
-        #closeButton {
-          font-size: 2.5rem;
+    //     #closeButton {
+    //       font-size: 2.5rem;
+    //     }
+  
+    //     a {
+    //       font-size: 1.65rem;
+    //     }
+    //   }    
+  
+    // }
+
+    >#centeringWrapper {
+      position: inherit;
+      left: 8%;
+      margin: auto;
+
+      >.widget {
+        color: #fff;
+
+        >.handle {
+          width: 100%;
+          height: 50px;
+          color: #fff;
+          background: #424a51;
+          font-weight: 500;
+          padding: 15px;
+          box-sizing: border-box;
         }
-  
-        a {
-          font-size: 1.65rem;
-        }
-      }    
-  
+      }
     }
   
   }

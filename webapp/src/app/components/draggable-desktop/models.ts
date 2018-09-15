@@ -18,26 +18,9 @@ export const containerConfig = {
     'margins': [5],
     'draggable': true,
     'resizable': false,
-    // 'max_cols': 4,
-    // 'max_rows': 0,
-    // 'visible_cols': 0,
-    // 'visible_rows': 0,
-    // 'min_cols': 1,
-    // 'min_rows': 1,
-    // 'col_width': 2,
-    // 'row_height': 2,
-    // 'cascade': 'left',
-    // 'min_width': 50,
-    // 'min_height': 50,
-    // 'fix_to_grid': false,
-    // 'auto_style': true,
-    // 'auto_resize': false,
-    // 'maintain_ratio': false,
-    // 'prefer_new': false,
-    // 'zoom_on_drag': false,
-    // 'limit_to_screen': false,
-    // 'allow_overlap': false,
-    // 'widget_width_factor': 22
+    'auto_resize': false,
+    'limit_to_screen': true
+
 };
 
 export const widgetmetadatas = [
@@ -121,24 +104,24 @@ export const widgetmetadatas = [
         'config': { 'dragHandle': '.handle', 'row': 4, 'col': 1, 'resizable': false, 'payload': 1 },
         'name': 'Dark Secret',
         'src': '../../../assets/draggable/travel.png'
-    },
-    {
-        'id': 14,
-        'config': { 'dragHandle': '.handle', 'row': 4, 'col': 2, 'resizable': false, 'payload': 2 },
-        'name': 'Widget Simple Product Market',
-        'src': '../../../assets/draggable/travel.png'
-    },
-    {
-        'id': 15,
-        'config': { 'dragHandle': '.handle', 'row': 4, 'col': 3, 'resizable': false, 'payload': 1 },
-        'name': 'Widget Simple Product Market',
-        'src': '../../../assets/draggable/travel.png'
-    },
-    {
-        'id': 16,
-        'config': { 'dragHandle': '.handle', 'row': 4, 'col': 4, 'resizable': false, 'payload': 2 },
-        'name': 'Widget Simple Product Market',
-        'src': '../../../assets/draggable/travel.png'
-    },
+    }
+    // {
+    //     'id': 14,
+    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 2, 'resizable': false, 'payload': 2 },
+    //     'name': 'Widget Simple Product Market',
+    //     'src': '../../../assets/draggable/travel.png'
+    // },
+    // {
+    //     'id': 15,
+    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 3, 'resizable': false, 'payload': 1 },
+    //     'name': 'Widget Simple Product Market',
+    //     'src': '../../../assets/draggable/travel.png'
+    // },
+    // {
+    //     'id': 16,
+    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 4, 'resizable': false, 'payload': 2 },
+    //     'name': 'Widget Simple Product Market',
+    //     'src': '../../../assets/draggable/travel.png'
+    // },
     
 ];

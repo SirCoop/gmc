@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    this.toggleMenu();
+    // this.toggleMenu();
   }
 
   constructor(private router: Router,

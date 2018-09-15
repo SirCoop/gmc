@@ -3,8 +3,8 @@
     <div class="col m2 s1"></div>
     <div class="col m8 s10">
       <div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
-        <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index">
-          <div class="widget" [ngWidget]="widgetmetadata.config">
+        <div id="centeringWrapper">
+          <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index" [ngWidget]="widgetmetadata.config">
             <div class="handle">{{ widgetmetadata.name }}</div>
             <img [src]="widgetmetadata.src">
           </div>
