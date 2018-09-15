@@ -1,80 +1,16 @@
-<!-- <div class="draggable-desktop-container">
+<div class="draggable-desktop-container">
   <div class="row">
     <div class="col m2 s1"></div>
     <div class="col m8 s10">
-      <div id="widgetContainer" class="widget-container" [ngWidgetContainer]="{ 'fix_to_grid': true  }">
-        <div class="widget" [ngWidget]>
-          <div class="handle">About</div>
-          <img src='../../../assets/draggable/about.png'>
+      <div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
+        <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index">
+          <div class="widget" [ngWidget]="widgetmetadata.config">
+            <div class="handle">{{ widgetmetadata.name }}</div>
+            <img [src]="widgetmetadata.src">
+          </div>
         </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Apps</div>
-          <img src='../../../assets/draggable/apps.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Contact</div>
-          <img src='../../../assets/draggable/contact.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">DNA</div>
-          <img src='../../../assets/draggable/dna.gif'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Failure</div>
-          <img src='../../../assets/draggable/failure.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Good Reads</div>
-          <img src='../../../assets/draggable/good-reads.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Animation</div>
-          <img src='../../../assets/draggable/lps-head.gif'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Musings</div>
-          <img src='../../../assets/draggable/musings.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Resume</div>
-          <img src='../../../assets/draggable/resume.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Analysis</div>
-          <img src='../../../assets/draggable/self-assessment.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Success</div>
-          <img src='../../../assets/draggable/success.png'>
-        </div>
-
-        <div class="widget" [ngWidget]>
-          <div class="handle">Travel</div>
-          <img src='../../../assets/draggable/travel.png'>
-        </div>
-
       </div>
     </div>
     <div class="col m2 s1"></div>
-  </div>
-</div> -->
-
-<div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
-  <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index">
-    <!-- <div [ngWidget]="widgetmetadata.config" class="widget handle">{{widgetmetadata.name}}</div> -->
-    <div class="widget" [ngWidget]>
-        <div class="handle">{{ widgetmetadata.name }}</div>
-        <img [src]="widgetmetadata.src">
-      </div>
   </div>
 </div>
