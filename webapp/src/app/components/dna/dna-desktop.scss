@@ -1,0 +1,268 @@
+@media (min-width: 981px) {
+    #landing-page {
+        &:hover {
+            cursor: pointer;
+        }
+    }   
+
+    /*dna*/
+    .dna-wrapper {
+        font-size: 2.5em;
+        width: inherit;
+        color: #4875e0;
+    }
+
+    .value {
+        opacity: 1;
+
+        // &:hover {
+        //     cursor: pointer;
+        //     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+        //             animation: fadein 2s;
+        // }
+    }
+
+    #line1 {
+        position: absolute;
+        top: 11%;
+        left: 43%;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #line2 {
+        position: absolute;
+        top: 31%;
+        left: 42%;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #line3 {
+        position: absolute;
+        top: 53%;
+        left: 43%;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #line4 {
+        position: absolute;
+        top: 77%;
+        left: 42%;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #A,#T,#C,#G,#A2,#T2,#C2,#G2,#A3,#T3,#C3,#G3,#A4,#T4,#C4,#G4,
+    #A9,#T9,#C9,#G9,#A10,#T10,#C10,#G10,#A11,#T11,#C11,#G11,#A12,#T12,#C12,#G12 {
+        position: absolute;        
+    }
+
+    #T,#G,#T2,#G2,#T3,#G3,#T4,#G4,#T9,#G9,#T10,#G10,#T11,#G11,#T12,#G12 {
+        color: red;
+    }
+
+    #A,#T {
+        top: 10%;
+        left: 40%;        
+    }
+    #C,#G {
+        top: 15%;
+        left: 40%;
+    }
+    #A2,#T2 {
+        top: 20%;
+        left: 40%;
+    }
+    #C2,#G2 {
+        top: 25%;
+        left: 40%;
+    }
+    #A3,#T3 {
+        top: 30%;
+        left: 40%;
+    }
+    #C3,#G3 {
+        top: 35%;
+        left: 40%;
+    }
+    #A4,#T4 {
+        top: 40%;
+        left: 40%;
+    }
+    #C4,#G4 {
+        top: 45%;
+        left: 40%;
+    }
+    #A9,#T9 {
+        top: 50%;
+        left: 40%;
+    }
+    #C9,#G9 {
+        top: 55%;
+        left: 40%;
+    }
+    #A10,#T10 {
+        top: 60%;
+        left: 40%;
+    }
+    #C10,#G10 {
+        top: 65%;
+        left: 40%;
+    }
+    #A11,#T11 {
+        top: 70%;
+        left: 40%;
+    }
+    #C11,#G11 {
+        top: 75%;
+        left: 40%;
+    }
+    #A12,#T12 {
+        top: 80%;
+        left: 40%;
+    }
+    #C12,#G12 {
+        top: 85%;
+        left: 40%;
+    }
+
+    @-webkit-keyframes one {
+        0% {
+            left: 40%;
+            z-index: 0;
+            -webkit-transform: scale(1);
+        }
+        25% {
+            -webkit-transform: scale(2);
+        }
+        50% {
+            left: 48%;
+            z-index: 1;
+            -webkit-transform: scale(1);
+        }
+        75% {
+            -webkit-transform: scale(.5);
+        }
+        100% {
+            left: 40%;
+            z-index: 0;
+            -webkit-transform: scale(1);
+        }
+    }
+    @-webkit-keyframes onex {
+        0% {
+            left: 40%;
+            z-index: 1;
+            -webkit-transform: scale(1);
+        }
+        25% {
+            -webkit-transform: scale(2);
+        }
+        50% {
+            left: 48%;
+            z-index: 0;
+            -webkit-transform: scale(1);
+        }
+        75% {
+            -webkit-transform: scale(0.5);
+        }
+        100% {
+            left: 40%;
+            z-index: 1;
+            -webkit-transform: scale(1);
+        }
+    }
+
+    /*1st pair*/
+    #A,#A9 {
+        -webkit-animation: one 4s infinite;
+        /*moz-animation: one 4s infinite;*/
+    }
+    #T,#T9 {
+        -webkit-animation: onex 4s 2s infinite;
+        /*moz-animation: onex 4s 2s infinite;*/
+    }
+    #C,#C9 {
+        -webkit-animation: one 4s 0.5s infinite;
+        /*moz-animation: one 4s 0.5s infinite;*/
+    }
+    #G,#G9 {
+        -webkit-animation: onex 4s 2.5s infinite;
+        /*moz-animation: onex 4s 2.5s infinite;*/
+    }
+    /*end 1st pair*/
+
+    /*2nd pair*/
+    #A2,#A10 {
+        -webkit-animation: one 4s 1s infinite;
+        /*moz-animation: one 4s 1s infinite;*/
+    }
+    #T2,#T10 {
+        -webkit-animation: onex 4s 3s infinite;
+        /*moz-animation: onex 4s 3s infinite;*/
+    }
+    #C2,#C10 {
+        -webkit-animation: one 4s 1.5s infinite;
+        /*moz-animation: one 4s 1.5s infinite;*/
+    }
+    #G2,#G10 {
+        -webkit-animation: onex 4s 3.5s infinite;
+        /*moz-animation: onex 4s 3.5s infinite;*/
+    }
+    /*end 2nd pair*/
+
+    /*3rd pair*/
+    #A3,#A11 {
+        -webkit-animation: one 4s 2s infinite;
+        /*moz-animation: one 4s 2s infinite;*/
+    }
+    #T3,#T11 {
+        -webkit-animation: onex 4s 4s infinite;
+        /*moz-animation: onex 4s 2s infinite;*/
+    }
+    #C3,#C11 {
+        -webkit-animation: one 4s 2.5s infinite;
+        /*moz-animation: one 4s 0.5s infinite;*/
+    }
+    #G3,#G11 {
+        -webkit-animation: onex 4s 4.5s infinite;
+        /*moz-animation: onex 4s 2.5s infinite;*/
+    }
+    /*end 3rd pair*/
+
+    /*4th pair*/
+    #A4,#A12 {
+        -webkit-animation: one 4s 3s infinite;
+        /*moz-animation: one 4s 3s infinite;*/
+    }
+    #T4,#T12 {
+        -webkit-animation: onex 4s 5s infinite;
+        /*moz-animation: onex 4s 5s infinite;*/
+    }
+    #C4,#C12 {
+        -webkit-animation: one 4s 3.5s infinite;
+        /*moz-animation: one 4s 3.5s infinite;*/
+    }
+    #G4,#G12 {
+        -webkit-animation: onex 4s 5.5s infinite;
+        /*moz-animation: onex 4s 3.5s infinite;*/
+    }
+    /*end 4th pair*/
+
+    /*end dna*/
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+  
+
+}
