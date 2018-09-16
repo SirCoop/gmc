@@ -31,6 +31,7 @@
     "moment": "^2.22.2",
     "ng2-pdf-viewer": "^5.1.1",
     "ng4-loading-spinner": "^1.2.3",
+    "ng6-breadcrumbs": "^1.0.6",
     "ngx-draggable-widget": "^1.0.7",
     "rxjs": "^6.0.0",
     "three": "^0.95.0",
