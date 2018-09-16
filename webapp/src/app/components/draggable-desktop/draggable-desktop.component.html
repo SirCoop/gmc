@@ -6,7 +6,9 @@
         <div id="centeringWrapper">
           <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index" [ngWidget]="widgetmetadata.config" [@widgetTrigger]='state'>
             <div class="handle">{{ widgetmetadata.name }}</div>
-            <a [routerLink]="widgetmetadata.routerLink"><img [src]="widgetmetadata.src"></a>
+            <a [routerLink]="widgetmetadata.routerLink">
+              <img class="zoom" [src]="widgetmetadata.src">
+            </a>
           </div>
         </div>
       </div>

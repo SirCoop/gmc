@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import {
   trigger,
   style,
@@ -15,7 +15,7 @@ import { containerConfig, widgetmetadatas, IWidgetDashboard } from './models';
   animations: [
     trigger('widgetTrigger', [
       transition('none => loaded', [
-        animate(500, keyframes([
+        animate(1000, keyframes([
           style({ transform: 'translate(1px, 1px) rotate(0deg)' }),
           style({ transform: 'translate(-1px, -2px) rotate(-1deg)' }),
           style({ transform: 'translate(-3px, 0px) rotate(1deg)' }),
@@ -38,7 +38,7 @@ export class DraggableDesktopComponent implements OnInit, AfterViewInit {
 
   public dashboardconfig$: IWidgetDashboard;
 
-  constructor() { }
+  constructor(private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.createDashboard();
@@ -46,6 +46,7 @@ export class DraggableDesktopComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.state = 'loaded';
+    this.cdr.detectChanges();
   }
 
   createDashboard() {
