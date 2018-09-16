@@ -25,6 +25,7 @@ body {
   margin: 0;
   font-family: 'Heebo';
   height: 100vh;
+  background-color: #161616;
 }
 
 #container {
@@ -41,12 +42,13 @@ body {
 @media only screen and (min-device-width: 1366px) {
   #mainContent {
     div.page-content {
-      position: absolute !important;
-      top: 0;
-      left: 0;
-      margin-left: 10%;
-      margin-right: 20%;
-      margin-top: 1%;
+      // position: absolute !important;
+      // top: 0;
+      // left: 0;
+      // margin-left: 10%;
+      // margin-right: 20%;
+      margin-top: 2%;
+      color: #fff;
     }
   }
 }
