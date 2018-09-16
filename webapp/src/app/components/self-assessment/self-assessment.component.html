@@ -1,27 +1,34 @@
-<div class="self-assessment-container page-content">
-  <h1>Nosce Te Ipsum</h1>
-  <mat-tab-group #tabgroup>
-    <mat-tab label="Technical Skills">
-      <ng-template matTabContent>
-        <app-bullet-chart-mobile *ngIf="isMobile" [dataSource]="dataSource"></app-bullet-chart-mobile>      
-        <app-bullet-chart *ngIf="!isMobile" [dataSource]="dataSource"></app-bullet-chart>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Behaviorial Analysis">
-      <ng-template matTabContent>
-        <h2>Predictive Index</h2>
-        
-        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc1" [render-text]="renderText"
-          style="display: block"></pdf-viewer>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Personality Assessment">
-      <ng-template matTabContent>
-        <h2>Meyers Briggs (ENTP): Extroverted | Intuitive | Thinking | Perceptive</h2>
-        
-        <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc2" [render-text]="renderText"
-          style="display: block"></pdf-viewer>
-      </ng-template>
-    </mat-tab>
-  </mat-tab-group>
+<div class="self-assessment-container">
+  <div class="row">
+    <div class="col m2 s1"></div>
+    <div class="col m8 s1">
+      <div class="content">
+        <h3>Cognitive Analysis</h3>
+        <mat-tab-group #tabgroup>
+          <mat-tab label="Technical Skills">
+            <ng-template matTabContent>
+              <app-bullet-chart-mobile *ngIf="isMobile" [dataSource]="dataSource"></app-bullet-chart-mobile>
+              <app-bullet-chart *ngIf="!isMobile" [dataSource]="dataSource"></app-bullet-chart>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Behaviorial Analysis">
+            <ng-template matTabContent>
+              <h4>Predictive Index</h4>
+
+              <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc1"
+                [render-text]="renderText" style="display: block"></pdf-viewer>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Personality Assessment">
+            <ng-template matTabContent>
+              <h4>Meyers Briggs (ENTP): Extroverted | Intuitive | Thinking | Perceptive</h4>
+
+              <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc2"
+                [render-text]="renderText" style="display: block"></pdf-viewer>
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
 </div>
