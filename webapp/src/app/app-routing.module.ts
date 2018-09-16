@@ -25,11 +25,7 @@ const routes: Routes = [
   {
     path: '',
     component: DraggableDesktopComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
+  },  
   {
     path: 'animations',
     component: AnimationsComponent
@@ -41,6 +37,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'credentials',
+    component: AboutComponent
   },
   {
     path: 'dark-secret',

@@ -15,7 +15,7 @@ import { containerConfig, widgetmetadatas, IWidgetDashboard } from './models';
   animations: [
     trigger('widgetTrigger', [
       transition('none => loaded', [
-        animate(1000, keyframes([
+        animate(500, keyframes([
           style({ transform: 'translate(1px, 1px) rotate(0deg)' }),
           style({ transform: 'translate(-1px, -2px) rotate(-1deg)' }),
           style({ transform: 'translate(-3px, 0px) rotate(1deg)' }),

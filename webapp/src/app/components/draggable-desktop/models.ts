@@ -20,34 +20,34 @@ export const containerConfig = {
     'cascade': 'left'
 };
 
-export const widgetmetadatas = [
+export const widgetmetadatas = [    
     {
         'id': 1,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': false, 'payload': 1 },
-        'name': 'About',
-        'src': '../../../assets/draggable/about.png',
-        'routerLink': 'about'
-    },
-    {
-        'id': 2,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': false, 'payload': 1 },
         'name': 'Animations',
         'src': '../../../assets/draggable/lps-head.gif',
         'routerLink': 'animations'
     },
     {
-        'id': 3,
+        'id': 2,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': false, 'payload': 2 },
         'name': 'Apps',
         'src': '../../../assets/draggable/apps.png',
         'routerLink': 'apps'
     },
     {
-        'id': 4,
+        'id': 3,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 4, 'resizable': false, 'payload': 1 },
         'name': 'Contact',
         'src': '../../../assets/draggable/contact.png',
         'routerLink': 'contact'
+    },
+    {
+        'id': 4,
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': false, 'payload': 1 },
+        'name': 'Credentials',
+        'src': '../../../assets/draggable/about.png',
+        'routerLink': 'credentials'
     },
     {
         'id': 5,
