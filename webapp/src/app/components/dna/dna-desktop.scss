@@ -25,7 +25,7 @@
     #line1 {
         position: absolute;
         top: 11%;
-        left: 43%;
+        left: 48%;
         font-size: 18px;
         color: #fff;
     }
@@ -33,7 +33,7 @@
     #line2 {
         position: absolute;
         top: 31%;
-        left: 42%;
+        left: 47%;
         font-size: 18px;
         color: #fff;
     }
@@ -41,7 +41,7 @@
     #line3 {
         position: absolute;
         top: 53%;
-        left: 43%;
+        left: 48%;
         font-size: 18px;
         color: #fff;
     }
@@ -49,7 +49,7 @@
     #line4 {
         position: absolute;
         top: 77%;
-        left: 42%;
+        left: 47%;
         font-size: 18px;
         color: #fff;
     }
@@ -61,31 +61,32 @@
 
     #T,#G,#T2,#G2,#T3,#G3,#T4,#G4,#T9,#G9,#T10,#G10,#T11,#G11,#T12,#G12 {
         color: red;
+
     }
 
     #A,#T {
         top: 10%;
-        left: 40%;        
+        left: 45%;        
     }
     #C,#G {
         top: 15%;
-        left: 40%;
+        left: 45%;
     }
     #A2,#T2 {
         top: 20%;
-        left: 40%;
+        left: 45%;
     }
     #C2,#G2 {
         top: 25%;
-        left: 40%;
+        left: 45%;
     }
     #A3,#T3 {
         top: 30%;
-        left: 40%;
+        left: 45%;
     }
     #C3,#G3 {
         top: 35%;
-        left: 40%;
+        left: 45%;
     }
     #A4,#T4 {
         top: 40%;
@@ -97,40 +98,40 @@
     }
     #A9,#T9 {
         top: 50%;
-        left: 40%;
+        left: 45%;
     }
     #C9,#G9 {
         top: 55%;
-        left: 40%;
+        left: 45%;
     }
     #A10,#T10 {
         top: 60%;
-        left: 40%;
+        left: 45%;
     }
     #C10,#G10 {
         top: 65%;
-        left: 40%;
+        left: 45%;
     }
     #A11,#T11 {
         top: 70%;
-        left: 40%;
+        left: 45%;
     }
     #C11,#G11 {
         top: 75%;
-        left: 40%;
+        left: 45%;
     }
     #A12,#T12 {
         top: 80%;
-        left: 40%;
+        left: 45%;
     }
     #C12,#G12 {
         top: 85%;
-        left: 40%;
+        left: 45%;
     }
 
     @-webkit-keyframes one {
         0% {
-            left: 40%;
+            left: 45%;
             z-index: 0;
             -webkit-transform: scale(1);
         }
@@ -138,7 +139,7 @@
             -webkit-transform: scale(2);
         }
         50% {
-            left: 48%;
+            left: 53%;
             z-index: 1;
             -webkit-transform: scale(1);
         }
@@ -146,14 +147,14 @@
             -webkit-transform: scale(.5);
         }
         100% {
-            left: 40%;
+            left: 45%;
             z-index: 0;
             -webkit-transform: scale(1);
         }
     }
     @-webkit-keyframes onex {
         0% {
-            left: 40%;
+            left: 45%;
             z-index: 1;
             -webkit-transform: scale(1);
         }
@@ -161,7 +162,7 @@
             -webkit-transform: scale(2);
         }
         50% {
-            left: 48%;
+            left: 53%;
             z-index: 0;
             -webkit-transform: scale(1);
         }
@@ -169,7 +170,7 @@
             -webkit-transform: scale(0.5);
         }
         100% {
-            left: 40%;
+            left: 45%;
             z-index: 1;
             -webkit-transform: scale(1);
         }
