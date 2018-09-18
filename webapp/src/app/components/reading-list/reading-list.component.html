@@ -1,63 +1,69 @@
-<div class="reading-list-container page-content">
-  <section>
-    <h2>My personal recommendations.</h2>
-    <p>Because I only demand of others what I first demand of myself, all written works listed have been read by me.</p>
-    <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
-  </section>
+<div class="reading-list-container">
+  <div class="row">
+    <div class="col m2 s1"></div>
+    <div class="col m8 s1">
+      <div class="content">
+        <h2>My personal recommendations.</h2>
+        <p>Because I only demand of others what I first demand of myself, all written works listed have been read by
+          me.</p>
+        <p>Each book has been vetted on the basis of profundity, seminality, and applicability.</p>
+        <mat-tab-group #tabgroup>
+          <mat-tab label="Self-Improvement">
+            <ng-template matTabContent>
+              <h3>These books will absolutely change your life.</h3>
+              <ul *ngFor="let book of books$.selfImprovement">
+                <li>{{book.title}} - {{book.author}}</li>
+              </ul>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Entrepreneurship">
+            <ng-template matTabContent>
+              <ul *ngFor="let book of books$.business">
+                <li>{{book.title}} - {{book.author}}</li>
+              </ul>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Psychology">
+            <ng-template matTabContent>
+              <div class="sub-section">
+                <strong>Crowd Psychology</strong>
+                <ul *ngFor="let book of books$.psychology.crowdPsychology">
+                  <li>{{book.title}} - {{book.author}}</li>
+                </ul>
+              </div>
 
-  <mat-tab-group #tabgroup>
-    <mat-tab label="Self-Improvement">
-      <ng-template matTabContent>
-        <h3>These books will absolutely change your life.</h3>
-        <ul *ngFor="let book of books$.selfImprovement">
-          <li>{{book.title}} - {{book.author}}</li>
-        </ul>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Entrepreneurship">
-      <ng-template matTabContent>
-        <ul *ngFor="let book of books$.business">
-          <li>{{book.title}} - {{book.author}}</li>
-        </ul>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Psychology">
-      <ng-template matTabContent>
-        <div class="sub-section">
-          <strong>Crowd Psychology</strong>
-          <ul *ngFor="let book of books$.psychology.crowdPsychology">
-            <li>{{book.title}} - {{book.author}}</li>
-          </ul>
-        </div>
+              <div class="sub-section">
+                <strong>Body Language</strong>
+                <ul *ngFor="let book of books$.psychology.bodyLanguage">
+                  <li>{{book.title}} - {{book.author}}</li>
+                </ul>
+              </div>
 
-        <div class="sub-section">
-          <strong>Body Language</strong>
-          <ul *ngFor="let book of books$.psychology.bodyLanguage">
-            <li>{{book.title}} - {{book.author}}</li>
-          </ul>
-        </div>
-
-        <div class="sub-section">
-          <strong>Communication</strong>
-          <ul *ngFor="let book of books$.psychology.communication">
-            <li>{{book.title}} - {{book.author}}</li>
-          </ul>
-        </div>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Philosophy">
-      <ng-template matTabContent>
-        <ul *ngFor="let book of books$.philosophy">
-          <li>{{book.title}} - {{book.author}}</li>
-        </ul>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Spiritual">
-      <ng-template matTabContent>
-        <ul *ngFor="let book of books$.spiritual">
-          <li>{{book.title}} - {{book.author}}</li>
-        </ul>
-      </ng-template>
-    </mat-tab>
-  </mat-tab-group>
+              <div class="sub-section">
+                <strong>Communication</strong>
+                <ul *ngFor="let book of books$.psychology.communication">
+                  <li>{{book.title}} - {{book.author}}</li>
+                </ul>
+              </div>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Philosophy">
+            <ng-template matTabContent>
+              <ul *ngFor="let book of books$.philosophy">
+                <li>{{book.title}} - {{book.author}}</li>
+              </ul>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="Spiritual">
+            <ng-template matTabContent>
+              <ul *ngFor="let book of books$.spiritual">
+                <li>{{book.title}} - {{book.author}}</li>
+              </ul>
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+    <div class="col m2 s1"></div>
+  </div>
 </div>

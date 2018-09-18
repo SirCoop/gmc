@@ -1,3 +1,11 @@
 .sub-section {
   margin-top: .5rem;
+
+  > ul {
+    margin-left: 1rem;
+  }
+}
+
+.reading-list-container {
+  color: #fff;
 }
