@@ -37,8 +37,8 @@ export class WorldmapComponent implements OnInit {
                 .offset([10, -10])
                 .html(function(d) {
                   return (
-                    `<strong>Country: </strong><span class="details">${d.properties.name}<br>
-                    </span><strong>Population: </strong><span class="details">${format(d.population)}</span>`);
+                    `<span style="color: #fff;"><strong>Country: </strong><span class="details">${d.properties.name}</span><br>
+                    </span><span style="color: #fff;"><strong>Population: </strong><span class="details">${format(d.population)}</span></span>`);
                 });
     
     const margin = {top: 0, right: 0, bottom: 0, left: 0};
