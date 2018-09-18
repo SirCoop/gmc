@@ -25,6 +25,18 @@ body {
   font-family: 'Heebo';
   height: 100vh;
   background-color: #161616;
+
+  a {
+    text-decoration: underline;
+
+    &:link {
+      color: #dcd8d3;
+    }
+
+    &:visited {
+      color: #f5228a;
+    }
+  }
 }
 
 #container {

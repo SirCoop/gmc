@@ -1,27 +1,29 @@
 .writings-container {
-    color: #fff;
+  color: #fff;
 }
 
 .list-container {
-    margin-top: 1rem;    
-    overflow: auto;
+  margin-top: 1rem;
+  overflow: auto;
 
-    &.mArt {
-        border-right: 1px solid #383838;
-        height: 600px;
-    }
+  &.mArt {
+    // border-right: 1px solid #383838;
+    border-right: 1px solid #f5228a;    
+    height: 600px;
+  }
 }
 
 .writing-item {
-    padding: .3rem .3rem;
+  padding: .3rem .3rem;
 }
 
 .bo-header {
-    > .quote {
-        font-weight: bold;
-    }
+  >.quote {
+    font-weight: bold;
+  }
 
-    > .author {
-        text-align: center;
-    }
+  >.author {
+    text-align: center;
+  }
 }
+
