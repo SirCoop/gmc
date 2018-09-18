@@ -65,11 +65,13 @@ export class BulletChartComponent implements OnInit {
 
     title.append('text')
       .attr('class', 'title')
+      .style('fill', 'azure')
       .text(function (d) { return d.title; });
 
     title.append('text')
       .attr('class', 'subtitle')
       .attr('dy', '1em')
+      .style('fill', 'azure')
       .text(function (d) { return d.subtitle; });
 
     d3.selectAll('button').on('click', function () {

@@ -120,7 +120,8 @@ const d3Bullet = function() {
         var tickEnter = tick.enter().append('g')
           .attr('class', 'tick')
           .attr('transform', bulletTranslate(x0))
-          .style('opacity', 1e-6);
+          .style('opacity', 1e-6)
+          .style('fill', 'azure');
 
         tickEnter.append('line')
           .attr('y1', height)

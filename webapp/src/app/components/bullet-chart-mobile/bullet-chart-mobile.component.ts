@@ -64,10 +64,12 @@ export class BulletChartMobileComponent implements OnInit {
 
     title.append('text')
       .attr('class', 'title')
+      .style('fill', 'azure')
       .text(function (d) { return d.title; });
 
     title.append('text')
       .attr('class', 'subtitle')
+      .style('fill', 'azure')
       .attr('dy', '1em')
       .text(function (d) { return d.subtitle; });
 
