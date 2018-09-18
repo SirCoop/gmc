@@ -1,4 +1,4 @@
-<div class="travel-images-container page-content">
+<div class="travel-images-container">
   <div *ngIf="imageUrls$.length">
     <div *ngFor="let url of imageUrls$" class="image-container">
       <img [src]="url | urlSanitizer" (click)="openDialog(url)" />

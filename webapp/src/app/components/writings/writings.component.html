@@ -1,63 +1,69 @@
-<div class="writings-container page-content">
-  <h1>Writings</h1>
+<div class="writings-container">
+  <div class="row">
+    <div class="col m2 s1"></div>
+    <div class="col m8 s10">
+      <section>
+        <h3>This section is dedicated to my personal musings.</h3>
+        <p>I owe my life to writing.</p>
+        <p>
+          My pen has been my best friend ever since I was a child; it never lets me down; never betrays me; knows all
+          of my thoughts,
+          feelings, and secrets; always here for me when I need it, with no judgement and no condescension; gives me
+          the ultimate
+          freedom of expression; never jealous; and always giving until there's nothing left to give; the perfect
+          relationship.
+        </p>
+      </section>
 
-  <section>
-    <h3>This section is dedicated to my personal musings.</h3>
-    <p>I owe my life to writing.</p>
-    <p>
-      My pen has been my best friend ever since I was a child; it never lets me down; never betrays me; knows all of my thoughts,
-      feelings, and secrets; always here for me when I need it, with no judgement and no condescension; gives me the ultimate
-      freedom of expression; never jealous; and always giving until there's nothing left to give; the perfect relationship.
-    </p>
-  </section>
-
-  <section>
-      <mat-tab-group #tabgroup (selectedTabChange)="tabChanged($event)">
+      <section>
+        <mat-tab-group #tabgroup (selectedTabChange)="tabChanged($event)">
           <mat-tab label="Journal">
             <ng-template matTabContent class="tab-content">
               <div class="list-container">
                 <div *ngFor="let item of sortedTitles(writings$.journal)" class="writing-item">
-                    <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
+                  <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
                 </div>
-              </div>              
+              </div>
             </ng-template>
           </mat-tab>
           <mat-tab label="Metaphorical Art">
             <ng-template matTabContent class="tab-content">
-              <div id="metaphoricalArt" class="row">
-                <div class="column-left">
-                  <div class="list-container mArt">
-                    <div *ngFor="let item of sortedTitles(writings$.metaphorical_art)" class="writing-item">
-                      <a href="javascript:void(0)" (click)="viewArt(item.type, item.fileName)">{{item.value}}</a>
-                    </div>
-                  </div> 
-                </div>
-                <div class="column-right">
-                  <div class="photo-container">
-                    <app-inline-reader [writingType]="writingType" [fileName]="fileName"></app-inline-reader>
+              <div class="col m3 s3">
+                <div class="list-container mArt">
+                  <div *ngFor="let item of sortedTitles(writings$.metaphorical_art)" class="writing-item">
+                    <a href="javascript:void(0)" (click)="viewArt(item.type, item.fileName)">{{item.value}}</a>
                   </div>
                 </div>
-              </div>              
+              </div>
+              <div class="col m9 s9">
+                <div id="metaphoricalArt">
+                  <app-inline-reader [writingType]="writingType" [fileName]="fileName"></app-inline-reader>
+                </div>
+              </div>
             </ng-template>
           </mat-tab>
           <mat-tab label="Blue Ocean">
-              <ng-template matTabContent class="tab-content">
-                <div class="bo-header">
-                  <p class="quote">
-                      “Pythagoras was misunderstood, and Socrates, and Jesus, and Luther, and Copernicus, and Galileo, and Newton,
-                      and every pure and wise spirit that ever took flesh. To be great is to be misunderstood.”
-                  </p>
-                  <p class="author">
-                    --Ralph Waldo Emerson
-                  </p>
+            <ng-template matTabContent class="tab-content">
+              <div class="bo-header">
+                <p class="quote">
+                  “Pythagoras was misunderstood, and Socrates, and Jesus, and Luther, and Copernicus, and Galileo, and
+                  Newton,
+                  and every pure and wise spirit that ever took flesh. To be great is to be misunderstood.”
+                </p>
+                <p class="author">
+                  --Ralph Waldo Emerson
+                </p>
+              </div>
+              <div class="list-container">
+                <div *ngFor="let item of sortedTitles(writings$.blue_ocean)" class="writing-item">
+                  <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
                 </div>
-                <div class="list-container">
-                  <div *ngFor="let item of sortedTitles(writings$.blue_ocean)" class="writing-item">
-                    <a [routerLink]="['./', item.type, item.fileName]">{{item.value}}</a>
-                  </div>
-                </div>
-              </ng-template>
-            </mat-tab>
+              </div>
+            </ng-template>
+          </mat-tab>
         </mat-tab-group>
-  </section>
+      </section>
+    </div>
+    <div class="col m2 s1"></div>
+  </div>
 </div>

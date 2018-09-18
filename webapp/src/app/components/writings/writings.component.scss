@@ -1,26 +1,19 @@
+.writings-container {
+    color: #fff;
+}
+
 .list-container {
     margin-top: 1rem;    
     overflow: auto;
 
     &.mArt {
-        border-right: 1px solid black;
+        border-right: 1px solid 383838;
         height: 600px;
     }
 }
 
 .writing-item {
     padding: .3rem .3rem;
-}
-
-#metaphoricalArt {
-    display: flex;
-
-    > .column-left {
-        flex: 20%;
-    }
-    > .column-right {
-        flex: 80%;
-    }
 }
 
 .bo-header {

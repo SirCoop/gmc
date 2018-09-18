@@ -1,8 +1,8 @@
-<h4>{{pdfTitle}}</h4>
+<div class="inline-reader-container">
+  <h4>{{pdfTitle}}</h4>
 
-<pdf-viewer 
-  [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc"
-  [render-text]="renderText" style="display: block" [external-link-target]="'blank'"
-  (page-rendered)="pageRendered($event)"
-  (error)="onError($event)">
-</pdf-viewer>
+  <pdf-viewer [fit-to-page]="fitToPage" [zoom]="zoom" [autoresize]="autoresize" [show-all]="showAll" [src]="pdfSrc"
+    [render-text]="renderText" style="display: block" [external-link-target]="'blank'" (page-rendered)="pageRendered($event)"
+    (error)="onError($event)">
+  </pdf-viewer>
+</div>
