@@ -25,7 +25,7 @@
 </div> -->
 
 <div id="mainContent">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+  <ng4-loading-spinner [threshold]="50" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>
 </div>
 
-<ng4-loading-spinner [threshold]="50" [timeout]="4000" [loadingText]="" [zIndex]="9999"></ng4-loading-spinner>
