@@ -25,7 +25,7 @@ export const widgetmetadatas = [
         'id': 1,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': false, 'payload': 1 },
         'name': 'Animations',
-        'src': '../../../assets/draggable/lps-head.gif',
+        'src': '../../../assets/draggable/dna.gif',
         'routerLink': 'animations'
     },
     {
@@ -46,14 +46,14 @@ export const widgetmetadatas = [
         'id': 4,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': false, 'payload': 1 },
         'name': 'Credentials',
-        'src': '../../../assets/draggable/about.png',
+        'src': '../../../assets/draggable/credentials.png',
         'routerLink': 'credentials'
     },
     {
         'id': 5,
         'config': { 'dragHandle': '.handle', 'row': 2, 'col': 1, 'resizable': false, 'payload': 1 },
         'name': 'Dark Secret',
-        'src': '../../../assets/draggable/contact.png',
+        'src': '../../../assets/draggable/dark-secret.png',
         'routerLink': 'dark-secret'
     },
     {
