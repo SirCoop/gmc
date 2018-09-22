@@ -4,6 +4,8 @@
 
 #contactFormContainer {
   background-image: url('../../../assets/papyrus.jpg');
+  -webkit-text-fill-color: black;
+  fill: black;
 
   /* Change Autocomplete styles in Chrome*/
   input:-webkit-autofill,

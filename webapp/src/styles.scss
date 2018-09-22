@@ -55,6 +55,19 @@ body {
   }
 }
 
+/* used here because component scss file won't override angular material css */
+.contact-form {
+  mat-form-field {
+    div.mat-form-field-underline {
+      background-color: #000;
+    }
+  }
+
+  .mat-select-arrow {
+    color: #000;
+  }
+}
+
 #frontEndSkills {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 10px;

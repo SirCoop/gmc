@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    // this.toggleMenu();
+    this.toggleMenu();
   }
 
   constructor(private router: Router,
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.toggleMenu();
+    this.toggleMenu();
   }
 
   /* Shows and hides the loading spinner during RouterEvent changes */
