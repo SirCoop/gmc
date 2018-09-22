@@ -39,6 +39,12 @@ body {
   }
 }
 
+#mainContent {
+  .lds-roller {
+    position: fixed;
+  }
+}
+
 #container {
   display: grid;
   grid-template-columns: 4% auto;
