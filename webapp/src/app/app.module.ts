@@ -154,8 +154,7 @@ import { DarkSecretComponent } from './components/dark-secret/dark-secret.compon
     MatTreeModule,
     FormsModule,
     ReactiveFormsModule,
-    NgDraggableWidgetModule,
-    BreadcrumbsModule
+    NgDraggableWidgetModule
   ],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],
