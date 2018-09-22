@@ -47,7 +47,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NgDraggableWidgetModule } from 'ngx-draggable-widget';
-import { BreadcrumbsModule } from "ng6-breadcrumbs";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

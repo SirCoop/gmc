@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit, HostListener } from '@angular/core';
+import { Component, NgZone, OnInit, HostListener, AfterViewChecked } from '@angular/core';
 import 'hammerjs';
 import {
   Router,
@@ -19,10 +19,9 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewChecked {
   title = 'app';
   currentUrl = '';
-  hideSideNav = true;
   ipadWidth = 768;
   ipadHeight = 1024;
   activeSpinner = false;
@@ -52,6 +51,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.toggleMenu();
+  }
+
+  ngAfterViewChecked() {
     this.toggleMenu();
   }
 
@@ -104,11 +107,13 @@ export class AppComponent implements OnInit {
     const largeNav = document.getElementById('navIcon-desktop');
     const smallNavContainer = document.getElementById('mobileNavIconContainer');
     const smallNav = document.getElementById('navIcon-mobile');
+    const sideNav = document.getElementById('sidenav');
     if (!this.isScreenSmall()) {
       largeNav.style.display = 'block';
       smallNavContainer.style.display = 'none';
       smallNav.style.display = 'none';
     } else {
+      sideNav.style.display = 'block';
       largeNav.style.display = 'none';
       smallNavContainer.style.display = 'inline-block';
       smallNav.style.display = 'block';
