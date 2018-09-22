@@ -1,21 +1,21 @@
 /* Any screen larger than iPad Pro */
 
 @media only screen and (min-device-width: 1367px) {
-    // #sidenav.nav-container {
-    //   &.sidenav-opened {
-    //     width: 16%;
-    //     padding-top: 60px;
+    #sidenav.nav-container {
+      &.sidenav-opened {
+        width: 16%;
+        padding-top: 60px;
   
-    //     #closeButton {
-    //       font-size: 2.5rem;
-    //     }
+        #closeButton {
+          font-size: 2.5rem;
+        }
   
-    //     a {
-    //       font-size: 1.65rem;
-    //     }
-    //   }    
+        a {
+          font-size: 1.65rem;
+        }
+      }    
   
-    // }
+    }
 
     >#centeringWrapper {
       position: inherit;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -22,7 +22,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, AfterViewChecked {
 
   countries = countriesByCode;
   contactFormGroup: any;
@@ -67,6 +67,12 @@ export class ContactComponent implements OnInit {
     const setCountry = this.countries.find(c => c.code === 'US');
     this.contactFormGroup.get('country').setValue(setCountry.code);
   }
+
+  ngAfterViewChecked(): void {
+    /* target mat-card underline and change color to black */
+    
+           
+}       
 
   onSubmit() {
     this.spinnerService.show();

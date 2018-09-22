@@ -97,12 +97,15 @@ export class AppComponent implements OnInit {
 
   toggleMenu() {
     const largeNav = document.getElementById('navIcon-desktop');
+    const smallNavContainer = document.getElementById('mobileNavIconContainer');
     const smallNav = document.getElementById('navIcon-mobile');
     if (!this.isScreenSmall()) {
       largeNav.style.display = 'block';
+      smallNavContainer.style.display = 'none';
       smallNav.style.display = 'none';
     } else {
       largeNav.style.display = 'none';
+      smallNavContainer.style.display = 'inline-block';
       smallNav.style.display = 'block';
     }
   }
