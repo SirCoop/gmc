@@ -1,11 +1,17 @@
 <div class="travel-images-container">
-  <div *ngIf="imageUrls$.length">
-    <div *ngFor="let url of imageUrls$" class="image-container">
-      <img [src]="url | urlSanitizer" (click)="openDialog(url)" />
-    </div>
-  </div>
+  <div class="row">
+    <div class="col m1"></div>
+    <div class="col m8 s10 images">
+      <div *ngIf="imageUrls$.length">
+        <div *ngFor="let url of imageUrls$" class="image-container">
+          <img [src]="url | urlSanitizer" (click)="openDialog(url)" />
+        </div>
+      </div>
 
-  <div *ngIf="!imageUrls$.length">
-    This one is on the bucket list!
+      <div *ngIf="!imageUrls$.length">
+        This one is on the bucket list!
+      </div>
+    </div>
+    <div class="col m1"></div>
   </div>
 </div>
