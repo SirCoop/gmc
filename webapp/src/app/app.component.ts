@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit, HostListener, AfterViewChecked } from '@angular/core';
+import { Component, NgZone, OnInit, HostListener } from '@angular/core';
 import 'hammerjs';
 import {
   Router,
@@ -19,7 +19,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewChecked {
+export class AppComponent implements OnInit {
   title = 'app';
   currentUrl = '';
   ipadWidth = 768;
@@ -51,10 +51,6 @@ export class AppComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    this.toggleMenu();
-  }
-
-  ngAfterViewChecked() {
     this.toggleMenu();
   }
 
