@@ -43,7 +43,7 @@ export class AppComponent implements OnInit {
     private breakpointObserver: BreakpointObserver,
     private spinnerService: Ng4LoadingSpinnerService) {
     this.router.events.subscribe((_: NavigationEnd) => {
-      this.currentUrl = _.url;     
+      this.currentUrl = _.url;
     });
 
     this.router.events.subscribe((event: RouterEvent) => {
@@ -65,6 +65,11 @@ export class AppComponent implements OnInit {
     }
     if (event instanceof NavigationEnd) {
       this.spinnerService.hide();
+      if (event.url === undefined || event.url === '/') {
+        this.hideSidenav();
+      } else {
+        this.showSidenav();
+      }
     }
 
     /* Set loading state to false in both of the below events to hide the spinner in case a request fails */
@@ -108,6 +113,20 @@ export class AppComponent implements OnInit {
       smallNavContainer.style.display = 'inline-block';
       smallNav.style.display = 'block';
     }
+  }
+
+  hideSidenav() {
+    const rightArrow = document.getElementById('navIcon-desktop');
+    const sidenav = document.getElementById('sidenav');
+    rightArrow.style.display = 'none';
+    sidenav.style.display = 'none';
+  }
+
+  showSidenav() {
+    const rightArrow = document.getElementById('navIcon-desktop');
+    const sidenav = document.getElementById('sidenav');
+    rightArrow.style.display = 'inline-block';
+    sidenav.style.display = 'block';
   }
 
 }
