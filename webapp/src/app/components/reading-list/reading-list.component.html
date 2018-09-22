@@ -1,7 +1,7 @@
 <div class="reading-list-container">
   <div class="row">
-    <div class="col m2 s1"></div>
-    <div class="col m8 s1">
+    <div class="col m2"></div>
+    <div class="col m8 s12">
       <div class="content">
         <h2>My personal recommendations.</h2>
         <p>Because I only demand of others what I first demand of myself, all written works listed have been read by
@@ -10,7 +10,7 @@
         <mat-tab-group #tabgroup>
           <mat-tab label="Self-Improvement">
             <ng-template matTabContent>
-              <h3>These books will absolutely change your life.</h3>
+              <h4>These books will absolutely change your life.</h4>
               <ul *ngFor="let book of books$.selfImprovement">
                 <li>{{book.title}} - {{book.author}}</li>
               </ul>
@@ -64,6 +64,6 @@
         </mat-tab-group>
       </div>
     </div>
-    <div class="col m2 s1"></div>
+    <div class="col m2"></div>
   </div>
 </div>
