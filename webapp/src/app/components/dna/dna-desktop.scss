@@ -1,9 +1,4 @@
 @media (min-width: 981px) {
-    #landing-page {
-        &:hover {
-            cursor: pointer;
-        }
-    }   
 
     /*dna*/
     .dna-wrapper {
@@ -15,11 +10,6 @@
     .value {
         opacity: 1;
 
-        // &:hover {
-        //     cursor: pointer;
-        //     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-        //             animation: fadein 2s;
-        // }
     }
 
     #line1 {

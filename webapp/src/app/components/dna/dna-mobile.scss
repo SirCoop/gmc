@@ -1,30 +1,20 @@
-    #landing-page {
-      &:hover {
-        cursor: pointer;
-      }
-    }
 
     /*dna*/
 
     .dna-wrapper {
-      font-size: 26px;
-      width: inherit;
+      font-size: 2.5em;
+        width: inherit;
+        color: #4875e0;
     }
 
     .value {
       opacity: 1;
-
-      // &:hover {
-      //     cursor: pointer;
-      //     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-      //             animation: fadein 2s;
-      // }
   }
 
   #line1 {
       position: absolute;
       top: 11%;
-      left: 48%;
+      left: 38%;
       font-size: 18px;
       color: #fff;
   }
@@ -32,7 +22,7 @@
   #line2 {
       position: absolute;
       top: 31%;
-      left: 47%;
+      left: 37%;
       font-size: 18px;
       color: #fff;
   }
@@ -40,7 +30,7 @@
   #line3 {
       position: absolute;
       top: 53%;
-      left: 48%;
+      left: 38%;
       font-size: 18px;
       color: #fff;
   }
@@ -48,7 +38,7 @@
   #line4 {
       position: absolute;
       top: 77%;
-      left: 47%;
+      left: 37%;
       font-size: 18px;
       color: #fff;
   }
@@ -56,7 +46,7 @@
   #tagline {
       position: absolute;
       top: 94%;
-      left: 44%;
+      left: 26%;
       color: #fff;
   }
 
@@ -91,8 +81,7 @@
     #A12,
     #T12,
     #C12,
-    #G12,
-    #enterButton {
+    #G12 {
       position: absolute;
     }
 
@@ -112,7 +101,7 @@
     #G11,
     #T12,
     #G12 {
-      color: green;
+      color: red;
     }
 
     #A,
