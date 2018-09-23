@@ -17,7 +17,8 @@ export interface IWidgetDashboard {
 export const containerConfig = {
     'margins': [5],
     'max_rows': 3,
-    'cascade': 'left'
+    'cascade': 'up',
+    'limit_to_screen': true
 };
 
 export const widgetmetadatas = [    

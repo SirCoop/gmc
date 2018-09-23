@@ -1,0 +1,38 @@
+@media (max-width: 980px) {
+
+  .draggable-desktop-container {
+    height: auto;
+    background-color: #000;
+
+    .widget-container {
+      // consider changing color to white
+      background-color: #000;
+      position: inherit !important;
+      width: 100%;
+      top: 10%;
+      transform: translateY(0%);
+      padding: 0px;
+
+      >#centeringWrapper {
+        position: inherit;
+        left: 8%;
+        margin: auto;
+
+        >.widget {
+          color: #fff;
+
+
+          >.handle {
+            width: 100%;
+            height: 50px;
+            color: #d0d0d0;
+            background: #000;
+            font-weight: 500;
+            padding: 15px;
+            box-sizing: border-box;
+          }
+        }
+      }
+    }
+  }
+}
