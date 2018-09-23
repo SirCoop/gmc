@@ -40,8 +40,18 @@ body {
 }
 
 #mainContent {
+  // ===== spinner ======
   .lds-roller {
     position: fixed;
+
+    @media (max-width: 980px) {
+      position: fixed;
+      width: 64px;
+      height: 64px;
+      left: 40%;
+      top: 47%;
+    }
+    
   }
 }
 
