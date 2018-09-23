@@ -40,9 +40,9 @@ export class BulletChartMobileComponent implements OnInit {
 
   ready(data, selector) {
     d3Bullet();
-    const margin = { top: 5, right: 40, bottom: 20, left: 10 },
+    const margin = { top: 15, right: 40, bottom: 20, left: 10 },
       width = this.device.width - margin.left - margin.right,
-      height = 50;
+      height = 35;
 
     const chart = d3.bullet()
       .width(width)
@@ -52,10 +52,10 @@ export class BulletChartMobileComponent implements OnInit {
       .data(data)
       .enter().append('svg')
       .attr('class', 'bullet')
-      .style('padding-top', 10)
+      .style('padding-top', 5)
       .style('margin-bottom', 5)
       .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('height', '80px')
       .append('g')
       .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
       .call(chart);
@@ -67,11 +67,11 @@ export class BulletChartMobileComponent implements OnInit {
       .style('fill', 'azure')
       .text(function (d) { return d.title; });
 
-    title.append('text')
-      .attr('class', 'subtitle')
-      .style('fill', 'azure')
-      .attr('dy', '1em')
-      .text(function (d) { return d.subtitle; });
+    // title.append('text')
+    //   .attr('class', 'subtitle')
+    //   .style('fill', 'azure')
+    //   .attr('dy', '1em')
+    //   .text(function (d) { return d.subtitle; });
 
     d3.selectAll('button').on('click', function () {
       svg.datum(this.randomize).call(chart.duration(1000));

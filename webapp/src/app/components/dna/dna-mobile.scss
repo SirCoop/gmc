@@ -11,6 +11,55 @@
       width: inherit;
     }
 
+    .value {
+      opacity: 1;
+
+      // &:hover {
+      //     cursor: pointer;
+      //     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+      //             animation: fadein 2s;
+      // }
+  }
+
+  #line1 {
+      position: absolute;
+      top: 11%;
+      left: 48%;
+      font-size: 18px;
+      color: #fff;
+  }
+
+  #line2 {
+      position: absolute;
+      top: 31%;
+      left: 47%;
+      font-size: 18px;
+      color: #fff;
+  }
+
+  #line3 {
+      position: absolute;
+      top: 53%;
+      left: 48%;
+      font-size: 18px;
+      color: #fff;
+  }
+
+  #line4 {
+      position: absolute;
+      top: 77%;
+      left: 47%;
+      font-size: 18px;
+      color: #fff;
+  }
+
+  #tagline {
+      position: absolute;
+      top: 94%;
+      left: 44%;
+      color: #fff;
+  }
+
     #A,
     #T,
     #C,
