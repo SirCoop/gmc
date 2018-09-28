@@ -40,6 +40,11 @@ body {
 }
 
 #mainContent {
+
+  .page-content {
+    color: #c5c5c5;
+  }
+
   // ===== spinner ======
   .lds-roller {
     position: fixed;
@@ -91,7 +96,7 @@ body {
       }
 
       >rect.range.s1 {
-        fill: #ddd;
+        fill: #bbbbbb;
       }
 
       >rect.range.s2 {
@@ -120,7 +125,7 @@ body {
         }
 
         >text.title {
-          font-size: 14px;
+          font-size: 18px;
           font-weight: bold;
         }
 
@@ -145,7 +150,7 @@ body {
       }
 
       >rect.range.s1 {
-        fill: #ddd;
+        fill: #bbbbbb;
       }
 
       >rect.range.s2 {
@@ -174,7 +179,7 @@ body {
         }
 
         >text.title {
-          font-size: 14px;
+          font-size: 18px;
           font-weight: bold;
         }
 
@@ -199,7 +204,7 @@ body {
       }
 
       >rect.range.s1 {
-        fill: #ddd;
+        fill: #bbbbbb;
       }
 
       >rect.range.s2 {
@@ -228,7 +233,7 @@ body {
         }
 
         >text.title {
-          font-size: 14px;
+          font-size: 18px;
           font-weight: bold;
         }
 

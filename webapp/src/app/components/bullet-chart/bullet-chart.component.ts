@@ -42,7 +42,6 @@ export class BulletChartComponent implements OnInit {
     d3Bullet();
     const margin = { top: 5, right: 40, bottom: 20, left: this.device.width >= 980 ? 300 : 0 },
       width = this.device.width >= 980 ? 980 - margin.left - margin.right : this.device.width,
-      // width = 960 - margin.left - margin.right,
       height = 50 - margin.top - margin.bottom;
 
     const chart = d3.bullet()
@@ -65,13 +64,13 @@ export class BulletChartComponent implements OnInit {
 
     title.append('text')
       .attr('class', 'title')
-      .style('fill', 'azure')
+      .style('fill', '#c5c5c5')
       .text(function (d) { return d.title; });
 
     title.append('text')
       .attr('class', 'subtitle')
       .attr('dy', '1em')
-      .style('fill', 'azure')
+      .style('fill', '#c5c5c5')
       .text(function (d) { return d.subtitle; });
 
     d3.selectAll('button').on('click', function () {

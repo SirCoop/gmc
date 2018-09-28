@@ -52,7 +52,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { TravelComponent } from './components/travel/travel.component';
-import { HomeComponent } from './components/home/home.component';
 import { AppsComponent } from './components/apps/apps.component';
 import { ReadingListComponent } from './components/reading-list/reading-list.component';
 import { WritingsComponent } from './components/writings/writings.component';
@@ -83,7 +82,6 @@ import { DarkSecretComponent } from './components/dark-secret/dark-secret.compon
     AppComponent,
     AboutComponent,
     TravelComponent,
-    HomeComponent,
     AppsComponent,
     ReadingListComponent,
     WritingsComponent,

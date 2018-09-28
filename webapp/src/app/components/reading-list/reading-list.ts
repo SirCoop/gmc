@@ -2,7 +2,7 @@ const readingList: any = {
     selfImprovement: [
         { title: 'The Autobiography of Malcolm X: As told by Alex Haley', author: 'Malcolm X, Alex Haley' },
         { title: 'Principles', author: 'Ray Dalio' },
-        { title: '12 Rules for Life', author: 'Dr. Jordan B. Perterson' },
+        { title: '12 Rules for Life', author: 'Dr. Jordan B. Peterson' },
         { title: 'The New Evolution Diet', author: 'Arthur De Vany' },
         { title: 'The Power of Now', author: 'Eckhart Tolle' },
         { title: 'PsychoCybernetics', author: 'Maxwell Maltz' },
@@ -39,7 +39,7 @@ const readingList: any = {
             { title: 'Emotions Revealed', author: 'Paul Ekman' },
             { title: 'Telling Lies', author: 'Paul Ekman' },
             { title: 'Unmasking the Face', author: 'Paul Ekman' },
-            { title: 'Lie Spotting', author: 'Pamel Meyer' },
+            { title: 'Lie Spotting', author: 'Pamela Meyer' },
             { title: 'Manwatching', author: 'Desmond Morris' },
             { title: 'Spy the Lie', author: 'Philip Houston, Michael Floyd, and Susan Carnicero' },
             { title: 'Body Language and Social Order', author: 'Albert E Scheflen' }

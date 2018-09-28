@@ -64,14 +64,8 @@ export class BulletChartMobileComponent implements OnInit {
 
     title.append('text')
       .attr('class', 'title')
-      .style('fill', 'azure')
+      .style('fill', '#c5c5c5')
       .text(function (d) { return d.title; });
-
-    // title.append('text')
-    //   .attr('class', 'subtitle')
-    //   .style('fill', 'azure')
-    //   .attr('dy', '1em')
-    //   .text(function (d) { return d.subtitle; });
 
     d3.selectAll('button').on('click', function () {
       svg.datum(this.randomize).call(chart.duration(1000));
