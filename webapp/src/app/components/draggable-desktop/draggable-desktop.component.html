@@ -1,7 +1,6 @@
 <div class="draggable-desktop-container">
-  <div class="row">
-    <div class="col m2"></div>
-    <div class="col m8 s12">
+  <!-- <div class="row"> -->
+    <!-- <div class="col m12 s12"> -->
       <div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
         <div id="centeringWrapper">
           <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index" [ngWidget]="widgetmetadata.config" [@widgetTrigger]='state'>
@@ -12,7 +11,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col m2"></div>
-  </div>
+    <!-- </div> -->
+  <!-- </div> -->
 </div>

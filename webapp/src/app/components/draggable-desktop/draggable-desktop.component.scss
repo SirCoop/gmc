@@ -3,15 +3,13 @@
 @media (min-width: 981px) {
   .draggable-desktop-container {
     height: 100vh;
+    overflow: hidden;
     background-color: #000;
 
     .widget-container {
-      // consider changing color to white
       background-color: #000;
       position: relative;
       width: 100%;
-      top: 10%;
-      transform: translateY(9%);
 
       >#centeringWrapper {
         position: inherit;

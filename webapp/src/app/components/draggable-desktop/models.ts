@@ -16,22 +16,23 @@ export interface IWidgetDashboard {
 
 export const containerConfig = {
     'margins': [5],
-    'max_rows': 3,
+    'auto_resize': true,
     'cascade': 'up',
-    'limit_to_screen': true
+    'limit_to_screen': false, // if true, set auto-resize to false
+    'maintain_ratio': true,
 };
 
 export const widgetmetadatas = [    
     {
         'id': 1,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': false, 'payload': 1 },
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true, 'payload': 1  },
         'name': 'Animations',
         'src': '../../../assets/draggable/dna.gif',
         'routerLink': 'animations'
     },
     {
         'id': 2,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': false, 'payload': 2 },
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': true, 'payload': 2 },
         'name': 'Apps',
         'src': '../../../assets/draggable/apps.png',
         'routerLink': 'apps'
@@ -108,23 +109,5 @@ export const widgetmetadatas = [
         'routerLink': 'writings',
         'url': '/writings'
     },
-    // {
-    //     'id': 14,
-    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 2, 'resizable': false, 'payload': 2 },
-    //     'name': 'Widget Simple Product Market',
-    //     'src': '../../../assets/draggable/travel.png'
-    // },
-    // {
-    //     'id': 15,
-    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 3, 'resizable': false, 'payload': 1 },
-    //     'name': 'Widget Simple Product Market',
-    //     'src': '../../../assets/draggable/travel.png'
-    // },
-    // {
-    //     'id': 16,
-    //     'config': { 'dragHandle': '.handle', 'row': 4, 'col': 4, 'resizable': false, 'payload': 2 },
-    //     'name': 'Widget Simple Product Market',
-    //     'src': '../../../assets/draggable/travel.png'
-    // },
     
 ];
