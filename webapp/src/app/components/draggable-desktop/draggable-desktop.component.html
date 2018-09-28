@@ -1,16 +1,13 @@
 <div class="draggable-desktop-container">
-  <!-- <div class="row"> -->
-    <!-- <div class="col m12 s12"> -->
-      <div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
-        <div id="centeringWrapper">
-          <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index" [ngWidget]="widgetmetadata.config" [@widgetTrigger]='state'>
-            <div class="handle">{{ widgetmetadata.name }}</div>
-            <a [routerLink]="widgetmetadata.routerLink">
-              <img class="zoom" [src]="widgetmetadata.src">
-            </a>
-          </div>
-        </div>
+  <div [ngWidgetContainer]="dashboardconfig$.WidgetContainer" class="widget-container">
+    <div id="centeringWrapper">
+      <div *ngFor="let widgetmetadata of dashboardconfig$.Widgets; let i=index" [ngWidget]="widgetmetadata.config"
+        [@widgetTrigger]='state'>
+        <div class="handle">{{ widgetmetadata.name }}</div>
+        <a [routerLink]="widgetmetadata.routerLink">
+          <img class="zoom" [src]="widgetmetadata.src">
+        </a>
       </div>
-    <!-- </div> -->
-  <!-- </div> -->
+    </div>
+  </div>
 </div>
