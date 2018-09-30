@@ -64,7 +64,6 @@ export const widgetmetadatas = [
         'name': 'Failure',
         'src': '../../../assets/draggable/failure.png',
         'routerLink': 'failures',
-        'url': '/failures'
     },
     {
         'id': 7,
@@ -107,6 +106,5 @@ export const widgetmetadatas = [
         'name': 'Musings',
         'src': '../../../assets/draggable/musings.png',
         'routerLink': 'writings',
-        'url': '/writings'
     }
 ];
