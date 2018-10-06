@@ -16,10 +16,11 @@ import { FailuresComponent } from './components/failures/failures.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { ReaderComponent } from './components/reader/reader.component';
-import { AnimationsComponent } from './components/animations/animations.component';
+// import { AnimationsComponent } from './components/animations/animations.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
 import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
+import { AmbitionComponent } from './components/ambition/ambition.component';
 
 const routes: Routes = [
   {
@@ -27,8 +28,8 @@ const routes: Routes = [
     component: DraggableDesktopComponent
   },
   {
-    path: 'animations',
-    component: AnimationsComponent
+    path: 'ambition',
+    component: AmbitionComponent
   },
   {
     path: 'apps',

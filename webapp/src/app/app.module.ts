@@ -76,6 +76,7 @@ import { DraggableDesktopComponent } from './components/draggable-desktop/dragga
 import { AnimationsComponent } from './components/animations/animations.component';
 import { DnaComponent } from './components/dna/dna.component';
 import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
+import { AmbitionComponent } from './components/ambition/ambition.component';
 
 @NgModule({
   declarations: [
@@ -104,7 +105,8 @@ import { DarkSecretComponent } from './components/dark-secret/dark-secret.compon
     DraggableDesktopComponent,
     AnimationsComponent,
     DnaComponent,
-    DarkSecretComponent
+    DarkSecretComponent,
+    AmbitionComponent
   ],
   imports: [
     BrowserModule,
