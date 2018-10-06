@@ -30,6 +30,11 @@ const bezier = function () {
   var vis = d3.select("#bezier").selectAll("svg")
     .data(orders)
     .enter().append("svg:svg")
+    .classed("svg-container", true)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 1200 800")
+    //class to make it responsive
+    .classed("svg-content-responsive", true)
     .attr("width", w + 2 * padding)
     .attr("height", h + 2 * padding)
     .append("svg:g")

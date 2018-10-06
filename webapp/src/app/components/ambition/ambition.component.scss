@@ -2,6 +2,10 @@
     color: #fff !important;
     font-weight: lighter !important;
 
+    &.page-content {
+        display: inline-block;
+    }
+
     h3 {
         text-align: center;
     }
@@ -17,6 +21,20 @@
   background-color: #0A2B66;
 
   #bezier {
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* aspect ratio */
+        vertical-align: top;
+        overflow: hidden;
+    }
+    .svg-content-responsive {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 0;
+    }
     svg {
       position: absolute;
       top: 0;
