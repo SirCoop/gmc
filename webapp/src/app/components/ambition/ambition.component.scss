@@ -5,6 +5,12 @@
     h3 {
         text-align: center;
     }
+
+    #abstract {
+        > p {
+            font-size: 18px;
+        }
+    }
 }
 
 #bezierContainer {

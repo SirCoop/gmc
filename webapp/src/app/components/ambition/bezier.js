@@ -2,7 +2,7 @@ const bezier = function () {
   /* based on the work of Jason Davies. */
   // set dimensions of drawing
   var w = 1200,
-    h = 880,
+    h = 725,
     t = .5,
     delta = .01,
     padding = 10,
