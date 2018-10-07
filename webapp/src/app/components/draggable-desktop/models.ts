@@ -23,13 +23,6 @@ export const containerConfig = {
 };
 
 export const widgetmetadatas = [    
-    // {
-    //     'id': 1,
-    //     'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true },
-    //     'name': 'Animations',
-    //     'src': '../../../assets/draggable/dna.gif',
-    //     'routerLink': 'animations'
-    // },
     {
         'id': 1,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true },
