@@ -34,7 +34,7 @@ export const widgetmetadatas = [
         'id': 1,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true },
         'name': 'Ambition',
-        'src': '../../../assets/draggable/apps.png',
+        'src': '../../../assets/draggable/achieve.png',
         'routerLink': 'ambition'
     },
     {
