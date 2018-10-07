@@ -25,17 +25,24 @@ export const containerConfig = {
 export const widgetmetadatas = [    
     {
         'id': 1,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true },
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': true },
         'name': 'Ambition',
         'src': '../../../assets/draggable/achieve.png',
         'routerLink': 'ambition'
     },
     {
         'id': 2,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': true },
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 2, 'resizable': true },
         'name': 'Apps',
         'src': '../../../assets/draggable/apps.png',
         'routerLink': 'apps'
+    },
+    {
+        'id': 7,
+        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': false },
+        'name': 'Cognition',
+        'src': '../../../assets/draggable/self-assessment.png',
+        'routerLink': 'know-thyself'
     },
     {
         'id': 3,
@@ -46,32 +53,26 @@ export const widgetmetadatas = [
     },
     {
         'id': 4,
-        'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': false },
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 1, 'resizable': false },
         'name': 'Credentials',
         'src': '../../../assets/draggable/credentials.png',
         'routerLink': 'credentials'
     },
     {
         'id': 5,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 1, 'resizable': false },
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 2, 'resizable': false },
         'name': 'Dark Secret',
         'src': '../../../assets/draggable/dark-secret.png',
         'routerLink': 'dark-secret'
     },
     {
         'id': 6,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 2, 'resizable': false },
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 3, 'resizable': false },
         'name': 'Failure',
         'src': '../../../assets/draggable/failure.png',
         'routerLink': 'failures',
     },
-    {
-        'id': 7,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 3, 'resizable': false },
-        'name': 'Cognitive Analysis',
-        'src': '../../../assets/draggable/self-assessment.png',
-        'routerLink': 'know-thyself'
-    },
+    
     {
         'id': 8,
         'config': { 'dragHandle': '.handle', 'row': 2, 'col': 4, 'resizable': false },
@@ -103,7 +104,7 @@ export const widgetmetadatas = [
     {
         'id': 12,
         'config': { 'dragHandle': '.handle', 'row': 3, 'col': 4, 'resizable': false },
-        'name': 'Musings',
+        'name': 'Writings',
         'src': '../../../assets/draggable/musings.png',
         'routerLink': 'writings',
     }
