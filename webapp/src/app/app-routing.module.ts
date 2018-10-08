@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CountryImagesResolver } from './resolvers/country-images.resolver';
 import { WritingsResolver } from './resolvers/writings.resolver';
 
-// import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { TravelComponent } from './components/travel/travel.component';
 import { TravelImagesComponent } from './components/travel-images/travel-images.component';
 import { AboutComponent } from './components/about/about.component';
@@ -16,10 +15,9 @@ import { FailuresComponent } from './components/failures/failures.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { SelfAssessmentComponent } from './components/self-assessment/self-assessment.component';
 import { ReaderComponent } from './components/reader/reader.component';
-// import { AnimationsComponent } from './components/animations/animations.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DraggableDesktopComponent } from './components/draggable-desktop/draggable-desktop.component';
-import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
+import { LeadershipComponent } from './components/leadership/leadership.component';
 import { AmbitionComponent } from './components/ambition/ambition.component';
 
 const routes: Routes = [
@@ -44,8 +42,8 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'dark-secret',
-    component: DarkSecretComponent
+    path: 'leadership',
+    component: LeadershipComponent
   },
   {
     path: 'failures',

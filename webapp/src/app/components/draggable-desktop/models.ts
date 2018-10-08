@@ -27,7 +27,7 @@ export const widgetmetadatas = [
         'id': 1,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 1, 'resizable': true },
         'name': 'Ambition',
-        'src': '../../../assets/draggable/achieve.png',
+        'src': '../../../assets/draggable/ambition_3.jpg',
         'routerLink': 'ambition'
     },
     {
@@ -38,47 +38,47 @@ export const widgetmetadatas = [
         'routerLink': 'apps'
     },
     {
-        'id': 7,
+        'id': 3,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 3, 'resizable': false },
         'name': 'Cognition',
         'src': '../../../assets/draggable/self-assessment.png',
         'routerLink': 'know-thyself'
     },
     {
-        'id': 3,
+        'id': 4,
         'config': { 'dragHandle': '.handle', 'row': 1, 'col': 4, 'resizable': false },
         'name': 'Contact',
         'src': '../../../assets/draggable/contact.png',
         'routerLink': 'contact'
     },
     {
-        'id': 4,
+        'id': 5,
         'config': { 'dragHandle': '.handle', 'row': 2, 'col': 1, 'resizable': false },
         'name': 'Credentials',
         'src': '../../../assets/draggable/credentials.png',
         'routerLink': 'credentials'
-    },
-    {
-        'id': 5,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 2, 'resizable': false },
-        'name': 'Dark Secret',
-        'src': '../../../assets/draggable/dark-secret.png',
-        'routerLink': 'dark-secret'
-    },
+    },    
     {
         'id': 6,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 3, 'resizable': false },
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 2, 'resizable': false },
         'name': 'Failure',
         'src': '../../../assets/draggable/failure.png',
         'routerLink': 'failures',
     },
     
     {
-        'id': 8,
-        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 4, 'resizable': false },
+        'id': 7,
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 3, 'resizable': false },
         'name': 'Good Reads',
         'src': '../../../assets/draggable/good-reads.png',
         'routerLink': 'reading-list'
+    },
+    {
+        'id': 8,
+        'config': { 'dragHandle': '.handle', 'row': 2, 'col': 4, 'resizable': false },
+        'name': 'Leadership',
+        'src': '../../../assets/draggable/achieve.png',
+        'routerLink': 'leadership'
     },
     {
         'id': 9,

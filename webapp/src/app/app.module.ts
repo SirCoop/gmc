@@ -77,6 +77,7 @@ import { AnimationsComponent } from './components/animations/animations.componen
 import { DnaComponent } from './components/dna/dna.component';
 import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
 import { AmbitionComponent } from './components/ambition/ambition.component';
+import { LeadershipComponent } from './components/leadership/leadership.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { AmbitionComponent } from './components/ambition/ambition.component';
     AnimationsComponent,
     DnaComponent,
     DarkSecretComponent,
-    AmbitionComponent
+    AmbitionComponent,
+    LeadershipComponent
   ],
   imports: [
     BrowserModule,
