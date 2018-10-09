@@ -78,6 +78,7 @@ import { DnaComponent } from './components/dna/dna.component';
 import { DarkSecretComponent } from './components/dark-secret/dark-secret.component';
 import { AmbitionComponent } from './components/ambition/ambition.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
+import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { LeadershipComponent } from './components/leadership/leadership.componen
     DnaComponent,
     DarkSecretComponent,
     AmbitionComponent,
-    LeadershipComponent
+    LeadershipComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,

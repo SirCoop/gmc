@@ -1,4 +1,4 @@
-const worldPopulaiton = [
+const worldPopulation = [
 {
 'id': 'CHN',
 'name': 'China',
@@ -1449,4 +1449,4 @@ const worldPopulaiton = [
 }
 ];
 
-export default worldPopulaiton;
+export default worldPopulation;
