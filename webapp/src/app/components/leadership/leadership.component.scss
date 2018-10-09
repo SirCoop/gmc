@@ -1,7 +1,22 @@
 .leadership-container {
-    color: #818181;
+  color: #818181;
 
-    #title {
-        text-align: center;
-    }
+  #title {
+    text-align: center;
+  }
+
+  ::ng-deep .mat-list .mat-list-item .mat-line {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  ::ng-deep .mat-list .mat-list-item {
+    height: initial !important;
+    margin-bottom: 1rem;
+  }
+
+  ::ng-deep .mat-expansion-panel {
+    margin-bottom: .5rem;
+    padding: .25rem .25rem;
+  }
 }
