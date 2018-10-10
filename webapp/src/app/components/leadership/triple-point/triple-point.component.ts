@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import triplePoint from './triple-point';
 
 @Component({
   selector: 'app-triple-point',
@@ -8,10 +7,11 @@ import triplePoint from './triple-point';
 })
 export class TriplePointComponent implements OnInit {
 
+  imagePath = '../../../../assets/triple_point.png';
+
   constructor() { }
 
   ngOnInit() {
-    triplePoint();
   }
 
 }

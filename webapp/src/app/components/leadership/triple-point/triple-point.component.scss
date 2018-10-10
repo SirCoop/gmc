@@ -1,13 +1,15 @@
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
+#description {
+    font-size: 18px;
+    color: #c5c5c5;
+
+    p {
+        margin-top: 0px;
+    }
 }
 
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }
+
