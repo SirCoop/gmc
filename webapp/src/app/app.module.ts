@@ -79,6 +79,7 @@ import { DarkSecretComponent } from './components/dark-secret/dark-secret.compon
 import { AmbitionComponent } from './components/ambition/ambition.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.component';
+import { TriplePointComponent } from './components/leadership/triple-point/triple-point.component';
 
 @NgModule({
   declarations: [
@@ -110,7 +111,8 @@ import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.c
     DarkSecretComponent,
     AmbitionComponent,
     LeadershipComponent,
-    PieChartComponent
+    PieChartComponent,
+    TriplePointComponent
   ],
   imports: [
     BrowserModule,
