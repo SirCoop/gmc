@@ -154,7 +154,7 @@ const pieChart = function () {
 
   keys.append('div')
     .attr('class', 'name')
-    .text(d => `${d.name} (${d.value})`);
+    .text(d => `${d.name} (${d.value} hrs)`);
 
   keys.exit().remove();
 }
