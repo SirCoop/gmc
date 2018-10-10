@@ -80,6 +80,7 @@ import { AmbitionComponent } from './components/ambition/ambition.component';
 import { LeadershipComponent } from './components/leadership/leadership.component';
 import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.component';
 import { TriplePointComponent } from './components/leadership/triple-point/triple-point.component';
+import { CorrelationComponent } from './components/leadership/correlation/correlation.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +113,8 @@ import { TriplePointComponent } from './components/leadership/triple-point/tripl
     AmbitionComponent,
     LeadershipComponent,
     PieChartComponent,
-    TriplePointComponent
+    TriplePointComponent,
+    CorrelationComponent
   ],
   imports: [
     BrowserModule,
