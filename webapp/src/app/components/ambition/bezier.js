@@ -1,27 +1,46 @@
 const bezier = function () {
   /* based on the work of Jason Davies. */
   // set dimensions of drawing
-  var w = 1200,
-    h = 725,
+  var w = 1100,
+    h = 600,
     t = .5,
     delta = .01,
     padding = 10,
     // starting location of dots
+    // .style("font-family", function(d) { return d['font-family'];})
+    // .style("font-size", function(d) { return d['font-size'];})
+    // .style("stroke", 'red')
+    // .style('fill', function(d) { return d.color;})   
     points = [{
-      x: 20,
-      y: 550
+      x: 250,
+      y: 550,
+      'font-family': 'Heebo',
+      'font-size': '22px',
+      'color': '#000'
     }, {
-      x: 300,
-      y: 301
+      x: 400,
+      y: 301,
+      'font-family': 'Heebo',
+      'font-size': '22px',
+      'color': '#000'
     }, {
-      x: 600,
-      y: 436
+      x: 730,
+      y: 436,
+      'font-family': 'Heebo',
+      'font-size': '22px',
+      'color': '#000'
     }, {
-      x: 808,
-      y: 286
+      x: 900,
+      y: 276,
+      'font-family': 'Heebo',
+      'font-size': '22px',
+      'color': '#000'
     }, {
-      x: 905,
-      y: 65
+      x: 978,
+      y: 65,
+      'font-family': 'Heebo',
+      'font-size': '22px',
+      'color': '#000'
     }],
     bezier = {},
     line = d3.line().x(x).y(y),
@@ -71,9 +90,9 @@ const bezier = function () {
       }));
 
   const milestoneLabels = [
-      {
+    {
       id: 0,
-      label: 'Duke MBA'
+      label: 'Duke MBA'      
     },
     {
       id: 1,
@@ -105,9 +124,13 @@ const bezier = function () {
     })
     .enter().append("svg:text")
     .attr("class", "controltext")
-    .attr("dx", "20px")
+    .attr("dx", "22px")
     .attr("dy", ".4em")
-    .style('font-size', '18px')
+    .style("font-family", function(d) { 
+      console.log('d: ', d);
+      return d['font-family'];})
+    .style("font-size", function(d) { return d['font-size'];})
+    .style('fill', function(d) { return d['color'];})   
     .text(function (d, i) {      
       return milestoneLabels[i].label;
     });
@@ -146,7 +169,7 @@ const bezier = function () {
       .attr("d", line);
     path.attr("d", line)
       .style('fill', 'rgba(204, 204, 204, 0)')
-      .style('stroke', 'black');
+      .style('stroke', '#565656');
 
     var curve = vis.selectAll("path.curve")
       .data(getCurve);

@@ -1,40 +1,43 @@
 .ambition-container {
-    color: #fff !important;
-    font-weight: lighter !important;
+  font-weight: lighter !important;
 
-    &.page-content {
-        display: inline-block;
-    }
+  &.page-content {
+    display: inline-block;
+  }
 
-    h3 {
-        text-align: center;
-    }
+  h3 {
+    text-align: center;
+  }
 
-    #abstract {
-        > p {
-            font-size: 18px;
-        }
+  #abstract {
+    >p {
+      font-size: 18px;
     }
+  }
 }
 
 #bezierContainer {
   background-color: #0A2B66;
+  width: auto;
 
   #bezier {
     .svg-container {
-        display: inline-block;
-        position: relative;
-        width: 100%;
-        padding-bottom: 100%; /* aspect ratio */
-        vertical-align: top;
-        overflow: hidden;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      /* aspect ratio */
+      vertical-align: top;
+      overflow: hidden;
     }
+
     .svg-content-responsive {
-        display: inline-block;
-        position: absolute;
-        top: 10px;
-        left: 0;
+      display: inline-block;
+      position: absolute;
+      top: 10px;
+      left: 0;
     }
+
     svg {
       position: absolute;
       top: 0;
@@ -59,10 +62,16 @@
     }
 
     .t,
-    .controltext {
+      {
       font-family: "Yanone Kaffeesatz";
       font-weight: 400;
       font-size: 1em;
+    }
+
+    .controltext {
+      font-size: 28px !important;
+      font-family: 'Heebo' !important;
+      fill: green !important;
     }
   }
 }
