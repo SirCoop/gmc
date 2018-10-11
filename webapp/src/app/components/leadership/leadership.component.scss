@@ -28,7 +28,7 @@
       font-size: 20px;
     }
 
-    #tenetList {
+    #tenetList, #personalPowerList {
       >li {
         margin-bottom: .5rem;
         font-size: 16px;
@@ -36,12 +36,16 @@
     }
   }
 
-  #lmt {
+  #lmt, #power {
     font-size: 16px;
   }
 
-  #lmtRow {
+  #lmtRow, #powerRow {
     width: 100%;
+  }
+
+  #powerIntro {
+    text-align: center;
   }
   
 }
