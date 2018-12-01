@@ -1,6 +1,7 @@
 node_modules/
 
 assets/images/**/*
+assets/testimonies/**/*
 assets/writings/**/*
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
