@@ -7,6 +7,7 @@ module.exports = {
     webapp: {
         dist: path.join(__dirname, './dist'),
         dev: path.join(__dirname, 'webapp/src'),
+        testimonies: path.join(__dirname, './assets/testimonies'),
         writings: path.join(__dirname, './assets/writings')
     }
 };

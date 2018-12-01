@@ -33,7 +33,11 @@ export class SocialImpactComponent implements OnInit {
 
   fetchPdf() {
     this.spinnerService.show();
-    this.pdfTitle = this.fileName.split('_')[1].split('.')[0];
+    const newFileName = this.fileName.replace('.pdf', '');
+    const split = newFileName.split('_');
+    const firstName = split[1];
+    const lastName = split[2];
+    this.pdfTitle = `${firstName} ${lastName}`
     this.pdfSrc = `/api/leadership/testimonies/${this.fileName}`;
   }
 
