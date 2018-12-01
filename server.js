@@ -57,6 +57,22 @@ app.get('/api/country/:name/:image', (req, res) => {
   });
 });
 
+/* Testimonies */
+const testimoniesController = require('./controllers/testimonies.controller');
+// get List - All
+app.use(`${base_api_url}/leadership/testimonies/list`, testimoniesController.getTestimoniesList);
+// get One
+app.get(`${base_api_url}/leadership/testimonies/:fileName`, (req, res) => {
+  const fileName = req.params.fileName;
+  const path = `${CONSTANTS.webapp.testimonies}/${fileName}`;
+  const file = fs.createReadStream(path);
+  const stat = fs.statSync(path);
+  res.setHeader('Content-Length', stat.size);
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'attachment;');
+  file.pipe(res);
+});
+
 /* Writings */
 const writingsController = require('./controllers/writings.controller');
 // get List - All

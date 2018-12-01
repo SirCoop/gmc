@@ -17,9 +17,8 @@ export class WritingsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) {
     router.events.subscribe((_: NavigationEnd) => {
       this.currentUrl = _.url;
-           
     });
-   }
+  }
 
   ngOnInit() {
     this.writings$ = this.route.snapshot.data.writings.data;

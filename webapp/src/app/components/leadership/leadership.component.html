@@ -219,6 +219,31 @@
           <app-correlation></app-correlation>
         </mat-expansion-panel> -->
 
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <div class="panel-title">Social Impact</div>
+          </mat-expansion-panel-header>
+          <mat-panel-description id="socialImpact">
+            <div>A list of personal testimonies.</div>
+
+            <div class="col m3 s3">
+              <div class="si-list-container si-list">
+                <div *ngFor="let item of testimonies$" class="testimony-item">
+                  <a href="javascript:void(0)" (click)="viewTestimony(item.fileName)">{{item.value}}</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col m9 s9">
+              <div id="testimonyInlineReader">
+                <app-social-impact [fileName]="fileName"></app-social-impact>
+              </div>
+            </div>
+
+            <!-- <app-inline-reader [writingType]="writingType" [fileName]="fileName"></app-inline-reader> -->
+          </mat-panel-description>
+        </mat-expansion-panel>
+
       </mat-accordion>
     </div>
     <div class="col m2 s12"></div>

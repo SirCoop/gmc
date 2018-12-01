@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CountryImagesResolver } from './resolvers/country-images.resolver';
+import { TestimoniesResolver } from './resolvers/testimonies.resolver';
 import { WritingsResolver } from './resolvers/writings.resolver';
 
 import { TravelComponent } from './components/travel/travel.component';
@@ -43,7 +44,10 @@ const routes: Routes = [
   },
   {
     path: 'leadership',
-    component: LeadershipComponent
+    component: LeadershipComponent,
+    resolve: {
+      testimonies: TestimoniesResolver
+    }
   },
   {
     path: 'failures',

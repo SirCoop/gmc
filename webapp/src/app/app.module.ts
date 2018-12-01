@@ -81,6 +81,7 @@ import { LeadershipComponent } from './components/leadership/leadership.componen
 import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.component';
 import { TriplePointComponent } from './components/leadership/triple-point/triple-point.component';
 import { CorrelationComponent } from './components/leadership/correlation/correlation.component';
+import { SocialImpactComponent } from './components/social-impact/social-impact.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +115,8 @@ import { CorrelationComponent } from './components/leadership/correlation/correl
     LeadershipComponent,
     PieChartComponent,
     TriplePointComponent,
-    CorrelationComponent
+    CorrelationComponent,
+    SocialImpactComponent
   ],
   imports: [
     BrowserModule,

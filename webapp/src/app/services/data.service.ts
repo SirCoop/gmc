@@ -17,6 +17,19 @@ export class DataService {
     return this.http.get(`${this.baseUrl}/country/${country}/images`);
   }
 
+  getTestimoniesList() {
+    return this.http.get(`${this.baseUrl}/leadership/testimonies/list`);
+  }
+
+  getTestimony(fileName): Observable<any> {
+    /*
+    * HttpClient automatically returns an Observable
+    * Subscribe to Observable in component requesting this data    
+    * e.g. this.dataService.getWriting(type, fileName).subscribe(res => this.pdf$ = res);
+    */
+    return this.http.get(`${this.baseUrl}/leadership/testimonies/${fileName}.pdf`);
+  }
+
   getWritingLists() {
     return this.http.get(`${this.baseUrl}/writings/lists`);
   }
