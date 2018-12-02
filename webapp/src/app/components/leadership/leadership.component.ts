@@ -21,7 +21,6 @@ export class LeadershipComponent implements OnInit {
 
   ngOnInit() {
     this.testimonies$ = this.sortTestimonies(this.marshallFileNames(this.route.snapshot.data.testimonies.data));
-    console.log('this.testimonies$: ', this.testimonies$);
   }
 
    viewTestimony(testimony) {

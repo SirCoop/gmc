@@ -13,11 +13,11 @@ export class SocialImpactComponent implements OnInit {
   pdfTitle: string;
   pdfSrc = '';
   zoom = 1.00;
-  originalSize = true;
+  originalSize = false;
   showAll = true;
   renderText = false;
   fitToPage = false;
-  autoresize = false;
+  autoresize = true;
 
   constructor(private route: ActivatedRoute, private spinnerService: Ng4LoadingSpinnerService) { }
 
