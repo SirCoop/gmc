@@ -1,0 +1,11 @@
+<div class="dialog-header-close"><i class="material-icons" (click)="close()">close</i></div>
+<div class="testimony-container">
+    <h2 mat-dialog-title>Testimony: {{testimony.value}}</h2>
+
+    <mat-dialog-content>
+        <app-social-impact [fileName]="testimony.fileName"></app-social-impact>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+    </mat-dialog-actions>
+</div>

@@ -13,11 +13,11 @@ export class SocialImpactComponent implements OnInit {
   pdfTitle: string;
   pdfSrc = '';
   zoom = 1.00;
-  originalSize = false;
+  originalSize = true;
   showAll = true;
   renderText = false;
-  fitToPage = true;
-  autoresize = true;
+  fitToPage = false;
+  autoresize = false;
 
   constructor(private route: ActivatedRoute, private spinnerService: Ng4LoadingSpinnerService) { }
 
@@ -26,7 +26,6 @@ export class SocialImpactComponent implements OnInit {
 
   ngOnChanges() {
     if (this.fileName) {
-      console.log('reader: ', this.fileName);
       this.fetchPdf();
     }
   }

@@ -82,6 +82,7 @@ import { PieChartComponent } from './components/leadership/pie-chart/pie-chart.c
 import { TriplePointComponent } from './components/leadership/triple-point/triple-point.component';
 import { CorrelationComponent } from './components/leadership/correlation/correlation.component';
 import { SocialImpactComponent } from './components/social-impact/social-impact.component';
+import { TestimonyDialogComponent } from './components/testimony-dialog/testimony-dialog.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,8 @@ import { SocialImpactComponent } from './components/social-impact/social-impact.
     PieChartComponent,
     TriplePointComponent,
     CorrelationComponent,
-    SocialImpactComponent
+    SocialImpactComponent,
+    TestimonyDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -168,6 +170,6 @@ import { SocialImpactComponent } from './components/social-impact/social-impact.
   ],
   providers: [{provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent],
-  entryComponents: [ImageDialogComponent]
+  entryComponents: [ImageDialogComponent, TestimonyDialogComponent]
 })
 export class AppModule { }
