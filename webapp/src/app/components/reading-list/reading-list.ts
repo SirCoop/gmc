@@ -71,7 +71,7 @@ const readingList: any = {
         { title: 'The Four Agreements', author: 'Don Miguel Ruiz' },
         { title: 'Seven Spiritual Laws of Success', author: 'Deepak Chopra' },
         { title: 'Feng Shui', author: 'Lillian Too' },
-        { title: 'The Celesting Prophecy', author: 'James Refield' },
+        { title: 'The Celestine Prophecy', author: 'James Refield' },
         { title: 'The Art of Dreaming', author: 'Carlos Castaneda' }
     ]
 
