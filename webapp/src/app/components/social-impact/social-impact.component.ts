@@ -16,7 +16,7 @@ export class SocialImpactComponent implements OnInit {
   originalSize = false;
   showAll = true;
   renderText = false;
-  fitToPage = false;
+  fitToPage = true;
   autoresize = true;
 
   constructor(private route: ActivatedRoute, private spinnerService: Ng4LoadingSpinnerService) { }
