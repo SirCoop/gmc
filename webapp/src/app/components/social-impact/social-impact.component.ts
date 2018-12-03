@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
@@ -7,7 +7,7 @@ import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
   templateUrl: './social-impact.component.html',
   styleUrls: ['./social-impact.component.scss']
 })
-export class SocialImpactComponent implements OnInit {
+export class SocialImpactComponent implements OnInit, OnChanges {
   @Input() fileName: string;
 
   pdfTitle: string;
