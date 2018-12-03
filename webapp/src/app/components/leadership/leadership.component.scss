@@ -1,6 +1,18 @@
 .leadership-container {
   color: #818181;
 
+  a {
+    text-decoration: underline;
+
+    &:link {
+      color: #dcd8d3;
+    }
+
+    &:visited {
+      color: #f5228a;
+    }
+  }
+
   #title {
     text-align: center;
   }
