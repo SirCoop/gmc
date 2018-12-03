@@ -36,7 +36,7 @@ export class SocialImpactComponent implements OnInit {
     const split = newFileName.split('_');
     const firstName = split[1];
     const lastName = split[2];
-    this.pdfTitle = `${firstName} ${lastName}`
+    this.pdfTitle = `${firstName} ${lastName}`;
     this.pdfSrc = `/api/leadership/testimonies/${this.fileName}`;
   }
 
